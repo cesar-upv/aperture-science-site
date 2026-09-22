@@ -17,7 +17,7 @@ Revisión local del 22 de septiembre de 2026. Fuente editorial vigente: [SITE_CO
 - Pestañas del plan: cambio con flechas de teclado y foco conservado. Verificados los tres objetivos con cinco componentes SMART y las tres estrategias con cuatro fases cada una.
 - Menú móvil: apertura, cierre con Escape y devolución del foco al botón.
 - Desplegables de funciones: apertura y contenido de las subáreas.
-- Formulario: campos etiquetados, validación nativa, confirmación de simulación con foco y regreso al formulario. No hay envío a un servicio externo.
+- Portada simplificada: una sola llamada a la acción, «Explorar Portal Gun». Se retiraron la barra superior, las etiquetas decorativas solicitadas y la sección de contacto con todos sus enlaces.
 - axe-core 4.10.3 ejecutado localmente en las vistas revisadas de escritorio y móvil: sin infracciones automáticas tras corregir contraste y semántica. La herramienta dejó comprobaciones de contraste para revisión manual, especialmente sobre imágenes y capas. No equivale a una certificación completa de accesibilidad.
 
 El script de auditoría se utilizó de forma temporal y no es una dependencia ni un recurso del sitio. No se ha desplegado la página ni ejecutado flujos remotos.

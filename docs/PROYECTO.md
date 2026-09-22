@@ -14,7 +14,7 @@
 | Compilación | `npm run build` → `dist/` |
 | Hosting preparado | GitHub Pages, activación y ejecución manual |
 | URL pública | Pendiente; no se ha creado ni publicado un repositorio |
-| Captura de datos | Sin backend; formulario de demostración |
+| Captura de datos | Sin backend ni formularios |
 | Recursos | Imágenes y fuentes locales; procedencia en `ASSETS.md` |
 
 ## Personalización al publicar

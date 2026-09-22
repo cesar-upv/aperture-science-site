@@ -36,10 +36,6 @@ export default function Hero() {
       <div className="hero-horizon" aria-hidden="true" />
       <div className="wrap hero-main">
         <div className="hero-copy">
-          <div className="eyebrow">
-            <span className="live-indicator" /> APERTURE SCIENCE / CIENCIA
-            EXPERIMENTAL
-          </div>
           <div className="hero-edition mono">
             <span>ASHPD</span>
             <span>EL SIGUIENTE SALTO DE LA CIENCIA</span>
@@ -61,16 +57,7 @@ export default function Hero() {
             <a className="button button-blue" href="#portal-gun">
               Explorar Portal Gun <Arrow diagonal />
             </a>
-            <a className="text-link" href="#tecnologia">
-              <span className="play-icon">▶</span> Iniciar prueba
-            </a>
           </div>
-          <a className="hero-plan-link" href="#estrategia">
-            <span className="mono">DE LA VISIÓN A LA ACCIÓN</span>
-            <span>
-              Conoce nuestro plan empresarial <Arrow />
-            </span>
-          </a>
         </div>
         <div
           ref={art}
@@ -81,9 +68,6 @@ export default function Hero() {
           aria-label="Exhibición interactiva de la Portal Gun"
         >
           <div className="art-grid" aria-hidden="true" />
-          <span className="art-coordinate coordinate-top">
-            FIG. 01 / APERTURE SCIENCE HANDHELD PORTAL DEVICE
-          </span>
           <div className="orbital-ticks" aria-hidden="true" />
           <div className="orbit orbit-one" aria-hidden="true" />
           <div className="orbit orbit-two" aria-hidden="true" />
@@ -110,17 +94,6 @@ export default function Hero() {
               height="589"
               fetchPriority="high"
             />
-          </div>
-          <div className="hardware-tag">
-            <span className="hardware-plus">+</span>
-            <div>
-              <span className="mono">INGENIERÍA EXTRAORDINARIA</span>
-              <p>
-                Todo un universo.
-                <br />
-                Al alcance de tu mano.
-              </p>
-            </div>
           </div>
           <div className="hero-portal-selector">
             <span className="mono" aria-live="polite">
@@ -151,9 +124,6 @@ export default function Hero() {
         </div>
       </div>
       <div className="wrap hero-bottom">
-        <a className="scroll-cue" href="#portal-gun">
-          <span>↓</span> DESCIENDE AL LABORATORIO
-        </a>
         <div className="hero-facts">
           <div>
             <strong>01</strong>

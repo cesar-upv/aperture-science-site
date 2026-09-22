@@ -2,7 +2,7 @@
 
 Sitio empresarial e interactivo inspirado en **Portal y Portal 2**, de Valve. Combina la presentación de la Portal Gun con una propuesta académica de planeación empresarial, en una interfaz tecnológica con identidad azul y naranja.
 
-**Proyecto conceptual de fans.** No representa a Valve, no vende dispositivos reales y el formulario es una simulación local: no envía ni registra solicitudes en un servidor.
+**Proyecto conceptual de fans.** No representa a Valve, no vende dispositivos reales y no ofrece formularios, compras ni reservas.
 
 ![Vista de escritorio](docs/preview.png)
 

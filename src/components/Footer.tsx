@@ -21,7 +21,6 @@ export default function Footer() {
           {[
             ...navLinks,
             { label: "Preguntas frecuentes", id: "preguntas" },
-            { label: "Contacto", id: "contacto" },
           ].map((link) => (
             <a href={`#${link.id}`} key={link.id}>
               {link.label}

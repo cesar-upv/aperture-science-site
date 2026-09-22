@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Arrow, Icon, SectionLabel } from "./ui"
+import { Icon, SectionLabel } from "./ui"
 import portalGun from "../assets/portal-gun.png"
 const productFeatures = [
   {
@@ -134,9 +134,6 @@ export default function Product() {
                 </div>
               </article>
             ))}
-            <a className="button button-outline" href="#contacto">
-              Solicitar una demostración <Arrow diagonal />
-            </a>
             <p className="product-note mono">
               TECNOLOGÍA FICTICIA DEL UNIVERSO PORTAL.
             </p>

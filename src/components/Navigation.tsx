@@ -40,17 +40,6 @@ export default function Navigation() {
       <a className="skip-link" href="#contenido">
         Saltar al contenido
       </a>
-      <div className="utility-bar" role="region" aria-label="Acerca del sitio">
-        <div className="wrap">
-          <span>
-            <i className="status-dot" /> CENTRO DE ENRIQUECIMIENTO
-          </span>
-          <span>
-            PROYECTO CONCEPTUAL <span className="utility-separator">/</span>{" "}
-            UNIVERSO PORTAL
-          </span>
-        </div>
-      </div>
       <header className="site-header">
         <nav className="wrap nav-bar" aria-label="Navegación principal">
           <a
@@ -73,9 +62,6 @@ export default function Navigation() {
               </a>
             ))}
           </div>
-          <a className="button button-small nav-cta" href="#contacto">
-            Solicitar demo <Arrow diagonal />
-          </a>
           <button
             ref={toggle}
             className="menu-toggle"
@@ -89,10 +75,7 @@ export default function Navigation() {
           </button>
         </nav>
         <div id="mobile-menu" className="mobile-menu" hidden={!open}>
-          {[
-            ...navLinks,
-            { label: "Solicitar demostración", id: "contacto" },
-          ].map((link, i) => (
+          {navLinks.map((link, i) => (
             <a
               key={link.id}
               href={`#${link.id}`}

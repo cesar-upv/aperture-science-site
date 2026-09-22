@@ -18,7 +18,7 @@ const faqs = [
   ],
   [
     "¿Puedo comprar el dispositivo o reservar una prueba real?",
-    "Este sitio es un proyecto conceptual de fans, no una tienda ni una página oficial de Valve. La demostración y el formulario son simulaciones: no realizan compras, reservas ni envían datos.",
+    "Este sitio es un proyecto conceptual de fans, no una tienda ni una página oficial de Valve. La demostración de portales es interactiva y ficticia; no ofrecemos compras ni reservas de pruebas reales.",
   ],
 ]
 export default function FAQ() {

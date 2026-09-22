@@ -8,9 +8,7 @@ import StrategySection from "./components/StrategySection"
 import OrgSection from "./components/OrgSection"
 import Facilities from "./components/Facilities"
 import FAQ from "./components/FAQ"
-import Contact from "./components/Contact"
 import Footer from "./components/Footer"
-import { Arrow } from "./components/ui"
 
 export default function App() {
   const [motion, setMotion] = useState(
@@ -32,9 +30,6 @@ export default function App() {
             <span>LA CIENCIA NO SE DETIENE.</span>
             <span className="strip-icon">✻</span>
             <span>USTED TAMPOCO.</span>
-            <a href="#estrategia">
-              CONOCE EL PLAN <Arrow />
-            </a>
           </div>
         </div>
         <Product />
@@ -44,7 +39,6 @@ export default function App() {
         <OrgSection />
         <Facilities />
         <FAQ />
-        <Contact />
       </main>
       <Footer />
       <button
