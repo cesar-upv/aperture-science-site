@@ -1,0 +1,25 @@
+# Dependencies and generated output
+node_modules/
+dist/
+dist-ssr/
+.vite/
+coverage/
+*.tsbuildinfo
+
+# Local settings and logs
+.env
+.env.*
+!.env.example
+*.local
+*.log
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Local archives and review artifacts
+*.zip
+work/
+outputs/
+playwright-report/
+test-results/
