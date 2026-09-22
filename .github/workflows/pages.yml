@@ -6,6 +6,8 @@ on:
 
 permissions:
   contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: github-pages
@@ -17,24 +19,31 @@ jobs:
     name: Preparar sitio
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Obtener código
         uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
+
       - name: Preparar Node.js
         uses: actions/setup-node@v7.0.0
         with:
           node-version-file: .nvmrc
           package-manager-cache: false
+
       - name: Leer configuración de Pages
         uses: actions/configure-pages@v6.0.0
+
       - name: Instalar versiones del lockfile
         run: npm ci
+
       - name: Comprobar tipos y generar sitio
         run: npm run build
+
       - name: Verificar requisitos del plan empresarial
         run: npm test
+
       - name: Preparar archivos públicos
         uses: actions/upload-pages-artifact@v5.0.0
         with:
@@ -45,12 +54,11 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    permissions:
-      pages: write
-      id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Publicar en Pages
         id: deployment
