@@ -2,6 +2,8 @@ name: Verificar proyecto
 
 on:
   push:
+    branches:
+      - main
   pull_request:
   workflow_dispatch:
 
@@ -14,22 +16,27 @@ concurrency:
 
 jobs:
   build:
-    name: TypeScript y compilación
+    name: Compilar y verificar
     runs-on: ubuntu-latest
     timeout-minutes: 10
+
     steps:
       - name: Obtener código
         uses: actions/checkout@v7.0.1
         with:
           persist-credentials: false
+
       - name: Preparar Node.js
         uses: actions/setup-node@v7.0.0
         with:
           node-version-file: .nvmrc
           cache: npm
-      - name: Instalar versiones del lockfile
+
+      - name: Instalar dependencias
         run: npm ci
+
       - name: Comprobar tipos y generar sitio
         run: npm run build
-      - name: Verificar requisitos del plan empresarial
+
+      - name: Ejecutar pruebas
         run: npm test
