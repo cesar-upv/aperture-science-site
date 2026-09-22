@@ -11,7 +11,8 @@ Sitio empresarial e interactivo inspirado en **Portal y Portal 2**, de Valve. Co
 - Landing page, presentación del producto, demostración de portales y galería de instalaciones.
 - Filosofía empresarial: misión, visión y valores.
 - Análisis FODA con **20 factores**: cinco fortalezas, cinco oportunidades, cinco debilidades y cinco amenazas.
-- **Cuatro objetivos SMART**, cada uno con su estrategia y su plan de acción: **cuatro estrategias y cuatro planes** en total.
+- **Tres objetivos SMART**, cada uno con su estrategia y su plan de acción: **tres estrategias y tres planes** en total.
+- Organigrama, responsabilidades por departamento, cultura de trabajo y cuatro compromisos verificables.
 - Diseño adaptable a móvil, navegación por secciones y recursos gráficos y fuentes locales.
 
 Las metas, indicadores y textos de negocio son propuestas para un ejercicio académico; no describen resultados reales de Aperture Science ni información oficial del juego.
@@ -63,6 +64,6 @@ React 19 · TypeScript · Vite 8 · Tailwind CSS 4. El resultado de compilación
 
 ## Recursos y documentación
 
-[Plan empresarial completo](docs/PLAN-EMPRESARIAL.md) · [Inventario de assets](ASSETS.md) · [Licencias y atribuciones](docs/LICENCIAS.md) · [Guía de GitHub](docs/GITHUB.md) · [Verificación](docs/VERIFICACION.md)
+[Contenido vigente del sitio](docs/SITE_CONTENT.md) · [Inventario de assets](ASSETS.md) · [Licencias y atribuciones](docs/LICENCIAS.md) · [Guía de GitHub](docs/GITHUB.md) · [Verificación](docs/VERIFICACION.md)
 
 El arte y las marcas del videojuego conservan sus derechos originales. Este repositorio no concede una licencia abierta sobre esos recursos.

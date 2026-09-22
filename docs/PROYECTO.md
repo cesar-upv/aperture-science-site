@@ -25,4 +25,8 @@ Los enlaces entre secciones usan anclas. La compilación usa `base: './'` para q
 
 ## Cobertura académica prevista
 
-Filosofía empresarial con misión, visión y valores; veinte factores FODA; cuatro objetivos SMART; una estrategia por objetivo y un plan de acción por estrategia. Los números corresponden al contenido del ejercicio, no a métricas de una compañía real.
+Filosofía empresarial con misión, visión y valores; veinte factores FODA; tres objetivos SMART; una estrategia por objetivo y un plan de acción por estrategia con cuatro fases cada uno. Estructura organizacional con organigrama gerencial interactivo, departamentos y subáreas, cultura de trabajo y compromisos de control. Los números corresponden al contenido del ejercicio, no a métricas de una compañía real.
+
+## Fuente editorial vigente
+
+El contenido empresarial se mantiene a partir de [SITE_CONTENT.md](SITE_CONTENT.md). `PLAN-EMPRESARIAL.md` es una referencia histórica, no la especificación de la página. La presentación puede resumir los textos, conservando objetivos, fases, departamentos, subáreas e indicadores.
