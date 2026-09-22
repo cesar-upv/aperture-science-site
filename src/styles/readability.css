@@ -5,7 +5,8 @@ h1, h2, h3, h4, h5 { text-wrap: balance; }
 p { text-wrap: pretty; }
 :focus-visible { outline: 3px solid #0864ed; outline-offset: 5px; }
 .site-header :focus-visible, .hero :focus-visible, .strategy-section :focus-visible,
-.org-culture :focus-visible, .footer :focus-visible { outline-color: #a1e7ff; }
+.org-culture :focus-visible, .org-director :focus-visible, .technology :focus-visible,
+.product-view :focus-visible, .image-dialog :focus-visible, .footer :focus-visible { outline-color: #a1e7ff; }
 .hero-copy > p,.section-heading > p,.feature-row p,.product .feature-row p,.steps p,.about-description > p:not(.lead),.value-card p,.faq-layout > div > p,.faq-list details > p,.strategy-heading-copy p,.strategy-panel-heading p,.strategy-smart-grid dd,.strategy-action-intro,.strategy-step-body > p { font-size: 1.125rem; line-height: 1.7; }
 .hero-copy > p { max-width: 40ch; }
 .hero-actions { flex-wrap: wrap; }
@@ -23,7 +24,6 @@ button, .button, .text-link, .back-top { min-height: 44px; }
 .footer-bottom > p { font-size: 1rem; line-height: 1.7; }
 .footer-links { flex-wrap: wrap; }
 .footer-links a { display: inline-flex; align-items: center; min-height: 44px; font-size: 1rem; }
-.motion-control { min-height: 44px; }
 .strategy-context { color: #bfd3df; max-width: 85ch; font-size: 1rem; line-height: 1.7; margin: 0 0 2rem; }
 .strategy-swot-card h5 { font-size: 1.125rem; font-weight: 400; line-height: 1.5; }
 .strategy-smart-grid { grid-template-columns: 1fr; }
@@ -74,7 +74,6 @@ button, .button, .text-link, .back-top { min-height: 44px; }
   .facility-caption, .footer-bottom, .footer-last { flex-wrap: wrap; }
   .facility-copy { bottom: 1.25rem; }
   .facility-copy > span { font-size: 1rem; }
-  .motion-control { position: static; width: 100%; justify-content: center; }
 }
 @media (forced-colors: active) {
   .org-node, .org-director, .strategy-goal-selector button { border: 1px solid ButtonText; }

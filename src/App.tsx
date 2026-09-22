@@ -41,20 +41,6 @@ export default function App() {
         <FAQ />
       </main>
       <Footer />
-      <button
-        className="motion-control"
-        aria-pressed={motion}
-        onClick={() => setMotion(!motion)}
-        aria-label={
-          motion
-            ? "Pausar animaciones decorativas"
-            : "Activar animaciones decorativas"
-        }
-        title={motion ? "Pausar animaciones" : "Activar animaciones"}
-      >
-        <span aria-hidden="true">{motion ? "Ⅱ" : "▶"}</span>
-        <span>MOVIMIENTO {motion ? "ON" : "OFF"}</span>
-      </button>
     </div>
   )
 }

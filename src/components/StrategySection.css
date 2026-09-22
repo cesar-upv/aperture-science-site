@@ -1,4 +1,4 @@
-.strategy-section { position: relative; overflow: hidden; background: #07111a; color: #e8f2f7; padding: 104px 0 82px; isolation: isolate; }
+.strategy-section { position: relative; overflow: hidden; background: var(--night); color: var(--text-on-dark); padding: 104px 0 82px; isolation: isolate; }
 .strategy-section * { box-sizing: border-box; }
 .strategy-grid-decoration { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: radial-gradient(ellipse at 100% 0, #17425870, transparent 36%), linear-gradient(#76e0ff05 1px, transparent 1px), linear-gradient(90deg,#76e0ff05 1px, transparent 1px); background-size: auto, 70px 70px, 70px 70px; }
 .strategy-wrap { width: min(1280px,calc(100% - 100px)); margin-inline: auto; }

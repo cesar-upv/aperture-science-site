@@ -17,6 +17,9 @@ Revisión local del 22 de septiembre de 2026. Fuente editorial vigente: [SITE_CO
 - Pestañas del plan: cambio con flechas de teclado y foco conservado. Verificados los tres objetivos con cinco componentes SMART y las tres estrategias con cuatro fases cada una.
 - Menú móvil: apertura, cierre con Escape y devolución del foco al botón.
 - Desplegables de funciones: apertura y contenido de las subáreas.
+- Se eliminó el control flotante de movimiento; se conserva la respuesta a `prefers-reduced-motion` del sistema.
+- Cultura, planeación y footer comparten el fondo oscuro `--night`. Organización comparte la superficie clara de filosofía empresarial; etiquetas, separadores y focos sobre superficies oscuras usan la misma paleta.
+- Revisión posterior: anchos de 320 a 1440 px y texto al 200% en 390 y 1440 px sin desbordamiento horizontal. Eliminado el relleno inferior duplicado de organización.
 - Portada simplificada: una sola llamada a la acción, «Explorar Portal Gun». Se retiraron la barra superior, las etiquetas decorativas solicitadas y la sección de contacto con todos sus enlaces.
 - axe-core 4.10.3 ejecutado localmente en las vistas revisadas de escritorio y móvil: sin infracciones automáticas tras corregir contraste y semántica. La herramienta dejó comprobaciones de contraste para revisión manual, especialmente sobre imágenes y capas. No equivale a una certificación completa de accesibilidad.
 
