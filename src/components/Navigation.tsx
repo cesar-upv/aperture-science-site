@@ -26,7 +26,7 @@ export default function Navigation() {
       }
     }
     const onResize = () => {
-      if (window.innerWidth > 1000) setOpen(false)
+      if (window.innerWidth > 1250) setOpen(false)
     }
     document.addEventListener("keydown", onKey)
     window.addEventListener("resize", onResize)
@@ -40,7 +40,7 @@ export default function Navigation() {
       <a className="skip-link" href="#contenido">
         Saltar al contenido
       </a>
-      <div className="utility-bar">
+      <div className="utility-bar" role="region" aria-label="Acerca del sitio">
         <div className="wrap">
           <span>
             <i className="status-dot" /> CENTRO DE ENRIQUECIMIENTO

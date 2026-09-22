@@ -14,11 +14,11 @@ export const planningContext = {
   period: "Horizonte de 12 meses",
   status: "Propuesta académica · Sin ejecución real",
   premise:
-    "Escenario ficticio: Aperture Science prepara un programa de demostraciones y pilotos institucionales de la Portal Gun, dentro del universo de Portal.",
+    "Aperture Science prepara un programa de demostraciones y pilotos institucionales de la Portal Gun, dentro del universo de Portal. Interpretación creativa inspirada en Portal de Valve; no forma parte del canon del juego.",
   assumptions:
-    "Se supone un equipo de 12 personas, una cámara de pruebas, un dispositivo ficticio y presupuesto aprobado para 12 meses. Las funciones se distribuyen dentro de ese equipo; no representan contrataciones adicionales.",
+    "Se supone un equipo de 4 personas, una cámara de pruebas, y un dispositivo ficticio. El cumplimiento depende de confirmar estos recursos y la participación institucional. Las metas no representan resultados, ventas ni acuerdos obtenidos.",
   baseline:
-    "Mes 1 es el inicio hipotético del programa. Las cifras son metas propuestas, no resultados obtenidos. Los valores iniciales de cero son supuestos de un programa nuevo; se validarán en el mes 1. Donde no hay medición, se establece una línea base antes de evaluar avances.",
+    "Mes 1 es el inicio hipotético del programa. Las cifras son metas propuestas, no resultados obtenidos ni ventas cerradas. El cumplimiento depende de confirmar recursos y participación institucional.",
 }
 
 export const swot: SwotQuadrant[] = [
@@ -30,63 +30,29 @@ export const swot: SwotQuadrant[] = [
     tone: "cyan",
     items: [
       {
-        title: "Producto distintivo",
+        title: "Tecnología nueva y sin competencia",
         description:
-          "La conexión entre portales ofrece una propuesta diferenciada dentro del escenario ficticio.",
+          "Desarrollo pionero y sin competencia directa en manipulación cuántica del espacio y generación de portales bidireccionales.",
       },
       {
-        title: "Capacidad experimental",
+        title: "Infraestructura tecnológica muy avanzada diseñada para innovar",
         description:
-          "Las cámaras de prueba permiten repetir escenarios y observar el comportamiento del dispositivo.",
+          "Instalaciones subterráneas de escala masiva con equipamiento científico de última generación orientado a la innovación continua.",
       },
       {
-        title: "Conocimiento especializado",
+        title: "Ingenieros altamente capacitados",
         description:
-          "El equipo supuesto reúne investigación, ingeniería y operación de tecnología de portales.",
+          "Cuerpo técnico y científico con alta especialización en física cuántica, robótica, inteligencia artificial y mecánica de fluidos.",
       },
       {
-        title: "Demostración visual",
+        title: "Patentes exclusivas en tecnología de portales",
         description:
-          "El funcionamiento del dispositivo puede explicarse mediante recorridos y pruebas guiadas.",
+          "Propiedad intelectual y portafolio de patentes registradas que blindan el diseño y arquitectura del dispositivo portátil de portales.",
       },
       {
-        title: "Identidad reconocible",
+        title: "Instalaciones de prueba 100% autónomas",
         description:
-          "La marca, la señalética y el diseño industrial aportan coherencia a la experiencia de Aperture.",
-      },
-    ],
-  },
-  {
-    id: "debilidades",
-    letter: "D",
-    title: "Debilidades",
-    context: "Internas · Por resolver",
-    tone: "orange",
-    items: [
-      {
-        title: "Infraestructura limitada",
-        description:
-          "Una sola cámara y un dispositivo restringen el número de pruebas y demostraciones simultáneas.",
-      },
-      {
-        title: "Superficies compatibles",
-        description:
-          "El funcionamiento depende de superficies adecuadas, lo que limita los entornos de uso.",
-      },
-      {
-        title: "Sin línea base operativa",
-        description:
-          "El programa inicia sin un registro verificado de desempeño, tiempos ni demanda institucional.",
-      },
-      {
-        title: "Capacitación exigente",
-        description:
-          "El uso responsable requiere procedimientos, práctica supervisada y evaluación del personal.",
-      },
-      {
-        title: "Dependencia de especialistas",
-        description:
-          "La concentración del conocimiento en pocos perfiles dificulta cubrir ausencias y ampliar operaciones.",
+          "Cámaras de pruebas modulares con autoabastecimiento operativo, monitoreo robótico y ciclos de experimentación independientes.",
       },
     ],
   },
@@ -98,29 +64,63 @@ export const swot: SwotQuadrant[] = [
     tone: "mint",
     items: [
       {
-        title: "Alianzas de investigación",
+        title: "Revolución industrial",
         description:
-          "Instituciones del escenario podrían aportar casos de estudio y observadores para pilotos.",
+          "Potencial disruptivo para transformar cadenas de suministro, logística de transporte y manufactura a escala global mediante portales.",
       },
       {
-        title: "Aplicaciones logísticas",
+        title: "Reducción de la huella de carbono",
         description:
-          "El traslado de objetos entre puntos controlados constituye una hipótesis de uso por validar.",
+          "Eliminación del consumo masivo de combustibles en traslados de mercancías mediante interconexión instantánea de puntos geográficos.",
       },
       {
-        title: "Formación científica",
+        title: "Exploración continua a nuevos lugares",
         description:
-          "Las demostraciones guiadas pueden despertar interés en programas de aprendizaje experimental.",
+          "Apertura de accesos inmediatos a zonas remotas, entornos hostiles de alta radiación y exploración subterránea y aeroespacial.",
       },
       {
-        title: "Interés por la innovación",
+        title: "Nuevos contratos militares y gubernamentales",
         description:
-          "Organizaciones que exploran nuevas tecnologías podrían participar en una convocatoria de pruebas.",
+          "Oportunidades de financiamiento e integración tecnológica estratégica mediante acuerdos con agencias e instituciones de defensa.",
       },
       {
-        title: "Red de proveedores",
+        title: "Venta civil de tecnologías secundarias",
         description:
-          "Colaboraciones con proveedores podrían mejorar el mantenimiento y la disponibilidad de superficies compatibles.",
+          "Comercialización derivada de innovaciones auxiliares como geles de propulsión y repulsión, placas térmicas y sistemas de amortiguación.",
+      },
+    ],
+  },
+  {
+    id: "debilidades",
+    letter: "D",
+    title: "Debilidades",
+    context: "Internas · Por resolver",
+    tone: "orange",
+    items: [
+      {
+        title: "Altísimos costos de producción",
+        description:
+          "Manufactura intensiva en capital y dependencia de materias primas exóticas que elevan el costo unitario de dispositivos y prototipos.",
+      },
+      {
+        title: "Riesgos de seguridad para el usuario",
+        description:
+          "Peligros inherentes de aceleración terminal, desorientación cinética y fallos de software durante las pruebas con sujetos humanos.",
+      },
+      {
+        title: "Mantenimiento",
+        description:
+          "Elevada complejidad técnica y costo del mantenimiento preventivo y correctivo en hardware cuántico e infraestructura de cámaras.",
+      },
+      {
+        title: "Dependencia excesiva de una IA central",
+        description:
+          "Centralización extrema de la supervisión, telemetría y decisiones operativas en la inteligencia artificial rectora del complejo.",
+      },
+      {
+        title: "Prácticas éticas cuestionables",
+        description:
+          "Riesgos reputacionales y legales derivados de protocolos experimentales rigurosos y antecedentes de reclutamiento forzoso.",
       },
     ],
   },
@@ -132,29 +132,29 @@ export const swot: SwotQuadrant[] = [
     tone: "rose",
     items: [
       {
-        title: "Competencia tecnológica",
+        title: "Mala utilización del producto puede ocasionar desastres",
         description:
-          "Otras organizaciones del universo ficticio podrían ofrecer alternativas para las mismas necesidades.",
+          "Riesgo de incidentes catastróficos por apertura involuntaria de portales en entornos no controlados o uso destructivo por terceros.",
       },
       {
-        title: "Cambios de requisitos",
+        title: "Miedo o rechazo social",
         description:
-          "Nuevas exigencias institucionales de seguridad podrían retrasar la autorización de pilotos.",
+          "Resistencia pública, suspicacia cultural y desconfianza social ante una tecnología cuántica que desafía las leyes físicas convencionales.",
       },
       {
-        title: "Interrupciones de suministro",
+        title: "Escasez de materias primas",
         description:
-          "La falta de componentes o materiales compatibles podría suspender pruebas programadas.",
+          "Vulnerabilidad en el suministro de componentes indispensables como superconductores escasos y polvo lunar procesado para superficies.",
       },
       {
-        title: "Desconfianza de participantes",
+        title: "Auditorías de comités de ética",
         description:
-          "La percepción externa de riesgo puede reducir el interés o la continuidad de las alianzas.",
+          "Intervención de organismos reguladores y comités de bioética que puedan condicionar, sancionar o suspender las pruebas de laboratorio.",
       },
       {
-        title: "Menor inversión externa",
+        title: "Fuerte competencia corporativa",
         description:
-          "Recortes de presupuesto en instituciones interesadas podrían cancelar su participación en el programa.",
+          "Rivalidad encarnizada frente a conglomerados competidores (como Black Mesa) en la carrera por subsidios federales y patentes espaciales.",
       },
     ],
   },
@@ -167,6 +167,7 @@ export type StrategicGoal = {
   targetNumber: string
   targetUnit: string
   deadline: string
+  specific: string
   statement: string
   baseline: string
   metric: string
@@ -196,242 +197,395 @@ export type StrategicGoal = {
 export const strategicGoals: StrategicGoal[] = [
   {
     id: "01",
-    shortTitle: "Validar el dispositivo",
-    title: "Fiabilidad antes de expansión",
-    targetNumber: "95%",
-    targetUnit: "de casos aprobados",
-    deadline: "Mes 9",
+    shortTitle: "Reducir fallas críticas",
+    specific: "Reducir la tasa de fallas de hardware en las pistolas de portales durante las fases de prueba.",
+    title: "Reducir las fallas críticas de los dispositivos de portales",
+    targetNumber: "-15%",
+    targetUnit: "tasa de fallas de hardware",
+    deadline: "Mes 12",
     statement:
-      "Al cierre del mes 9, aprobar al menos 190 de 200 casos distintos de un protocolo de validación de la Portal Gun en cámara controlada, sin incidencias críticas abiertas, antes de autorizar pilotos externos.",
+      "Reducir la tasa de fallas de hardware en las pistolas de portales durante las fases de prueba en un 15% mediante la actualización del software de calibración cuántica sin cambiar el diseño físico, en un plazo de 12 meses.",
     baseline:
-      "Por establecer en el mes 2 mediante una primera ejecución del protocolo. No se dispone de resultados previos verificables.",
+      "Tasa basal de fallas registrada en el mes 1 a partir de las pruebas de hardware en cámaras de prueba. Sin calibración previa verificada.",
     metric:
-      "Casos aprobados ÷ 200 × 100. La última ejecución válida de cada caso determina su resultado; repetir una prueba no aumenta el denominador. Meta adicional: 0 incidencias críticas abiertas.",
+      "Disminuir la tasa de fallas de hardware en un 15% respecto al periodo inicial.",
     resources:
-      "4 especialistas de ingeniería y calidad, la cámara compartida y dos jornadas de prueba por semana; capacidad supuesta que se confirmará en el mes 1.",
+      "Actualizar el software de calibración cuántica sin cambiar el diseño físico.",
     relevance:
-      "Produce evidencia para decidir qué usos pueden pasar a un piloto y reduce el riesgo de escalar un producto sin validar.",
+      'Mitiga la debilidad de "riesgos de seguridad para el usuario" y mejora la confianza del producto para futuras implementaciones.',
     swotLinks: [
-      "F2 · Capacidad experimental",
-      "D3 · Sin línea base",
-      "A2 · Cambios de requisitos",
+      "D2 · Riesgos de seguridad para el usuario",
+      "F3 · Ingenieros altamente capacitados",
+      "A1 · Mala utilización del producto puede ocasionar desastres",
     ],
     strategy: {
       id: "E01",
-      title: "Validación por etapas",
+      title: "Simulaciones virtuales masivas ejecutadas por IA",
       description:
-        "Priorizar escenarios por riesgo, fijar un protocolo común y liberar el dispositivo por criterios de aceptación documentados.",
+        "Implementar un programa de simulaciones virtuales masivas ejecutadas por IA antes de realizar pruebas físicas con sujetos humanos, para predecir sobrecargas del sistema.",
     },
     plan: {
       id: "PA01",
-      owner: "Responsable de ingeniería y calidad",
-      window: "Meses 1–9",
+      owner: "Dpto. de Investigación y Desarrollo / Laboratorio de IA y Simulaciones",
+      window: "Meses 1–12",
       steps: [
         {
-          period: "M01–M02",
-          title: "Definir y medir",
-          task: "Aprobar los 200 casos, sus criterios y niveles de incidencia; ejecutar la primera ronda para registrar la línea base.",
+          period: "M01–M03",
+          title: "Fase 1: Asignación y calibración del entorno",
+          task: "Asignar un equipo de ingenieros para programar y calibrar el entorno de simulación de estrés físico.",
           evidence:
-            "Protocolo versionado y matriz inicial con 200 identificadores únicos.",
+            "Entorno de simulación calibrado y especificación de parámetros de estrés físico aprobada.",
         },
         {
-          period: "M03–M07",
-          title: "Corregir y repetir",
-          task: "Reservar dos jornadas semanales, resolver fallos por prioridad y repetir solo los casos afectados y sus dependencias.",
+          period: "M04–M06",
+          title: "Fase 2: Alimentación de datos históricos a la IA",
+          task: "Alimentar a la IA central con los datos históricos de todas las fallas previas de la pistola de portales.",
           evidence:
-            "Bitácora de ejecuciones y registro trazable de incidencias.",
+            "Base de datos histórica de incidencias depurada y cargada en los núcleos de la IA central.",
         },
         {
-          period: "M08–M09",
-          title: "Revisar la liberación",
-          task: "Cerrar la ronda de validación y someter los resultados a una revisión de calidad independiente de quien ejecutó la prueba.",
+          period: "M07–M09",
+          title: "Fase 3: 10,000 simulaciones automatizadas",
+          task: "Ejecutar 10,000 simulaciones automatizadas para identificar y registrar los puntos de ruptura del hardware.",
           evidence:
-            "Informe con al menos 190 casos aprobados y cero incidencias críticas abiertas.",
+            "Informe de 10,000 simulaciones concluidas con mapa analítico de puntos de ruptura registrados.",
+        },
+        {
+          period: "M10–M12",
+          title: "Fase 4: Parches de software y validación física",
+          task: "Desarrollar parches de software cuántico basados en los resultados y validar con una prueba física final controlada.",
+          evidence:
+            "Parche de software cuántico desplegado y reporte de validación física con reducción del 15% en fallas.",
         },
       ],
       tracking:
-        "Revisión quincenal del porcentaje aprobado y de incidencias críticas pendientes.",
-      gate: "Un incumplimiento impide autorizar pilotos externos; exige corregir y volver a evaluar.",
+        "Revisión mensual del volumen de simulaciones ejecutadas y tasa de fallas proyectadas vs registradas.",
+      gate:
+        "Completar 10,000 simulaciones automatizadas con cero anomalías críticas antes de autorizar la prueba física final.",
     },
   },
   {
     id: "02",
-    shortTitle: "Demostrar el valor",
-    title: "Interés que se puede medir",
-    targetNumber: "16",
-    targetUnit: "instituciones participantes",
-    deadline: "Mes 8",
+    shortTitle: "Disminuir costos de producción",
+    specific: "Reducir el costo de manufactura de los geles de propulsión y repulsión.",
+    title: "Disminuir los costos de producción de tecnologías secundarias",
+    targetNumber: "-20%",
+    targetUnit: "en presupuesto de producción",
+    deadline: "Mes 9",
     statement:
-      "Antes de terminar el mes 8, completar 16 demostraciones guiadas para 16 instituciones distintas que cumplan los criterios de selección, con al menos una ficha de evaluación recibida por institución.",
+      "Reducir el costo de manufactura de los geles de propulsión y repulsión logrando una reducción del 20% en el presupuesto de producción, sustituyendo componentes de importación costosa por compuestos sintéticos desarrollados en laboratorio para el cierre del tercer trimestre del año fiscal.",
     baseline:
-      "0 instituciones atendidas, supuesto de un programa nuevo que se verificará contra los registros del mes 1.",
+      "Costo de producción unitario del mes 1 basado en componentes importados y extracción de rocas lunares exóticas.",
     metric:
-      "Número de instituciones únicas con demostración completada y ficha de evaluación. Cada institución cuenta una sola vez. Meta: 16 de 16 fichas documentadas.",
+      "Reducir en un 20% el presupuesto de producción de geles.",
     resources:
-      "2 personas de vinculación y apoyo rotativo de operación; dos sesiones por mes de los meses 1 a 8, con fechas separadas de las jornadas de validación.",
+      "Sustituir componentes de importación costosa por compuestos sintéticos desarrollados en laboratorio.",
     relevance:
-      "Permite contrastar necesidades reales dentro del escenario y seleccionar aliados a partir de evidencia de interés.",
+      'Ataca directamente la debilidad de "altísimos costos de producción" y reduce la vulnerabilidad ante la escasez de materias primas.',
     swotLinks: [
-      "F4 · Demostración visual",
-      "O1 · Alianzas",
-      "A4 · Desconfianza",
+      "D1 · Altísimos costos de producción",
+      "O5 · Venta civil de tecnologías secundarias",
+      "A3 · Escasez de materias primas",
     ],
     strategy: {
       id: "E02",
-      title: "Vinculación con demostración guiada",
+      title: "Alianzas químicas para síntesis externa",
       description:
-        "Invitar instituciones con un caso de uso compatible y ofrecer sesiones adaptadas a su necesidad, con evaluación estructurada al cierre.",
+        "Formar alianzas con empresas químicas externas para tercerizar la creación de polímeros sintéticos, reduciendo la dependencia de la extracción de materias primas exóticas.",
     },
     plan: {
       id: "PA02",
-      owner: "Responsable de vinculación institucional",
-      window: "Meses 1–8",
+      owner: "Dpto. de Manufactura y Producción / Gestión Integrada de Ensamblaje y Síntesis",
+      window: "Meses 1–9",
       steps: [
         {
-          period: "M01",
-          title: "Seleccionar y convocar",
-          task: "Definir criterios de compatibilidad, capacidad de participación y aceptación del protocolo; preparar una lista de 32 candidatas y calendarizar las dos primeras sesiones.",
+          period: "M01–M02",
+          title: "Fase 1: Auditoría y selección de químicas",
+          task: "Auditar y seleccionar tres empresas químicas a nivel nacional con capacidad de producción industrial.",
           evidence:
-            "Lista de candidatas, criterios de selección y calendario de invitaciones.",
+            "Dictamen técnico de auditoría y selección de tres empresas químicas con capacidad industrial certificada.",
         },
         {
-          period: "M01–M08",
-          title: "Mostrar con supervisión",
-          task: "Celebrar dos sesiones mensuales y registrar asistencia. Usar una simulación o recorrido sin operación si aún no se autoriza una demostración física.",
+          period: "M03–M04",
+          title: "Fase 2: Fórmulas base y prototipos sintéticos",
+          task: "Proveer fórmulas base (censuradas por confidencialidad) para que los laboratorios externos generen los primeros prototipos de gel.",
           evidence:
-            "16 actas de demostración con modalidad y una institución distinta por acta.",
+            "Convenios de confidencialidad NDA firmados, fórmulas entregadas y lote inicial de prototipos recibido.",
         },
         {
-          period: "M01–M08",
-          title: "Documentar y dar seguimiento",
-          task: "Recibir una evaluación por institución y revisar mensualmente necesidades, objeciones y posibles candidatas a piloto.",
+          period: "M05–M07",
+          title: "Fase 3: Pruebas de eficacia y rebote en cámaras",
+          task: "Probar la eficacia y el rebote del nuevo gel sintético en las cámaras de prueba del Enrichment Center.",
           evidence:
-            "16 fichas de evaluación y un informe consolidado al cierre del mes 8.",
+            "Informe de pruebas de restitución elástica, viscosidad y aceleración en cámaras de prueba.",
+        },
+        {
+          period: "M08–M09",
+          title: "Fase 4: Exclusividad y cese de rocas lunares",
+          task: "Firmar el contrato de exclusividad con el mejor proveedor y detener gradualmente la compra de rocas lunares.",
+          evidence:
+            "Contrato marco de exclusividad firmado y reducción documentada del 20% en costos de manufactura.",
         },
       ],
       tracking:
-        "Revisión mensual de sesiones completadas, instituciones únicas y fichas recibidas.",
-      gate: "La participación no equivale a una venta ni a una validación técnica del dispositivo.",
+        "Comparativo mensual de costo por litro sintetizado versus costo histórico de importación.",
+      gate:
+        "El gel sintético alternativo debe superar el 95% de elasticidad y rebote del estándar previo antes de cesar contratos de rocas lunares.",
     },
   },
   {
     id: "03",
-    shortTitle: "Activar alianzas piloto",
-    title: "De la prueba a la colaboración",
-    targetNumber: "3",
-    targetUnit: "pilotos documentados",
-    deadline: "Mes 12",
+    shortTitle: "Reclutamiento de voluntarios",
+    specific: "Captar más voluntarios mediante incentivos económicos, reduciendo las pruebas obligatorias.",
+    title: "Incrementar el reclutamiento de sujetos de prueba voluntarios",
+    targetNumber: "70",
+    targetUnit: "nuevos sujetos integrados",
+    deadline: "Mes 6",
     statement:
-      "Al cierre del mes 12, completar tres pilotos secuenciales con tres instituciones distintas, cada uno con acuerdo de alcance, una sesión supervisada y un informe de resultados aprobado por ambas partes.",
+      "Captar más voluntarios mediante incentivos económicos, reduciendo las pruebas obligatorias, para reclutar e integrar a 70 nuevos sujetos de prueba al programa ofreciendo una compensación directa en efectivo al finalizar las pruebas, en un periodo máximo de 6 meses.",
     baseline:
-      "0 pilotos del programa, supuesto que se comprobará en el mes 1. No se presuponen acuerdos ni clientes existentes.",
+      "0 voluntarios remunerados registrados al inicio del mes 1 bajo el nuevo protocolo formal de compensación directa.",
     metric:
-      "Pilotos con los tres entregables completos: acuerdo, acta de sesión e informe bilateral. Meta: 3; una misma institución no puede contarse dos veces.",
+      "Reclutar e integrar a 70 nuevos sujetos de prueba al programa con expedientes de consentimiento y compensación formalizados.",
     resources:
-      "2 responsables de proyectos y vinculación con apoyo de operación; un piloto mensual entre los meses 10 y 12, usando la cámara de forma secuencial.",
+      "Ofrecer una compensación directa en efectivo al finalizar las pruebas.",
     relevance:
-      "Comprueba la pertinencia de casos de uso acotados antes de proponer una expansión institucional más amplia.",
+      'Mitiga las prácticas éticas cuestionables al asegurar que las pruebas se realicen con consentimiento.',
     swotLinks: [
-      "D1 · Infraestructura limitada",
-      "O1 · Alianzas",
-      "O2 · Aplicaciones logísticas",
+      "D5 · Prácticas éticas cuestionables",
+      "A4 · Auditorías de comités de ética",
+      "A2 · Miedo o rechazo social",
     ],
     strategy: {
       id: "E03",
-      title: "Pilotos pequeños y secuenciales",
+      title: "Campaña de reclutamiento urbano remunerado",
       description:
-        "Convertir el interés registrado en tres colaboraciones de alcance limitado, dentro de la capacidad disponible y con puertas de autorización explícitas.",
+        "Lanzar una campaña de reclutamiento masiva y de bajo costo en áreas urbanas, enfocada en personas que busquen ingresos extra rápidos, asegurando el flujo constante de sujetos hacia las instalaciones subterráneas.",
     },
     plan: {
       id: "PA03",
-      owner: "Responsable del programa de pilotos",
-      window: "Meses 7–12",
-      steps: [
-        {
-          period: "M07–M09",
-          title: "Acordar el alcance",
-          task: "Seleccionar tres instituciones entre las participantes, definir un caso por piloto y firmar acuerdos sujetos a validación técnica y personal habilitado.",
-          evidence:
-            "Tres acuerdos con alcance, agenda, responsables y criterios de cierre.",
-        },
-        {
-          period: "M10–M12",
-          title: "Ejecutar por turnos",
-          task: "Realizar una sesión por piloto, una institución al mes, únicamente después de cumplir las condiciones de los objetivos 01 y 04.",
-          evidence:
-            "Tres actas de ejecución y registro de incidencias de cada sesión.",
-        },
-        {
-          period: "M10–M12",
-          title: "Evaluar con el aliado",
-          task: "Entregar y revisar el informe de cada piloto dentro de los diez días posteriores a su sesión, sin superar el cierre del mes 12.",
-          evidence:
-            "Tres informes aprobados por ambas partes con hallazgos y decisión de continuidad.",
-        },
-      ],
-      tracking:
-        "Seguimiento mensual de acuerdos, sesiones e informes; un piloto cuenta solo cuando cierra sus tres entregables.",
-      gate: "Depende de la validación del objetivo 01 y la habilitación del objetivo 04. Si no se cumplen, el piloto se pospone y se reporta el desvío.",
-    },
-  },
-  {
-    id: "04",
-    shortTitle: "Preparar al equipo",
-    title: "Cada persona, un protocolo",
-    targetNumber: "12/12",
-    targetUnit: "personas habilitadas",
-    deadline: "Mes 6",
-    statement:
-      "Antes de cerrar el mes 6, habilitar internamente a las 12 personas del equipo en el protocolo correspondiente a su función: mínimo 90% en evaluación teórica y 100% de pasos críticos en una práctica supervisada.",
-    baseline:
-      "0 habilitaciones registradas para este protocolo, supuesto que se contrastará con un diagnóstico individual durante el mes 1.",
-    metric:
-      "Personas que aprueban ambas evaluaciones ÷ 12 × 100. Meta: 100%. La evaluación práctica exige completar todos los pasos críticos sin ayuda.",
-    resources:
-      "1 coordinador de formación y 1 evaluador de calidad del mismo equipo de 12; una sesión de 90 minutos cada dos semanas y práctica por función.",
-    relevance:
-      "Distribuye el conocimiento, reduce dependencias individuales y fija condiciones de participación antes de los pilotos.",
-    swotLinks: [
-      "F3 · Conocimiento especializado",
-      "D4 · Capacitación",
-      "D5 · Dependencia de especialistas",
-    ],
-    strategy: {
-      id: "E04",
-      title: "Formación y habilitación por función",
-      description:
-        "Convertir el conocimiento de especialistas en procedimientos enseñables y exigir evidencia individual antes de asignar tareas de operación.",
-    },
-    plan: {
-      id: "PA04",
-      owner: "Coordinación de formación y calidad",
+      owner: "Dpto. de Recursos Humanos y Reclutamiento",
       window: "Meses 1–6",
       steps: [
         {
           period: "M01",
-          title: "Diagnosticar y documentar",
-          task: "Revisar las competencias de las 12 personas, asignar funciones y redactar listas de pasos críticos y criterios de evaluación.",
+          title: "Fase 1: Contratos y exención médica legal",
+          task: "Redactar y aprobar legalmente los nuevos contratos de confidencialidad y exención de responsabilidad médica.",
           evidence:
-            "Matriz de competencias, diagnóstico individual y protocolo por función.",
+            "Contrato legalmente homologado con cláusula de exención de responsabilidad médica y compensación garantizada.",
         },
         {
-          period: "M02–M05",
-          title: "Entrenar y practicar",
-          task: "Impartir sesiones quincenales, practicar en grupos pequeños y reforzar los pasos que cada persona aún no domina.",
+          period: "M02–M03",
+          title: "Fase 2: Difusión de la oferta de $60 USD",
+          task: "Imprimir y distribuir publicidad en zonas urbanas clave destacando la compensación de $60 dólares en efectivo.",
           evidence:
-            "Registro de asistencia, material de formación y bitácoras de práctica.",
+            "Comprobantes de distribución publicitaria urbana y registro de afluencia de aspirantes.",
         },
         {
-          period: "M06",
-          title: "Evaluar la habilitación",
-          task: "Aplicar teoría y práctica con un evaluador distinto al participante; repetir la formación y evaluación de quienes no alcancen el criterio dentro del plazo.",
+          period: "M04",
+          title: "Fase 3: Recepción y filtros psicológicos",
+          task: "Habilitar la sala de recepción en la superficie para realizar entrevistas, filtros psicológicos rápidos y firma de documentos.",
           evidence:
-            "12 expedientes con resultados de al menos 90% en teoría y todos los pasos críticos aprobados.",
+            "Sala de superficie operativa y bitácora de filtros psicológicos con firmas de consentimiento registradas.",
+        },
+        {
+          period: "M05–M06",
+          title: "Fase 4: Éstasis e ingreso a pruebas",
+          task: "Ingresar a los 70 voluntarios seleccionados a las cámaras de éstasis para iniciar de inmediato los ciclos de prueba.",
+          evidence:
+            "70 expedientes completos de voluntarios con ingreso confirmado a cámaras de éstasis y asignación de circuito.",
         },
       ],
       tracking:
-        "Revisión quincenal de asistencia y competencias; cierre con el porcentaje de personas habilitadas.",
-      gate: "Es una habilitación interna ficticia, no una certificación oficial. Una persona sin aprobación no realiza tareas para las que aún no está habilitada.",
+        "Censo quincenal de postulantes entrevistados, contratos suscritos y voluntarios ingresados a cámaras.",
+      gate:
+        "100% de los sujetos deben tener expediente de consentimiento firmado y exención validada antes de ingresar a pruebas.",
     },
+  },
+]
+
+export type OrgSubarea = {
+  id: string
+  title: string
+  description: string
+  focus: string
+}
+
+export type OrgDepartment = {
+  id: string
+  code: string
+  title: string
+  role: string
+  description: string
+  tone: "cyan" | "orange" | "mint" | "rose"
+  icon: "gear" | "atom" | "users" | "shield"
+  subareas: OrgSubarea[]
+}
+
+export const orgStructure = {
+  ceo: {
+    id: "DIR-01",
+    title: "Dirección General / CEO",
+    role: "Liderazgo Ejecutivo y Estratégico",
+    description:
+      "Coordina las operaciones generales de Aperture Science, define prioridades y supervisa el cumplimiento de los objetivos de innovación, seguridad y producción.",
+    focus:
+      "Supervisión integral de las cuatro divisiones operativas, aprobación de presupuestos y dirección de la visión institucional.",
+  },
+  departments: [
+    {
+      id: "MFG-02",
+      code: "DPTO-01",
+      title: "Dpto. de Manufactura y Producción",
+      role: "Fabricación, Síntesis y Ensamble",
+      tone: "orange",
+      icon: "gear",
+      description:
+        "Se encarga de fabricar y ensamblar dispositivos, materiales y componentes experimentales, buscando mantener la calidad y reducir costos de producción.",
+      subareas: [
+        {
+          id: "MFG-S1",
+          title: "Gestión Integrada de Ensamblaje y Síntesis",
+          description:
+            "Integra componentes de hardware y materiales sintéticos, incluyendo los geles de propulsión y repulsión, antes de enviarlos a las fases de prueba.",
+          focus:
+            "Sustitución de materias primas exóticas por polímeros sintéticos y reducción del 20% en costos de manufactura.",
+        },
+      ],
+    },
+    {
+      id: "RD-03",
+      code: "DPTO-02",
+      title: "Dpto. de Investigación y Desarrollo",
+      role: "Innovación Cuántica y Prototipado",
+      tone: "cyan",
+      icon: "atom",
+      description:
+        "Diseña y mejora las tecnologías experimentales de la empresa, convirtiendo nuevas ideas en prototipos y soluciones para corregir fallas detectadas.",
+      subareas: [
+        {
+          id: "RD-S1",
+          title: "Laboratorio de IA y Simulaciones",
+          description:
+            "Ejecuta simulaciones virtuales para detectar riesgos, sobrecargas y puntos de ruptura antes de realizar pruebas físicas con los dispositivos.",
+          focus:
+            "10,000 simulaciones automatizadas en la IA central para modelado de estrés.",
+        },
+        {
+          id: "RD-S2",
+          title: "División de Hardware Cuántico y Portátiles",
+          description:
+            "Desarrolla, calibra y mantiene el hardware relacionado con la tecnología de portales y aplica mejoras derivadas de las pruebas y simulaciones.",
+          focus:
+            "Calibración de software cuántico y reducción del 15% en fallas críticas.",
+        },
+      ],
+    },
+    {
+      id: "HR-04",
+      code: "DPTO-03",
+      title: "Dpto. de Recursos Humanos y Reclutamiento",
+      role: "Gestión de Talento y Sujetos de Prueba",
+      tone: "mint",
+      icon: "users",
+      description:
+        "Administra al personal y coordina el reclutamiento de sujetos voluntarios, verificando que conozcan las condiciones y requisitos de las pruebas.",
+      subareas: [],
+    },
+    {
+      id: "QC-05",
+      code: "DPTO-04",
+      title: "Dpto. de Control de Calidad y Seguridad",
+      role: "Auditoría, Inspección y Salvaguarda",
+      tone: "rose",
+      icon: "shield",
+      description:
+        "Verifica que dispositivos, materiales y procedimientos cumplan con los estándares internos de calidad y seguridad antes de ser utilizados.",
+      subareas: [
+        {
+          id: "QC-S1",
+          title: "Monitoreo de Cámaras de Prueba",
+          description:
+            "Supervisa las pruebas en tiempo real, registra incidentes y permite detener o modificar un experimento cuando se detecta una situación de riesgo.",
+          focus:
+            "Validación del 100% de dispositivos destinados a pruebas y telemetría de seguridad en vivo.",
+        },
+      ],
+    },
+  ] as OrgDepartment[],
+}
+
+export const workCulture = {
+  summary:
+    "Aperture Science tendrá una cultura basada en la experimentación, la innovación y la mejora continua, siguiendo los valores de cuestionar, probar, investigar y aprender.",
+  pillars: [
+    {
+      title: "Experimentación y mejora continua",
+      description:
+        "Cada prueba nos permite revisar una idea, aprender de sus resultados y mejorar la siguiente versión.",
+      highlight: "Cuestionar · Probar · Investigar · Aprender",
+    },
+    {
+      title: "Liderazgo orientado a objetivos",
+      description:
+        "La dirección utilizará un liderazgo orientado a objetivos, con responsabilidades claras y autonomía para cada departamento.",
+      highlight: "Autonomía departamental y rendición de cuentas clara",
+    },
+    {
+      title: "Comunicación directa basada en datos",
+      description:
+        "La comunicación será directa y basada en datos obtenidos durante pruebas, simulaciones y procesos de producción.",
+      highlight: "Telemetría en tiempo real y evidencia verificable",
+    },
+    {
+      title: "Motivación y trabajo colaborativo",
+      description:
+        "La motivación se fomentará mediante la participación en proyectos experimentales y el reconocimiento de soluciones innovadoras. El trabajo en equipo será esencial para que investigación, manufactura y seguridad colaboren en la detección y corrección de fallas.",
+      highlight: "Sinergia interdisciplinaria e innovación compartida",
+    },
+  ],
+}
+
+export type CompanyCommitment = {
+  id: string
+  pillar: string
+  commitment: string
+  indicator: string
+  verification: string
+  tone: "cyan" | "orange" | "mint" | "rose"
+}
+
+export const companyCommitments: CompanyCommitment[] = [
+  {
+    id: "COM-01",
+    pillar: "Seguridad y confiabilidad",
+    commitment: "Mejorar continuamente la seguridad de los dispositivos de portales.",
+    indicator: "Reducir en 15% las fallas críticas de hardware en 12 meses.",
+    verification: "Comparar registros de fallas de simulaciones y pruebas físicas con periodos anteriores.",
+    tone: "cyan",
+  },
+  {
+    id: "COM-02",
+    pillar: "Validación previa",
+    commitment: "Evaluar las nuevas versiones de los dispositivos antes de realizar pruebas físicas.",
+    indicator: "Ejecutar 10,000 simulaciones automatizadas por cada ciclo principal de validación.",
+    verification: "Revisar los registros digitales del Laboratorio de IA y la autorización de Control de Calidad.",
+    tone: "orange",
+  },
+  {
+    id: "COM-03",
+    pillar: "Participación voluntaria",
+    commitment: "Garantizar que los sujetos de prueba participen voluntariamente y conozcan las condiciones del programa.",
+    indicator: "Mantener documentación de consentimiento en el 100% de los participantes.",
+    verification: "Revisar los expedientes administrados por Recursos Humanos antes de autorizar el ingreso a las pruebas.",
+    tone: "mint",
+  },
+  {
+    id: "COM-04",
+    pillar: "Control de calidad",
+    commitment: "Evitar el uso de tecnologías que no hayan completado los controles internos.",
+    indicator: "Validar el 100% de los dispositivos destinados a pruebas o demostraciones.",
+    verification: "Registrar inspecciones, fallas, correcciones y autorización final de cada dispositivo.",
+    tone: "rose",
   },
 ]

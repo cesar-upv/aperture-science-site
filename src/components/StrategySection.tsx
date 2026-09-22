@@ -1,6 +1,10 @@
 import { useRef, useState } from "react"
 import type { KeyboardEvent } from "react"
-import { planningContext, strategicGoals, swot } from "../data/strategy"
+import {
+  planningContext,
+  strategicGoals,
+  swot,
+} from "../data/strategy"
 import type { StrategicGoal } from "../data/strategy"
 import "./StrategySection.css"
 
@@ -10,13 +14,13 @@ const views = [
     id: "objetivos",
     label: "Objetivos SMART",
     number: "02",
-    count: "04 objetivos",
+    count: "03 objetivos",
   },
   {
     id: "accion",
     label: "Estrategias y acción",
     number: "03",
-    count: "04 planes",
+    count: "03 planes",
   },
 ] as const
 
@@ -48,15 +52,14 @@ function SmartDetails({ goal }: { goal: StrategicGoal }) {
       </div>
       <h4 id={`strategy-goal-${goal.id}`}>{goal.title}</h4>
       <TargetMetric goal={goal} />
-      <p className="strategy-goal-statement">{goal.statement}</p>
+
       <dl className="strategy-smart-grid">
         <div>
           <dt>
             <span>S</span> Específico
           </dt>
           <dd>
-            {goal.shortTitle} dentro del programa institucional de Aperture
-            Science.
+            {goal.specific}
           </dd>
         </div>
         <div>
@@ -67,7 +70,7 @@ function SmartDetails({ goal }: { goal: StrategicGoal }) {
         </div>
         <div>
           <dt>
-            <span>A</span> Alcanzable bajo supuestos
+            <span>A</span> Alcanzable
           </dt>
           <dd>{goal.resources}</dd>
         </div>
@@ -82,16 +85,10 @@ function SmartDetails({ goal }: { goal: StrategicGoal }) {
             <span>T</span> Con plazo
           </dt>
           <dd>
-            Cierre del {goal.deadline.toLowerCase()} a partir del inicio
-            hipotético del programa.
+            {goal.deadline === "Mes 9" ? "Cierre del tercer trimestre del año fiscal." : `${goal.deadline} desde el inicio del programa.`}
           </dd>
         </div>
-        <div>
-          <dt>
-            <span>↗</span> Línea base
-          </dt>
-          <dd>{goal.baseline}</dd>
-        </div>
+
       </dl>
       <div className="strategy-foda-links">
         <span className="strategy-micro">CONECTADO AL FODA</span>
@@ -113,6 +110,7 @@ function ActionDetails({ goal }: { goal: StrategicGoal }) {
     >
       <div
         className="strategy-link-chain"
+        role="group"
         aria-label={`Objetivo ${goal.id}, estrategia ${goal.strategy.id}, plan ${goal.plan.id}`}
       >
         <span>OBJETIVO {goal.id}</span>
@@ -143,28 +141,12 @@ function ActionDetails({ goal }: { goal: StrategicGoal }) {
               <span className="strategy-micro">{step.period}</span>
               <h5>{step.title}</h5>
               <p>{step.task}</p>
-              <div className="strategy-step-evidence">
-                <span>EVIDENCIA</span>
-                <p>{step.evidence}</p>
-              </div>
+
             </div>
           </li>
         ))}
       </ol>
-      <div className="strategy-plan-controls">
-        <div>
-          <span className="strategy-micro">SEGUIMIENTO / KPI</span>
-          <p>{goal.plan.tracking}</p>
-          <strong>
-            Meta: {goal.targetNumber} {goal.targetUnit.toLowerCase()} ·{" "}
-            {goal.deadline}
-          </strong>
-        </div>
-        <div>
-          <span className="strategy-micro">CONDICIÓN DE CONTROL</span>
-          <p>{goal.plan.gate}</p>
-        </div>
-      </div>
+
     </article>
   )
 }
@@ -213,41 +195,21 @@ export default function StrategySection() {
               LA CIENCIA NECESITA UNA DIRECCIÓN.
             </span>
             <h2 id="strategy-title">
-              Un gran salto.
+              Planeación
               <br />
-              <span>Un plan detrás.</span>
+              <span>estratégica.</span>
             </h2>
           </div>
           <div className="strategy-heading-copy">
             <p>
-              La siguiente frontera empieza con una decisión. Explora el
-              diagnóstico, las metas y las acciones de nuestro programa
-              institucional.
+              Menos fallas, menores costos y participación voluntaria. Tres objetivos para los próximos 12 meses.
             </p>
             <span className="strategy-period">
               HORIZONTE / 12 MESES <i aria-hidden="true">↗</i>
             </span>
           </div>
         </div>
-        <div className="strategy-command-bar">
-          <span>
-            <i aria-hidden="true">+</i> CENTRO DE PLANIFICACIÓN
-          </span>
-          <div>
-            <span>
-              <b>20</b> FACTORES FODA
-            </span>
-            <span>
-              <b>04</b> OBJETIVOS
-            </span>
-            <span>
-              <b>04</b> ESTRATEGIAS
-            </span>
-            <span>
-              <b>04</b> PLANES
-            </span>
-          </div>
-        </div>
+        <p className="strategy-context">{planningContext.assumptions}</p>
         <div
           className="strategy-tabs"
           role="tablist"
@@ -280,6 +242,7 @@ export default function StrategySection() {
           ))}
         </div>
 
+        {/* Panel 01: FODA */}
         <div
           id="strategy-panel-foda"
           className="strategy-panel"
@@ -294,14 +257,12 @@ export default function StrategySection() {
                 DIAGNÓSTICO / 5 FACTORES POR CUADRANTE
               </span>
               <h3>
-                Conocer el terreno.
-                <br />
-                Cambiar las posibilidades.
+                Análisis FODA.
               </h3>
             </div>
             <p>
-              Hipótesis de análisis para la empresa ficticia. Los factores
-              externos requieren validación antes de tomar decisiones.
+              Hipótesis de análisis para Aperture Science. Los factores
+              externos requieren validación continua antes de escalar operaciones.
             </p>
           </div>
           <div className="strategy-swot-grid">
@@ -328,7 +289,7 @@ export default function StrategySection() {
                       </span>
                       <div>
                         <h5>{item.title}</h5>
-                        <p>{item.description}</p>
+
                       </div>
                     </li>
                   ))}
@@ -347,8 +308,9 @@ export default function StrategySection() {
           </div>
         </div>
 
+        {/* Panel 02 & 03: Objetivos SMART y Estrategias */}
         {views
-          .filter((view) => view.id !== "foda")
+          .filter((view) => view.id === "objetivos" || view.id === "accion")
           .map((view) => (
             <div
               key={view.id}
@@ -368,14 +330,14 @@ export default function StrategySection() {
                   </span>
                   <h3>
                     {view.id === "objetivos"
-                      ? "Ambición con coordenadas."
-                      : "De la intención a la acción."}
+                      ? "Objetivos SMART."
+                      : "Estrategias y plan de acción."}
                   </h3>
                 </div>
                 <p>
                   {view.id === "objetivos"
-                    ? "Cuatro objetivos SMART. Selecciona uno para ver su indicador, recursos, línea base y fecha de cumplimiento."
-                    : "Cuatro estrategias con su propio plan: responsables, plazos, tres pasos concretos y evidencia de cumplimiento."}
+                    ? "Selecciona un objetivo para consultar su meta, recursos y plazo."
+                    : "Cada objetivo tiene una estrategia y cuatro fases de trabajo."}
                 </p>
               </div>
               <div className="strategy-objectives-layout">
@@ -407,15 +369,7 @@ export default function StrategySection() {
                       </span>
                     </button>
                   ))}
-                  <div className="strategy-selector-note">
-                    <span className="strategy-micro">
-                      ORDEN DE AUTORIZACIÓN
-                    </span>
-                    <p>
-                      Preparar al equipo → validar → ejecutar pilotos. Las
-                      demostraciones iniciales pueden usar simulaciones.
-                    </p>
-                  </div>
+
                 </div>
                 <div className="strategy-detail-container">
                   {strategicGoals.map((goal) => (
@@ -436,30 +390,6 @@ export default function StrategySection() {
               </div>
             </div>
           ))}
-
-        <div className="strategy-context">
-          <div className="strategy-context-icon" aria-hidden="true">
-            i
-          </div>
-          <div>
-            <h3>{planningContext.status}</h3>
-            <p>
-              {planningContext.premise} {planningContext.baseline}
-            </p>
-            <details>
-              <summary>
-                Consultar supuestos del programa
-                <span aria-hidden="true">+</span>
-              </summary>
-              <p>{planningContext.assumptions}</p>
-              <p>
-                La filosofía empresarial —misión, visión y valores— se presenta
-                en <a href="#nosotros">Nosotros</a>. Este plan es una
-                interpretación creativa y no forma parte del canon de Valve.
-              </p>
-            </details>
-          </div>
-        </div>
       </div>
     </section>
   )

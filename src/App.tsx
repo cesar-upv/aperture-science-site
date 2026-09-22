@@ -5,6 +5,7 @@ import Product from "./components/Product"
 import PortalDemo from "./components/PortalDemo"
 import About from "./components/About"
 import StrategySection from "./components/StrategySection"
+import OrgSection from "./components/OrgSection"
 import Facilities from "./components/Facilities"
 import FAQ from "./components/FAQ"
 import Contact from "./components/Contact"
@@ -29,7 +30,7 @@ export default function App() {
         <div className="science-strip">
           <div className="wrap">
             <span>LA CIENCIA NO SE DETIENE.</span>
-            <span className="strip-icon">✳</span>
+            <span className="strip-icon">✻</span>
             <span>USTED TAMPOCO.</span>
             <a href="#estrategia">
               CONOCE EL PLAN <Arrow />
@@ -40,6 +41,7 @@ export default function App() {
         <PortalDemo />
         <About />
         <StrategySection />
+        <OrgSection />
         <Facilities />
         <FAQ />
         <Contact />

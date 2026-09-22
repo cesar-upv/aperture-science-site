@@ -43,7 +43,7 @@ export default function Facilities() {
       aria-labelledby="facilities-title"
     >
       <div className="wrap">
-        <SectionLabel number="05">
+        <SectionLabel number="06">
           BIENVENIDO AL CENTRO DE ENRIQUECIMIENTO
         </SectionLabel>
         <div className="section-heading">

@@ -19,7 +19,7 @@ export default function Contact() {
     >
       <div className="wrap contact-layout">
         <div className="contact-copy">
-          <SectionLabel number="07" light>
+          <SectionLabel number="08" light>
             TU SIGUIENTE GRAN IDEA
           </SectionLabel>
           <h2 id="contact-title">
@@ -78,79 +78,81 @@ export default function Contact() {
                 no se envían ni se guardan.
               </p>
               <div className="form-grid">
-                <div className="field">
-                  <label htmlFor="full-name">
-                    Nombre <span>*</span>
-                  </label>
+                <div>
+                  <label htmlFor="nombre">Tu nombre</label>
                   <input
-                    id="full-name"
+                    type="text"
+                    id="nombre"
                     name="nombre"
                     autoComplete="name"
-                    placeholder="Tu nombre completo"
+                    placeholder="Dra. Caroline"
                     required
-                    maxLength={100}
+                    aria-describedby="form-description"
                   />
                 </div>
-                <div className="field">
-                  <label htmlFor="email">
-                    Correo electrónico <span>*</span>
-                  </label>
+                <div>
+                  <label htmlFor="organizacion">Organización</label>
                   <input
-                    id="email"
-                    name="correo"
-                    type="email"
-                    autoComplete="email"
-                    placeholder="tu@correo.com"
+                    type="text"
+                    id="organizacion"
+                    name="organizacion"
+                    autoComplete="organization"
+                    placeholder="Aperture Laboratories"
                     required
-                    maxLength={254}
                   />
                 </div>
               </div>
-              <div className="field">
-                <label htmlFor="organization">
-                  Organización <span className="optional">OPCIONAL</span>
-                </label>
+              <div>
+                <label htmlFor="correo">Correo de contacto</label>
                 <input
-                  id="organization"
-                  name="organizacion"
-                  autoComplete="organization"
-                  placeholder="Empresa, institución o proyecto"
-                  maxLength={150}
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  autoComplete="email"
+                  placeholder="investigacion@aperture.com"
+                  required
                 />
               </div>
-              <div className="field">
-                <label htmlFor="interest">¿Qué te gustaría explorar?</label>
-                <select id="interest" name="interes" defaultValue="producto">
-                  <option value="producto">Tecnología de portales</option>
-                  <option value="investigacion">
-                    Investigación y desarrollo
-                  </option>
-                  <option value="instalaciones">Instalaciones y pruebas</option>
-                  <option value="general">Información general</option>
-                </select>
-              </div>
-              <div className="field">
-                <label htmlFor="message">
-                  Tu idea <span className="optional">OPCIONAL</span>
+              <fieldset className="form-fieldset">
+                <legend>Interés principal</legend>
+                <div className="radio-pills">
+                  <label>
+                    <input
+                      type="radio"
+                      name="interes"
+                      value="innovacion"
+                      defaultChecked
+                    />
+                    <span>Investigación e innovación</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="interes" value="logistica" />
+                    <span>Aplicaciones industriales</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="interes" value="curiosidad" />
+                    <span>Curiosidad científica</span>
+                  </label>
+                </div>
+              </fieldset>
+              <div>
+                <label htmlFor="comentarios">
+                  ¿Cómo imaginas aplicar esta tecnología?
                 </label>
                 <textarea
-                  id="message"
-                  name="mensaje"
-                  rows={3}
-                  placeholder="Cuéntanos qué hay al otro lado de tu idea…"
-                  maxLength={2000}
+                  id="comentarios"
+                  name="comentarios"
+                  rows={4}
+                  placeholder="Nos interesa conocer qué problema quieres resolver..."
+                  required
                 />
               </div>
-              <button
-                className="button button-blue submit-button"
-                type="submit"
-                aria-describedby="form-description"
-              >
-                Probar solicitud de demostración <Arrow diagonal />
+              <button type="submit" className="button button-orange submit-btn">
+                Completar simulación <Arrow />
               </button>
-              <div className="form-footnote mono">
-                * CAMPOS OBLIGATORIOS · SIN ENVÍO DE DATOS
-              </div>
+              <p className="form-note">
+                Formulario demostrativo. No recopilamos datos personales.
+              </p>
             </form>
           )}
         </div>

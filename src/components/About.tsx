@@ -1,4 +1,5 @@
 import { Arrow, SectionLabel } from "./ui"
+
 export default function About() {
   return (
     <section
@@ -21,19 +22,9 @@ export default function About() {
             </div>
           </div>
           <div className="about-description">
-            <p className="lead">
-              Las grandes ideas empiezan con una pregunta.
-              <br />
-              Las nuestras, con una cámara de pruebas.
-            </p>
-            <p>
-              En Aperture Science imaginamos nuevas formas de relacionarnos con
-              el espacio. Combinamos investigación, ingeniería y una curiosidad
-              persistente para convertir lo imposible en el siguiente
-              experimento.
-            </p>
-            <a className="text-link" href="#instalaciones">
-              Entra en nuestras instalaciones <Arrow diagonal />
+            <p className="lead">Investigamos cómo conectar espacios y ampliar las posibilidades de nuestro entorno.</p>
+            <a className="text-link" href="#estrategia">
+              Explorar el plan empresarial <Arrow diagonal />
             </a>
           </div>
         </div>
@@ -83,27 +74,18 @@ export default function About() {
               <i />
             </div>
             <h3>
-              Cuestionar.
+              Cuestionar. Probar.
               <br />
-              Probar. Aprender.
+              Investigar. Aprender.
             </h3>
             <p>
-              Curiosidad para preguntar, precisión para investigar y
-              responsabilidad para experimentar. La innovación se construye en
-              equipo.
+              Cuestionamos, probamos e investigamos para aprender continuamente,
+              combinando curiosidad, precisión y creatividad en cada solución.
             </p>
-            <ul className="value-tags">
-              <li>Innovación</li>
-              <li>Precisión</li>
-              <li>Curiosidad</li>
-              <li>Responsabilidad</li>
-              <li>Colaboración</li>
-            </ul>
+
           </article>
         </div>
-        <p className="editorial-note mono">
-          DECLARACIONES CORPORATIVAS CREADAS PARA ESTE PROYECTO CONCEPTUAL.
-        </p>
+
       </div>
     </section>
   )

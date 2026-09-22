@@ -1,0 +1,57 @@
+.org-section { background: #f1f3ee; color: #202d32; padding-bottom: 0; }
+.org-heading { display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: end; margin: 2rem 0 3.5rem; }
+.org-heading h2, .org-heading h3 { font-family: var(--font-display); font-size: clamp(2.75rem, 5vw, 4.5rem); font-weight: 500; line-height: 1.05; }
+.org-heading h2 span { color: #46636e; }
+.org-heading p { max-width: 44ch; }
+.org-section p, .org-section dd { font-size: 1.125rem; line-height: 1.65; color: #485a60; }
+.org-section h4 { margin: 0 0 .75rem; font-size: 1.375rem; font-weight: 600; line-height: 1.3; }
+.org-chart > h3, .org-functions > h3 { font-size: 1.5rem; margin-bottom: 2rem; font-weight: 500; }
+.org-tree, .org-tree ul { list-style: none; padding: 0; margin: 0; }
+.org-director { max-width: 40rem; margin: auto; background: #173543; color: #fff; padding: 2rem; border-top: 4px solid #e77d35; }
+.org-director p { color: #d6e5e9; }
+.org-branches { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1.5rem; position: relative; padding-top: 3rem !important; }
+.org-branches::before { content: ''; position: absolute; height: 1.5rem; width: 1px; background: #77909a; top: 0; left: 50%; }
+.org-branches > li { position: relative; min-width: 0; }
+.org-branches > li::before { content: ''; position: absolute; height: 1.5rem; top: -1.5rem; left: 50%; width: calc(100% + 1.5rem); border-left: 1px solid #77909a; border-top: 1px solid #77909a; }
+.org-branches > li:last-child::before { width: 0; }
+.org-node { display: flex; justify-content: space-between; gap: .75rem; min-height: 7rem; align-items: center; padding: 1.25rem; border: 1px solid #77909a; background: #fff; font-size: 1.25rem; font-weight: 600; line-height: 1.3; }
+.org-node:hover { background: #e1edf1; }
+.org-node span { color: #0864a8; }
+.org-leaves { border-left: 1px solid #77909a; margin: 0 0 0 1.25rem !important; padding: .5rem 0 0 1rem !important; }
+.org-leaves li { position: relative; padding: .75rem 0 .25rem .25rem; font-size: 1rem; line-height: 1.5; }
+.org-leaves li::before { content: ''; position: absolute; width: 1rem; height: 1px; left: -1rem; top: 1.5rem; background: #77909a; }
+.org-functions { margin: 4rem 0 5rem; }
+.org-department-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 4rem; }
+.org-department-details article { border-top: 1px solid #a5b4b6; padding-top: 1.5rem; scroll-margin-top: 7rem; }
+.org-department-details summary { cursor: pointer; color: #085c96; padding-block: 1rem; font-size: 1rem; text-decoration: underline; text-underline-offset: .25em; }
+.org-department-details dl { margin: 0; border-left: 2px solid #a5b4b6; padding-left: 1.25rem; }
+.org-department-details dt { font-weight: 600; font-size: 1.125rem; margin-top: 1rem; }
+.org-department-details dd { margin: .5rem 0 0; }
+.org-culture { padding-block: 5rem; background: #112c38; color: #f2f6f5; }
+.org-culture-layout { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; }
+.org-culture h3 { font: 500 clamp(3rem, 6vw, 5.5rem)/1.05 var(--font-display); margin: 1.5rem 0; }
+.org-culture h3 span { color: #9bdbed; }
+.org-culture p { color: #c9dce2; max-width: 48ch; }
+.org-practices article { border-top: 1px solid #54717c; padding: 1.5rem 0; }
+.org-practices article:last-child { padding-bottom: 0; }
+.org-commitments { padding-block: 3rem 6rem; }
+.org-commitment-list article { display: grid; grid-template-columns: 1fr 1.6fr; gap: 3rem; border-top: 1px solid #a5b4b6; padding: 2rem 0; }
+.org-commitment-list article:last-child { border-bottom: 1px solid #a5b4b6; }
+.org-commitment-list dl { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 0; }
+.org-commitment-list dt { font-size: 1rem; font-weight: 600; color: #085c96; margin-bottom: .75rem; }
+.org-commitment-list dd { margin: 0; }
+@media(max-width: 900px) {
+  .org-branches { grid-template-columns: 1fr; gap: 1.5rem; margin-left: 1rem !important; padding: 1.5rem 0 0 1.5rem !important; border-left: 1px solid #77909a; }
+  .org-branches::before { display: none; }
+  .org-branches > li::before, .org-branches > li:last-child::before { width: 1.5rem; height: 1px; border-left: 0; left: -1.5rem; top: 2rem; }
+  .org-node { min-height: 4rem; }
+  .org-director { max-width: none; }
+  .org-heading, .org-culture-layout { grid-template-columns: 1fr; gap: 2rem; }
+  .org-commitment-list article { grid-template-columns: 1fr; gap: 1.5rem; }
+}
+@media(max-width: 600px) {
+  .org-department-details, .org-commitment-list dl { grid-template-columns: 1fr; gap: 1.5rem; }
+  .org-director { padding: 1.5rem; }
+  .org-heading { margin-bottom: 2.5rem; }
+  .org-culture { padding-block: 3.5rem; }
+}

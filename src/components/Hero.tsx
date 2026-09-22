@@ -75,6 +75,7 @@ export default function Hero() {
         <div
           ref={art}
           className="hero-art"
+          role="group"
           onPointerMove={move}
           onPointerLeave={reset}
           aria-label="Exhibición interactiva de la Portal Gun"

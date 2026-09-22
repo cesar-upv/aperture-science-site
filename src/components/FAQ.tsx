@@ -30,7 +30,7 @@ export default function FAQ() {
     >
       <div className="wrap faq-layout">
         <div>
-          <SectionLabel number="06">ANTES DE ENTRAR</SectionLabel>
+          <SectionLabel number="07">ANTES DE ENTRAR</SectionLabel>
           <h2 id="faq-title">
             Buenas
             <br />
