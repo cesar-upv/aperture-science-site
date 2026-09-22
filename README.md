@@ -1,69 +1,65 @@
-# Aperture Science · La realidad. Sin límites.
+# Aperture Science
 
-Sitio empresarial e interactivo inspirado en **Portal y Portal 2**, de Valve. Combina la presentación de la Portal Gun con una propuesta académica de planeación empresarial, en una interfaz tecnológica con identidad azul y naranja.
+Sitio estático e interactivo inspirado en Portal y Portal 2: presentación de la Portal Gun, demostración de portales, filosofía empresarial, planeación estratégica, organización y galería de instalaciones.
 
-**Proyecto conceptual de fans.** No representa a Valve, no vende dispositivos reales y no ofrece formularios, compras ni reservas.
+Proyecto académico de fans, sin afiliación con Valve, ventas reales ni captura de datos. React 19 · TypeScript · Vite 8 · Tailwind CSS 4.
 
-![Vista de escritorio](docs/preview.png)
+## Desarrollo
 
-## Contenido
-
-- Landing page, presentación del producto, demostración de portales y galería de instalaciones.
-- Filosofía empresarial: misión, visión y valores.
-- Análisis FODA con **20 factores**: cinco fortalezas, cinco oportunidades, cinco debilidades y cinco amenazas.
-- **Tres objetivos SMART**, cada uno con su estrategia y su plan de acción: **tres estrategias y tres planes** en total.
-- Organigrama, responsabilidades por departamento, cultura de trabajo y cuatro compromisos verificables.
-- Diseño adaptable a móvil, navegación por secciones y recursos gráficos y fuentes locales.
-
-Las metas, indicadores y textos de negocio son propuestas para un ejercicio académico; no describen resultados reales de Aperture Science ni información oficial del juego.
-
-## Ejecutar en tu computadora
-
-Instala **Node.js 24** y abre una terminal dentro de la carpeta que contiene este README y `package.json`.
+Usa Node.js 24, definido en `.nvmrc`:
 
 ```bash
 npm ci
 npm run dev
 ```
 
-Abre [http://127.0.0.1:5173](http://127.0.0.1:5173). Si ese puerto está ocupado, Vite mostrará otro en la terminal.
-
-## Comandos
+Abre la URL que indique Vite (por defecto, `http://127.0.0.1:5173`).
 
 | Comando | Función |
 | --- | --- |
-| `npm run dev` | Desarrollo con actualización automática |
-| `npm run typecheck` | Revisar tipos de TypeScript |
-| `npm test` | Verificar la integridad del FODA y la relación objetivo → estrategia → plan |
-| `npm run build` | Revisar tipos y generar `dist/` |
-| `npm run preview` | Revisar `dist/` en un servidor local |
+| `npm run dev` | Servidor de desarrollo |
+| `npm run typecheck` | Comprobar tipos de TypeScript |
+| `npm test` | Verificar contenido y relaciones del plan empresarial |
+| `npm run build` | Comprobar tipos y generar `dist/` |
+| `npm run preview` | Servir la compilación localmente |
 
-No abras `index.html` del código fuente con doble clic: React necesita el servidor de desarrollo o la versión compilada servida por HTTP.
+## Contenido y mantenimiento
 
-## Subir a GitHub
+[docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las metas son propuestas académicas, no resultados reales.
 
-**Descomprime el ZIP y sube el contenido de esta carpeta como un solo proyecto**, incluyendo `.github/`. No subas el ZIP como sustituto del código, ni `node_modules/` ni `dist/`.
+- `src/data/strategy.ts`: datos del FODA, objetivos, estrategias, planes, organización, cultura y compromisos.
+- `src/data/navigation.ts`: enlaces compartidos de navegación.
+- `src/components/`: secciones e interacciones; los textos de presentación también se mantienen aquí.
+- `src/styles/` y `src/index.css`: estilos generales y ajustes de legibilidad; organización y planeación tienen CSS junto a sus componentes.
+- `src/assets/`: imágenes, fuentes locales y avisos de licencia. Procedencia en [docs/LICENCIAS.md](docs/LICENCIAS.md).
+- `public/`: recursos estáticos, como el favicon.
+- `tests/strategy.test.mjs`: integridad del contenido y correspondencia con la fuente editorial.
 
-Sigue [la guía de GitHub](docs/GITHUB.md) para crear el repositorio y, si quieres, publicar la web con GitHub Pages. La compilación y las pruebas de integridad se ejecutan con cada push y pull request. La publicación requiere ejecutar manualmente el flujo de Pages.
+Las versiones anteriores del contenido y la documentación de entrega se conservan en el historial de Git.
 
-## Estructura
+## Verificación
 
-```text
-.github/workflows/   Verificación y publicación manual
-docs/               Guías de entrega, planeación y licencias
-public/             Recursos estáticos públicos
-src/                Componentes, estilos, contenido y assets
-tests/              Pruebas de integridad del plan empresarial
-index.html          Entrada HTML y metadatos
-vite.config.ts      Configuración de desarrollo y compilación
-package.json        Comandos y dependencias
-package-lock.json   Versiones reproducibles
+Antes de confirmar cambios:
+
+```bash
+npm test
+npm run build
+git diff --check
 ```
 
-React 19 · TypeScript · Vite 8 · Tailwind CSS 4. El resultado de compilación es un sitio estático; no requiere cuentas, claves de API ni backend.
+Si cambias la interfaz, revisa también en el navegador:
 
-## Recursos y documentación
+- Escritorio y móvil (320–1440 px), además de texto al 200%: lectura y ausencia de desbordamiento horizontal.
+- Navegación por teclado: menú móvil, pestañas del plan, controles del producto y demostración, desplegables y galería.
+- Contraste, foco visible y preferencia del sistema de movimiento reducido.
 
-[Contenido vigente del sitio](docs/SITE_CONTENT.md) · [Inventario de assets](ASSETS.md) · [Licencias y atribuciones](docs/LICENCIAS.md) · [Guía de GitHub](docs/GITHUB.md) · [Verificación](docs/VERIFICACION.md)
+Las pruebas de Node no sustituyen la revisión visual ni una auditoría de accesibilidad.
 
-El arte y las marcas del videojuego conservan sus derechos originales. Este repositorio no concede una licencia abierta sobre esos recursos.
+## Compilación y automatización
+
+`dist/` contiene el sitio estático para servir por HTTP. `vite.config.ts` usa `base: './'` y navegación por anclas para permitir alojamiento en una subcarpeta. Las imágenes de componentes se importan desde `src/assets/`; el HTML referencia recursos de `public/` mediante `%BASE_URL%`.
+
+- [.github/workflows/ci.yml](.github/workflows/ci.yml) instala dependencias, compila y ejecuta las pruebas en pushes y pull requests, o manualmente.
+- [.github/workflows/pages.yml](.github/workflows/pages.yml) conserva la publicación opcional en Pages, mediante ejecución manual sobre la rama predeterminada. Subir código no activa este despliegue. Su uso depende de la configuración y disponibilidad de Pages para el repositorio.
+
+`node_modules/`, `dist/`, archivos de entorno y artefactos locales están excluidos por `.gitignore`. El lockfile se versiona para reproducir la instalación.
