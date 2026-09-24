@@ -35,8 +35,8 @@ jobs:
       - name: Instalar dependencias
         run: npm ci
 
-      - name: Comprobar tipos y generar sitio
-        run: npm run build
-
       - name: Ejecutar pruebas
         run: npm test
+
+      - name: Comprobar tipos y generar sitio
+        run: npm run build

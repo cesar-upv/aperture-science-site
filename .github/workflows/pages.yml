@@ -38,11 +38,11 @@ jobs:
       - name: Instalar versiones del lockfile
         run: npm ci
 
-      - name: Comprobar tipos y generar sitio
-        run: npm run build
-
       - name: Verificar requisitos del plan empresarial
         run: npm test
+
+      - name: Comprobar tipos y generar sitio
+        run: npm run build
 
       - name: Preparar archivos públicos
         uses: actions/upload-pages-artifact@v5.0.0

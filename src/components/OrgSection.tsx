@@ -9,7 +9,7 @@ export default function OrgSection() {
       <div className="wrap">
         <SectionLabel number="05">ORGANIZACIÓN</SectionLabel>
         <div className="org-heading">
-          <h2 id="org-title">Quién hace<br /><span>posible la ciencia.</span></h2>
+          <h2 id="org-title">Nuestra<br /><span>organización.</span></h2>
           <p>Una dirección común. Cuatro departamentos que convierten las ideas en dispositivos, materiales y pruebas.</p>
         </div>
         <section className="org-chart" aria-labelledby="org-chart-title">
@@ -41,14 +41,14 @@ export default function OrgSection() {
           </div>
         </section>
       </div>
-      <section className="org-culture" aria-labelledby="culture-title">
+      <section id="forma-de-trabajar" className="org-culture" aria-labelledby="culture-title">
         <div className="wrap org-culture-layout">
-          <div><span className="mono">CULTURA DE TRABAJO</span><h3 id="culture-title">Cuestionar.<br />Probar.<br /><span>Aprender.</span></h3><p>La experimentación y la mejora continua guían nuestra forma de trabajar.</p></div>
+          <div><span className="mono">CULTURA DE TRABAJO</span><h3 id="culture-title">Nuestra forma<br /><span>de trabajar.</span></h3></div>
           <div className="org-practices">{workCulture.pillars.map(pillar => <article key={pillar.title}><h4>{pillar.title}</h4><p>{pillar.description}</p></article>)}</div>
         </div>
       </section>
-      <section className="wrap org-commitments" aria-labelledby="commitments-title">
-        <div className="org-heading"><h3 id="commitments-title">Compromisos<br />de la empresa.</h3><p>Qué nos proponemos mejorar y cómo comprobaremos cada avance. Son metas del programa, aún por cumplir.</p></div>
+      <section id="compromiso" className="wrap org-commitments" aria-labelledby="commitments-title">
+        <div className="org-heading"><h3 id="commitments-title">Nuestro<br />compromiso.</h3><p>Qué nos proponemos mejorar y cómo comprobaremos cada avance. Son metas del programa, aún por cumplir.</p></div>
         <div className="org-commitment-list">{companyCommitments.map(item => <article key={item.id}>
           <div><h4>{item.pillar}</h4><p>{item.commitment}</p></div>
           <dl><div><dt>Meta</dt><dd>{item.indicator}</dd></div><div><dt>Cómo se verifica</dt><dd>{item.verification}</dd></div></dl>

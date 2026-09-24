@@ -14,7 +14,7 @@ export default function Navigation() {
       { rootMargin: "-15% 0px -65% 0px" },
     )
     document
-      .querySelectorAll("main > section[id]")
+      .querySelectorAll("main section[id]")
       .forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])

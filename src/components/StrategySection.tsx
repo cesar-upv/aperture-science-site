@@ -85,19 +85,12 @@ function SmartDetails({ goal }: { goal: StrategicGoal }) {
             <span>T</span> Con plazo
           </dt>
           <dd>
-            {goal.deadline === "Mes 9" ? "Cierre del tercer trimestre del año fiscal." : `${goal.deadline} desde el inicio del programa.`}
+            {goal.deadline}
           </dd>
         </div>
 
       </dl>
-      <div className="strategy-foda-links">
-        <span className="strategy-micro">CONECTADO AL FODA</span>
-        <div>
-          {goal.swotLinks.map((link) => (
-            <span key={link}>{link}</span>
-          ))}
-        </div>
-      </div>
+
     </article>
   )
 }
@@ -131,6 +124,7 @@ function ActionDetails({ goal }: { goal: StrategicGoal }) {
           <strong>{goal.plan.window}</strong>
         </div>
       </div>
+      <p className="strategy-action-intro"><strong>Recursos: </strong>{goal.plan.resources}</p>
       <ol className="strategy-timeline">
         {goal.plan.steps.map((step, index) => (
           <li key={step.title}>
@@ -138,7 +132,7 @@ function ActionDetails({ goal }: { goal: StrategicGoal }) {
               0{index + 1}
             </span>
             <div className="strategy-step-body">
-              <span className="strategy-micro">{step.period}</span>
+
               <h5>{step.title}</h5>
               <p>{step.task}</p>
 
@@ -195,9 +189,9 @@ export default function StrategySection() {
               LA CIENCIA NECESITA UNA DIRECCIÓN.
             </span>
             <h2 id="strategy-title">
-              Planeación
+              Nuestra
               <br />
-              <span>estratégica.</span>
+              <span>estrategia.</span>
             </h2>
           </div>
           <div className="strategy-heading-copy">
@@ -337,7 +331,7 @@ export default function StrategySection() {
                 <p>
                   {view.id === "objetivos"
                     ? "Selecciona un objetivo para consultar su meta, recursos y plazo."
-                    : "Cada objetivo tiene una estrategia y cuatro fases de trabajo."}
+                    : "Consulta las acciones, responsables, recursos y plazos de cada estrategia."}
                 </p>
               </div>
               <div className="strategy-objectives-layout">
@@ -364,7 +358,7 @@ export default function StrategySection() {
                       </span>
                       <strong>{goal.shortTitle}</strong>
                       <span className="strategy-selector-bottom">
-                        {goal.targetNumber} {goal.targetUnit}
+                        {goal.targetUnit}
                         <i aria-hidden="true">↗</i>
                       </span>
                     </button>

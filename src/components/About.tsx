@@ -1,3 +1,4 @@
+import { philosophy } from "../data/strategy"
 import { Arrow, SectionLabel } from "./ui"
 
 export default function About() {
@@ -43,8 +44,7 @@ export default function About() {
               lo impensable.
             </h3>
             <p>
-              Desarrollar tecnologías experimentales que amplíen las
-              posibilidades de interacción con nuestro entorno.
+              {philosophy.mission}
             </p>
           </article>
           <article className="value-card">
@@ -61,8 +61,7 @@ export default function About() {
               sin distancias.
             </h3>
             <p>
-              Imaginar un futuro donde conectar espacios abra nuevas
-              oportunidades para la ciencia y las personas.
+              {philosophy.vision}
             </p>
           </article>
           <article className="value-card">
@@ -78,10 +77,7 @@ export default function About() {
               <br />
               Investigar. Aprender.
             </h3>
-            <p>
-              Cuestionamos, probamos e investigamos para aprender continuamente,
-              combinando curiosidad, precisión y creatividad en cada solución.
-            </p>
+            <dl className="philosophy-values">{philosophy.values.map(value => <div key={value.title}><dt>{value.title}</dt><dd>{value.description}</dd></div>)}</dl>
 
           </article>
         </div>

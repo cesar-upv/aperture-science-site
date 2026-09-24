@@ -111,3 +111,12 @@ body { min-width: 0; }
 }
 .org-section,.strategy-section { overflow-wrap: anywhere; }
 .org-heading > *,.org-culture-layout > *,.org-commitment-list article > *,.org-commitment-list dl > *,.hero-main > * { min-width: 0; }
+
+.philosophy-values dt { font-weight: 600; margin-top: 1rem; }
+.philosophy-values dd { margin: .25rem 0 0; font-size: 1rem; line-height: 1.6; }
+#forma-de-trabajar, #compromiso { scroll-margin-top: 7rem; }
+.strategy-deadline { max-width: 24ch; }
+@media (min-width: 1251px) {
+  .desktop-links { gap: 1rem; flex-wrap: wrap; justify-content: flex-end; }
+  .desktop-links a { font-size: .85rem; }
+}

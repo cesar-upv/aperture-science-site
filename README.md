@@ -63,3 +63,7 @@ Las pruebas de Node no sustituyen la revisión visual ni una auditoría de acces
 - [.github/workflows/pages.yml](.github/workflows/pages.yml) conserva la publicación opcional en Pages, mediante ejecución manual sobre la rama predeterminada. Subir código no activa este despliegue. Su uso depende de la configuración y disponibilidad de Pages para el repositorio.
 
 `node_modules/`, `dist/`, archivos de entorno y artefactos locales están excluidos por `.gitignore`. El lockfile se versiona para reproducir la instalación.
+
+## Actualizar contenido empresarial
+
+Edita `docs/SITE_CONTENT.md` y ejecuta `npm run content:sync` para regenerar los datos tipados del sitio. Conserva los encabezados y etiquetas del documento. Guarda ambos archivos en el mismo commit. `npm test` verifica la sincronización antes de probar el contenido; CI y Pages ejecutan las pruebas antes de compilar. Usa la versión de Node de `.nvmrc` (24).
