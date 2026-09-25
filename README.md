@@ -2,7 +2,7 @@
 
 Sitio estático e interactivo inspirado en Portal y Portal 2: presentación de la Portal Gun, demostración de portales, filosofía empresarial, planeación estratégica, organización y galería de instalaciones.
 
-Proyecto académico de fans, sin afiliación con Valve, ventas reales ni captura de datos. React 19 · TypeScript · Vite 8 · Tailwind CSS 4.
+React 19 · TypeScript · Vite 8 · Tailwind CSS 4. Créditos de recursos en [docs/LICENCIAS.md](docs/LICENCIAS.md).
 
 ## Desarrollo
 
@@ -25,7 +25,7 @@ Abre la URL que indique Vite (por defecto, `http://127.0.0.1:5173`).
 
 ## Contenido y mantenimiento
 
-[docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las metas son propuestas académicas, no resultados reales.
+[docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las cifras son metas del programa, no resultados obtenidos.
 
 - `src/data/strategy.ts`: datos del FODA, objetivos, estrategias, planes, organización, cultura y compromisos.
 - `src/data/navigation.ts`: enlaces compartidos de navegación.
@@ -50,7 +50,7 @@ git diff --check
 Si cambias la interfaz, revisa también en el navegador:
 
 - Escritorio y móvil (320–1440 px), además de texto al 200%: lectura y ausencia de desbordamiento horizontal.
-- Navegación por teclado: menú móvil, pestañas del plan, controles del producto y demostración, desplegables y galería.
+- Navegación por teclado: menú móvil, controles del producto y demostración, desplegables y galería.
 - Contraste, foco visible y preferencia del sistema de movimiento reducido.
 
 Las pruebas de Node no sustituyen la revisión visual ni una auditoría de accesibilidad.
@@ -67,3 +67,7 @@ Las pruebas de Node no sustituyen la revisión visual ni una auditoría de acces
 ## Actualizar contenido empresarial
 
 Edita `docs/SITE_CONTENT.md` y ejecuta `npm run content:sync` para regenerar los datos tipados del sitio. Conserva los encabezados y etiquetas del documento. Guarda ambos archivos en el mismo commit. `npm test` verifica la sincronización antes de probar el contenido; CI y Pages ejecutan las pruebas antes de compilar. Usa la versión de Node de `.nvmrc` (24).
+
+## Evidencia de la Unidad 1
+
+Capturas organizadas, presentación editable y matriz de cumplimiento en [docs/evidencias/README.md](docs/evidencias/README.md).
