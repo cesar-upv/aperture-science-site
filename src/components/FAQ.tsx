@@ -2,7 +2,7 @@ import { SectionLabel } from "./ui"
 const faqs = [
   [
     "¿Qué es exactamente la Portal Gun?",
-    "Es el dispositivo ficticio de Aperture Science en los videojuegos Portal y Portal 2. Permite colocar dos portales conectados y manipular objetos del entorno durante las pruebas.",
+    "Es el dispositivo de portales de Aperture Science. Permite colocar dos portales conectados y manipular objetos del entorno durante las pruebas.",
   ],
   [
     "¿Los portales funcionan en ambas direcciones?",
@@ -17,8 +17,8 @@ const faqs = [
     "El dispositivo mantiene un portal de cada color. Al colocar uno nuevo, se sustituye el anterior del mismo color y se conserva la conexión con el otro.",
   ],
   [
-    "¿Puedo comprar el dispositivo o reservar una prueba real?",
-    "Este sitio es un proyecto conceptual de fans, no una tienda ni una página oficial de Valve. La demostración de portales es interactiva y ficticia; no ofrecemos compras ni reservas de pruebas reales.",
+    "¿Cómo se participa en el programa de pruebas?",
+    "Recursos Humanos coordina la selección de voluntarios, las entrevistas y la información sobre cada prueba. La participación requiere conocer las condiciones, completar el expediente y otorgar consentimiento.",
   ],
 ]
 export default function FAQ() {

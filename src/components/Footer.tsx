@@ -1,4 +1,4 @@
-import { Arrow, Brand } from "./ui"
+import { Brand } from "./ui"
 import { navLinks } from "../data/navigation"
 export default function Footer() {
   return (
@@ -29,29 +29,11 @@ export default function Footer() {
         </div>
         <div className="footer-bottom">
           <p>
-            Proyecto conceptual de fans inspirado en <strong>Portal</strong> y{" "}
-            <strong>Portal 2</strong>. Portal y Aperture Science pertenecen a
-            Valve. Sin afiliación oficial. Sin venta real de productos.
+            Aperture Science · Investigación, desarrollo y tecnologías experimentales.
           </p>
-          <div className="footer-sources">
-            <a
-              href="https://store.steampowered.com/app/620/Portal_2/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              CONOCE EL VIDEOJUEGO <Arrow diagonal />
-            </a>
-            <a
-              href="https://theportalwiki.com/wiki/Handheld_Portal_Device"
-              target="_blank"
-              rel="noreferrer"
-            >
-              RECURSOS: PORTAL WIKI <Arrow diagonal />
-            </a>
           </div>
-        </div>
         <div className="footer-last mono">
-          <span>APERTURE SCIENCE / PROYECTO CONCEPTUAL</span>
+          <span>APERTURE SCIENCE / INVESTIGACIÓN Y DESARROLLO</span>
           <span>
             <i className="status-dot" /> LA CIENCIA CONTINÚA.
           </span>

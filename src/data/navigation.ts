@@ -1,10 +1,7 @@
 export const navLinks = [
-  { label: "Portal Gun", id: "portal-gun" },
-  { label: "Tecnología", id: "tecnologia" },
-  { label: "Nosotros", id: "nosotros" },
-  { label: "Nuestra estrategia", id: "estrategia" },
-  { label: "Nuestra organización", id: "estructura" },
-  { label: "Nuestra forma de trabajar", id: "forma-de-trabajar" },
-  { label: "Nuestro compromiso", id: "compromiso" },
-  { label: "Instalaciones", id: "instalaciones" },
+  { label: "Tecnología", id: "portal-gun" },
+  { label: "Estrategia", id: "estrategia" },
+  { label: "Organización", id: "estructura" },
+  { label: "Cultura", id: "forma-de-trabajar" },
+  { label: "Compromiso", id: "compromiso" },
 ]

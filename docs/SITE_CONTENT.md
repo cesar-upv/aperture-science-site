@@ -2,13 +2,9 @@
 
 ## Alcance y supuestos
 
-Aperture Science prepara un programa de demostraciones y pilotos institucionales de la Portal Gun, dentro del universo de Portal.
+Aperture Science desarrolla tecnologías de portales, materiales experimentales y programas de pruebas controladas.
 
-Interpretación creativa inspirada en Portal de Valve; no forma parte del canon del juego.
-
-Se supone un equipo de 4 personas, una cámara de pruebas, y un dispositivo ficticio.
-
-El cumplimiento depende de confirmar estos recursos y la participación institucional. Las metas no representan resultados, ventas ni acuerdos obtenidos.
+Las cifras del plan son metas por alcanzar; su seguimiento corresponde a los departamentos responsables.
 
 ---
 
@@ -227,3 +223,169 @@ Los departamentos trabajan de forma interdependiente, coordinando diseño, produ
 - **Compromiso**: Mantener la rentabilidad de las tecnologías secundarias sin sacrificar la calidad de los materiales.
 - **Indicador**: Reducción y mantenimiento de un 20% menos en el presupuesto de producción de geles.
 - **Forma en que se verificará**: Análisis del estado de resultados al cierre de cada trimestre fiscal y cotejo de facturas con los nuevos proveedores de compuestos sintéticos.
+
+---
+
+## Adaptación editorial para el sitio
+
+Síntesis empresarial del contenido anterior. Los canales de comunicación, puestos y ciclo de mejora concretan las funciones descritas. Las metas de reducción relativa del 15% y umbral absoluto del 5% se evalúan por separado.
+
+```json
+{
+  "goals": [
+    {
+      "title": "Portales más fiables",
+      "metric": "−15%",
+      "unit": "en la tasa de fallas críticas",
+      "deadline": "12 meses",
+      "strategy": "Simulaciones virtuales",
+      "description": "Anticipamos sobrecargas con IA y validamos la calibración antes de las pruebas físicas.",
+      "connection": "Nuestra infraestructura e ingeniería permiten reducir los riesgos de seguridad.",
+      "actions": [
+        "Calibrar el entorno y cargar fallas históricas.",
+        "Ejecutar 10,000 simulaciones.",
+        "Validar los parches de calibración cuántica."
+      ],
+      "owner": "Investigación y Desarrollo",
+      "resources": "Servidores, IA central y $1,500,000 de desarrollo."
+    },
+    {
+      "title": "Producción más eficiente",
+      "metric": "−20%",
+      "unit": "en costos de producción de geles",
+      "deadline": "Cierre del tercer trimestre · 9 meses",
+      "strategy": "Alianzas químicas",
+      "description": "Colaboramos con proveedores para desarrollar polímeros sintéticos y sustituir insumos costosos.",
+      "connection": "Respondemos a los altos costos y a la escasez de materias primas.",
+      "actions": [
+        "Auditar proveedores y compartir fórmulas protegidas.",
+        "Validar geles sintéticos en cámaras de prueba.",
+        "Formalizar la alianza de suministro."
+      ],
+      "owner": "Manufactura y Producción",
+      "resources": "Laboratorios, fórmulas, apoyo legal y $500,000 de licitación."
+    },
+    {
+      "title": "Participación voluntaria",
+      "metric": "70",
+      "unit": "nuevos voluntarios integrados",
+      "deadline": "6 meses",
+      "strategy": "Reclutamiento informado",
+      "description": "Acercamos el programa a nuevos participantes mediante difusión urbana y compensaciones claras.",
+      "connection": "Atendemos las debilidades éticas y la desconfianza con consentimiento informado.",
+      "actions": [
+        "Preparar documentación y difusión urbana.",
+        "Entrevistar e informar a los candidatos.",
+        "Integrar a 70 voluntarios y gestionar compensaciones."
+      ],
+      "owner": "Recursos Humanos y Reclutamiento",
+      "resources": "Publicidad, recepción y $60 USD por participante."
+    }
+  ],
+  "values": [
+    "Investigar más allá de lo conocido.",
+    "Calibrar y verificar cada detalle.",
+    "Diseñar nuevas alternativas.",
+    "Aprender de cada prueba.",
+    "Convertir ideas en soluciones."
+  ],
+  "roles": [
+    {
+      "title": "Dirección General",
+      "function": "Define el rumbo de Aperture Science.",
+      "responsibility": "Prioriza objetivos, asigna recursos y supervisa a las cuatro direcciones de área."
+    },
+    {
+      "title": "Responsable de Manufactura",
+      "function": "Coordina ensamblaje y síntesis.",
+      "responsibility": "Asegura materiales, gestiona proveedores y controla los costos de producción."
+    },
+    {
+      "title": "Responsable de Investigación",
+      "function": "Lidera el desarrollo experimental.",
+      "responsibility": "Coordina simulaciones, valida prototipos y supervisa la calibración del hardware."
+    },
+    {
+      "title": "Responsable de Personas",
+      "function": "Coordina personal y reclutamiento.",
+      "responsibility": "Informa a los voluntarios, verifica expedientes y gestiona las compensaciones."
+    },
+    {
+      "title": "Responsable de Calidad y Seguridad",
+      "function": "Supervisa dispositivos y cámaras.",
+      "responsibility": "Autoriza pruebas según los estándares, registra incidentes y detiene operaciones de riesgo."
+    }
+  ],
+  "culture": [
+    {
+      "title": "Nuestra cultura de trabajo",
+      "text": "Curiosidad para explorar, precisión para probar y aprendizaje para mejorar. Documentamos cada hallazgo y priorizamos la seguridad antes de avanzar.",
+      "tags": [
+        "Investigar",
+        "Verificar",
+        "Aprender"
+      ]
+    },
+    {
+      "title": "Cómo lideramos",
+      "text": "Lideramos con tecnología y resultados medibles. La dirección fija prioridades y cada responsable decide con evidencia de simulaciones, costos y pruebas.",
+      "tags": [
+        "Prioridades claras",
+        "Decisiones con datos"
+      ]
+    },
+    {
+      "title": "Cómo nos comunicamos",
+      "text": "La dirección comunica prioridades a las áreas. Los responsables reportan avances mediante un tablero central, bitácoras de prueba y alertas automatizadas en tiempo real.",
+      "tags": [
+        "Tablero central",
+        "Bitácoras",
+        "Alertas"
+      ]
+    },
+    {
+      "title": "Cómo impulsamos a nuestro equipo",
+      "text": "Reconocemos aportaciones técnicas y abrimos oportunidades para participar en nuevos desarrollos. Los voluntarios reciben información clara y una compensación de $60 USD al finalizar las pruebas.",
+      "tags": [
+        "Reconocimiento",
+        "Innovación",
+        "Participación"
+      ]
+    },
+    {
+      "title": "Trabajamos en equipo",
+      "text": "Investigación diseña, Manufactura produce, Personas coordina participantes y Calidad verifica. Compartimos resultados y resolvemos incidencias antes de autorizar la siguiente prueba.",
+      "tags": [
+        "Diseñar → Producir",
+        "Coordinar → Verificar"
+      ]
+    }
+  ],
+  "standards": [
+    {
+      "title": "Fiabilidad",
+      "text": "Dispositivos calibrados y validados para prevenir sobrecargas y proteger al usuario.",
+      "metric": "<5%",
+      "unit": "de fallas de hardware en pruebas durante los primeros 12 meses",
+      "review": "Revisión mensual de registros de estrés y contraste con 10,000 simulaciones.",
+      "owner": "Calidad e Investigación"
+    },
+    {
+      "title": "Participación informada",
+      "text": "Pruebas voluntarias con condiciones claras, documentación completa y compensación.",
+      "metric": "100%",
+      "unit": "de nuevos participantes con expediente, contrato y pago procesado",
+      "review": "Auditoría trimestral de expedientes, contratos y comprobantes de $60 USD.",
+      "owner": "Recursos Humanos"
+    },
+    {
+      "title": "Eficiencia",
+      "text": "Materiales de calidad y costos controlados en nuestras tecnologías secundarias.",
+      "metric": "−20%",
+      "unit": "en el presupuesto de producción de geles",
+      "review": "Revisión trimestral de resultados y facturas de proveedores sintéticos.",
+      "owner": "Manufactura y Dirección"
+    }
+  ]
+}
+```

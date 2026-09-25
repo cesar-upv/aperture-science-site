@@ -69,7 +69,8 @@ const companyCommitments = blocks('Compromisos de la empresa').map((block, i) =>
   indicator: field(block.body, 'Indicador'), verification: field(block.body, 'Forma en que se verificará'),
 }))
 const planningContext = { assumptions: section('Alcance y supuestos') }
-const data = { philosophy, swot, strategicGoals, orgStructure, workCulture, companyCommitments, planningContext }
+const webContent = JSON.parse(section("Adaptación editorial para el sitio").match(/```json\n([\s\S]*?)\n```/)[1])
+const data = { webContent, philosophy, swot, strategicGoals, orgStructure, workCulture, companyCommitments, planningContext }
 const output = '// Generado por npm run content:sync desde docs/SITE_CONTENT.md. No editar directamente.\n\n' +
   Object.entries(data).map(([key, value]) => `export const ${key} = ${JSON.stringify(value, null, 2)}\n`).join('\n') +
   '\nexport type StrategicGoal = (typeof strategicGoals)[number]\n'

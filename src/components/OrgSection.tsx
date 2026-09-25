@@ -1,59 +1,20 @@
-import { orgStructure, workCulture, companyCommitments } from "../data/strategy"
-import { SectionLabel } from "./ui"
+import { orgStructure, webContent } from "../data/strategy"
 import "./OrgSection.css"
 
 export default function OrgSection() {
   const { ceo, departments } = orgStructure
-  return (
-    <section className="org-section section-space" id="estructura" aria-labelledby="org-title">
-      <div className="wrap">
-        <SectionLabel number="05">ORGANIZACIÓN</SectionLabel>
-        <div className="org-heading">
-          <h2 id="org-title">Nuestra<br /><span>organización.</span></h2>
-          <p>Una dirección común. Cuatro departamentos que convierten las ideas en dispositivos, materiales y pruebas.</p>
-        </div>
-        <section className="org-chart" aria-labelledby="org-chart-title">
-          <h3 id="org-chart-title">Organigrama</h3>
-          <ul className="org-tree" aria-label="Jerarquía de Aperture Science">
-            <li>
-              <div className="org-director"><h4>{ceo.title}</h4><p>{ceo.description}</p></div>
-              <ul className="org-branches">
-                {departments.map(dept => (
-                  <li key={dept.id}>
-                    <a className="org-node" href={`#department-${dept.id}`}>{dept.title.replace("Dpto. de ", "")}<span aria-hidden="true">↓</span></a>
-                    {dept.subareas.length > 0 && <ul className="org-leaves">{dept.subareas.map(sub => <li key={sub.id}>{sub.title}</li>)}</ul>}
-                  </li>
-                ))}
-              </ul>
-            </li>
-          </ul>
-        </section>
-        <section className="org-functions" aria-labelledby="org-functions-title">
-          <h3 id="org-functions-title">Responsabilidades por departamento</h3>
-          <div className="org-department-details">
-            {departments.map(dept => (
-              <article key={dept.id} id={`department-${dept.id}`}>
-                <h4>{dept.title.replace("Dpto. de ", "")}</h4>
-                <p>{dept.description}</p>
-                {dept.subareas.length > 0 && <details><summary>Funciones de {dept.subareas.length === 1 ? "su área" : "sus áreas"}</summary><dl>{dept.subareas.map(sub => <div key={sub.id}><dt>{sub.title}</dt><dd>{sub.description}</dd></div>)}</dl></details>}
-              </article>
-            ))}
-          </div>
-        </section>
-      </div>
-      <section id="forma-de-trabajar" className="org-culture" aria-labelledby="culture-title">
-        <div className="wrap org-culture-layout">
-          <div><span className="mono">CULTURA DE TRABAJO</span><h3 id="culture-title">Nuestra forma<br /><span>de trabajar.</span></h3></div>
-          <div className="org-practices">{workCulture.pillars.map(pillar => <article key={pillar.title}><h4>{pillar.title}</h4><p>{pillar.description}</p></article>)}</div>
-        </div>
-      </section>
-      <section id="compromiso" className="wrap org-commitments" aria-labelledby="commitments-title">
-        <div className="org-heading"><h3 id="commitments-title">Nuestro<br />compromiso.</h3><p>Qué nos proponemos mejorar y cómo comprobaremos cada avance. Son metas del programa, aún por cumplir.</p></div>
-        <div className="org-commitment-list">{companyCommitments.map(item => <article key={item.id}>
-          <div><h4>{item.pillar}</h4><p>{item.commitment}</p></div>
-          <dl><div><dt>Meta</dt><dd>{item.indicator}</dd></div><div><dt>Cómo se verifica</dt><dd>{item.verification}</dd></div></dl>
-        </article>)}</div>
-      </section>
-    </section>
-  )
+  return <>
+    <section className="company-section company-light" id="estructura" aria-labelledby="org-title"><div className="wrap">
+      <header className="company-heading"><span className="mono">02 / PERSONAS Y ESTRUCTURA</span><h2 id="org-title">Nuestra organización</h2><p>Una dirección común. Cuatro áreas que convierten ideas en dispositivos, materiales y pruebas.</p></header>
+      <section className="company-block org-chart" id="organigrama"><h3>Nuestra estructura</h3><ul className="org-tree" aria-label="Jerarquía de Aperture Science"><li><div className="org-director"><span className="mono">DIRECCIÓN</span><h4>{ceo.title}</h4></div><ul className="org-branches">{departments.map(dept => <li key={dept.id}><a className="org-node" href={`#department-${dept.id}`}>{dept.title.replace("Dpto. de ", "")}<span aria-hidden="true">↓</span></a>{dept.subareas.length > 0 && <ul className="org-leaves">{dept.subareas.map(sub => <li key={sub.id}>{sub.title}</li>)}</ul>}</li>)}</ul></li></ul><p className="company-note">Dirección General → Departamentos → Unidades especializadas</p></section>
+      <section className="company-block" id="areas"><h3>Nuestras áreas</h3><div className="company-grid two">{departments.map(dept => <article className="company-card" key={dept.id} id={`department-${dept.id}`}><h4>{dept.title.replace("Dpto. de ", "")}</h4><p>{dept.description}</p>{dept.subareas.length > 0 && <details><summary>Unidades especializadas</summary><dl>{dept.subareas.map(sub => <div key={sub.id}><dt>{sub.title}</dt><dd>{sub.description}</dd></div>)}</dl></details>}</article>)}</div></section>
+      <section className="company-block" id="equipo"><h3>Nuestro equipo</h3><p className="company-intro">Responsabilidades claras en cada etapa, desde la primera idea hasta la última verificación.</p><div className="company-grid team-grid">{webContent.roles.map((role,i) => <article className="company-card team-card" key={role.title}><div className="team-portrait" role="img" aria-label={`Espacio reservado para retrato de ${role.title}`}><span className="portrait-silhouette" aria-hidden="true"><i /></span><span className="mono">RETRATO / 0{i+1}</span></div><h4>{role.title}</h4><p>{role.function}</p><dl><dt>Responsabilidades</dt><dd>{role.responsibility}</dd></dl></article>)}</div></section>
+    </div></section>
+    <section className="company-section company-dark" id="forma-de-trabajar" aria-labelledby="culture-title"><div className="wrap"><header className="company-heading"><span className="mono">03 / COLABORACIÓN</span><h2 id="culture-title">Nuestra forma de trabajar</h2><p>El siguiente descubrimiento comienza con una buena coordinación.</p></header><div className="culture-grid">{webContent.culture.map((item,i) => <section className="company-card" id={`cultura-${i+1}`} key={item.title}><span className="mono">03 / 0{i+1}</span><h3>{item.title}</h3><p>{item.text}</p><div className="company-tags">{item.tags.map(tag => <span className="company-tag" key={tag}>{tag}</span>)}</div></section>)}</div></div></section>
+    <section className="company-section company-light" id="compromiso" aria-labelledby="commitments-title"><div className="wrap"><header className="company-heading"><span className="mono">04 / MEJORA CONTINUA</span><h2 id="commitments-title">Nuestro compromiso</h2><p>La confianza se construye con criterios claros, resultados verificables y acciones de mejora.</p></header>
+      <section className="company-block" id="estandares"><h3>Nuestros estándares</h3><div className="company-grid three">{webContent.standards.map(item => <article className="company-card" key={item.title}><h4>{item.title}</h4><p>{item.text}</p></article>)}</div></section>
+      <section className="company-block" id="resultados"><h3>Medimos nuestros resultados</h3><p className="company-intro">Indicadores de seguimiento y metas por alcanzar; no representan resultados obtenidos.</p><div className="company-grid three">{webContent.standards.map(item => <article className="company-card" key={item.title}><h4>{item.title}</h4><strong className="company-metric">{item.metric}</strong><p>{item.unit}</p></article>)}</div><p className="company-note">Fiabilidad: el umbral de fallas inferior al 5% complementa la meta de reducir la tasa inicial en un 15%.</p></section>
+      <section className="company-block" id="mejora"><h3>Seguimiento y mejora</h3><div className="company-grid three">{webContent.standards.map(item => <article className="company-card" key={item.title}><h4>{item.owner}</h4><p>{item.review}</p></article>)}</div><ol className="improvement-cycle"><li><strong>01 / Revisar</strong><span>Comparar registros con las metas.</span></li><li><strong>02 / Corregir</strong><span>Identificar causas y asignar acciones, responsable y plazo.</span></li><li><strong>03 / Verificar</strong><span>Comprobar el efecto y actualizar los procedimientos.</span></li></ol></section>
+    </div></section>
+  </>
 }

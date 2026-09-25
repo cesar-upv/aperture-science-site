@@ -3,7 +3,6 @@ import Navigation from "./components/Navigation"
 import Hero from "./components/Hero"
 import Product from "./components/Product"
 import PortalDemo from "./components/PortalDemo"
-import About from "./components/About"
 import StrategySection from "./components/StrategySection"
 import OrgSection from "./components/OrgSection"
 import Facilities from "./components/Facilities"
@@ -34,7 +33,6 @@ export default function App() {
         </div>
         <Product />
         <PortalDemo />
-        <About />
         <StrategySection />
         <OrgSection />
         <Facilities />
