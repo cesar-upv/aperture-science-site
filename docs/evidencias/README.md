@@ -2,13 +2,13 @@
 
 [Presentación editable: Unidad-1-Aperture-Science.pptx](Unidad-1-Aperture-Science.pptx)
 
-14 diapositivas con capturas del sitio y títulos ordenados según los cuatro apartados solicitados. Los PNG se incluyen por separado para reutilizarlos. Los retratos reservados son intencionales.
+15 diapositivas con capturas del sitio y títulos ordenados según los cuatro apartados solicitados. Los PNG se incluyen por separado para reutilizarlos. Los retratos reservados son intencionales.
 
 ## Correspondencia
 
 | Apartado | Evidencia |
 | --- | --- |
-| 1. Nuestra estrategia / 1.1 Nuestra filosofía | 01 |
+| 1. Nuestra estrategia / 1.1 Nuestra filosofía | 00–01 |
 | 1.2 Nuestro panorama | 02 |
 | 1.3 Hacia dónde vamos | 03 |
 | 1.4 Nuestras estrategias | 04 |
@@ -37,9 +37,9 @@ La versión revisada presenta los cuatro apartados como secciones hermanas, con 
 - `npm run build`: TypeScript y compilación de producción.
 - `git diff --check`: sin errores de espacios.
 - Chromium: títulos y jerarquía exactos, enlaces internos válidos, cinco retratos reservados, activación y reinicio de portales, apertura y cierre de galería, menú móvil y retorno de foco con Escape.
-- Sin desbordamiento horizontal a 320, 390, 768 y 1440 px, ni con texto al 200% en escritorio; sin errores JavaScript durante las comprobaciones.
+- Sin desbordamiento horizontal a 320, 390, 768, 1024, 1440 y 1920 px, ni con texto al 200% en escritorio; sin errores JavaScript durante las comprobaciones.
 
-Browser Preview se utilizó para inspección y capturas iniciales; `preview-referencia.png` conserva una de ellas. Por su menor nitidez, las 14 capturas de entrega se regeneraron en Chromium a 1440 × 1080 CSS px, escala 2 (2880 × 2160 PNG). No se alteró el contenido del sitio para tomarlas. La presentación coloca una captura por diapositiva, sin recortarla.
+Browser Preview se utilizó para inspección y capturas iniciales; `preview-referencia.png` conserva una de ellas. Por su menor nitidez, las 15 capturas de entrega se regeneraron en Chromium a 1440 × 1080 CSS px, escala 2 (2880 × 2160 PNG). No se alteró el contenido del sitio para tomarlas. La presentación coloca una captura por diapositiva, sin recortarla.
 
 ## Regeneración
 
@@ -50,3 +50,9 @@ python scripts/capture-evidence.py
 ```
 
 El script comprueba la estructura y las interacciones, reemplaza los PNG y genera la presentación. El navegador local de revisión no publica el sitio. El push, PR y entrega quedan a cargo del responsable del repositorio.
+
+## Actualización visual
+
+La estrategia se recorre ahora en cinco capítulos con fondos alternos, navegación por anclas, fotografías y laterales gráficos que acompañan la lectura en escritorio. Atlas y P-body ilustran la colaboración; los puestos conservan sus retratos reservados. Se incorporaron esquemas vectoriales propios y movimientos discretos que respetan la preferencia de movimiento reducido. Los recursos nuevos y su procedencia están en [LICENCIAS.md](../LICENCIAS.md).
+
+Las capturas y la presentación se regeneraron tras el rediseño. La evidencia `00` muestra la portada de estrategia y la `01`, la filosofía completa. La verificación también cubre la navegación por capítulos, la permanencia del indicador de estrategia en el header y la ausencia de animación decorativa con movimiento reducido.

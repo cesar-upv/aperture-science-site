@@ -1,6 +1,6 @@
 """Run with playwright and python-pptx installed; requires npm run dev."""
 from pathlib import Path
-from playwright.sync_api import sync_playwright
+from playwright.sync_api import sync_playwright, expect
 from pptx import Presentation
 from pptx.util import Inches, Pt
 from pptx.dml.color import RGBColor
@@ -9,7 +9,8 @@ root = Path(__file__).resolve().parents[1]
 out = root / 'docs/evidencias'
 out.mkdir(parents=True, exist_ok=True)
 shots = [
- ('01-estrategia-filosofia','estrategia',0,'1. Nuestra estrategia · Nuestra filosofía'),
+ ('00-estrategia-portada','estrategia',0,'1. Nuestra estrategia'),
+ ('01-estrategia-filosofia','filosofia',0,'1.1 Nuestra filosofía'),
  ('02-panorama','panorama',0,'1.2 Nuestro panorama'),
  ('03-objetivos','objetivos',0,'1.3 Hacia dónde vamos'),
  ('04-estrategias','estrategias',0,'1.4 Nuestras estrategias'),
@@ -50,7 +51,7 @@ with sync_playwright() as p:
  assert page.locator('dialog').is_visible()
  page.keyboard.press('Escape')
  assert not page.locator('dialog').is_visible()
- for width in [320,390,768,1440]:
+ for width in [320,390,768,1024,1440,1920]:
   page.set_viewport_size({'width':width,'height':1080})
   assert page.evaluate('document.documentElement.scrollWidth<=innerWidth'),width
  page.set_viewport_size({'width':320,'height':800})
@@ -62,8 +63,15 @@ with sync_playwright() as p:
  page.evaluate('document.documentElement.style.fontSize="200%"')
  assert page.evaluate('document.documentElement.scrollWidth<=innerWidth')
  page.evaluate('document.documentElement.style.fontSize=""')
+ # Chapter navigation must retain the parent section's active header link.
+ page.locator('.strategy-chapters a[href="#objetivos"]').click()
+ expect(page.locator('.desktop-links a[href="#estrategia"]')).to_have_attribute('aria-current', 'location')
+ assert page.evaluate('document.querySelector("#objetivos").getBoundingClientRect().top >= document.querySelector(".site-header").getBoundingClientRect().bottom')
+ assert page.locator('.cover-coordinate .science-mark').evaluate('(e)=>getComputedStyle(e).animationName')=='none'
+ assert len(set(page.locator('.story-panel').evaluate_all('(es)=>es.map(e=>getComputedStyle(e).backgroundColor)')))==5
  for name,id,offset,title in shots:
   page.evaluate('([id,offset])=>{const e=document.getElementById(id);scrollTo({top:scrollY+e.getBoundingClientRect().top-105+offset,behavior:"instant"})}',[id,offset])
+  page.wait_for_function('Array.from(document.images).filter(i=>{const r=i.getBoundingClientRect();return r.top<innerHeight&&r.bottom>0}).every(i=>i.complete&&i.naturalWidth>0)')
   page.screenshot(path=str(out/f'{name}.png'),animations='disabled')
  assert not errors,errors
  browser.close()
@@ -76,4 +84,4 @@ for name,id,offset,title in shots:
  par=box.text_frame.paragraphs[0];par.text=title;par.font.size=Pt(19);par.font.color.rgb=RGBColor.from_string('88DFFF')
  slide.shapes.add_picture(str(out/f'{name}.png'),0,Inches(.7),width=Inches(12),height=Inches(9))
 prs.save(out/'Unidad-1-Aperture-Science.pptx')
-print('PASS: estructura, enlaces, retratos, interacciones, 4 anchos, texto 200%, sin errores JS. 14 capturas y PPTX generados.')
+print('PASS: estructura, enlaces, retratos, interacciones, 6 anchos, texto 200%, navegación por apartados, movimiento reducido, sin errores JS. 15 capturas y PPTX generados.')
