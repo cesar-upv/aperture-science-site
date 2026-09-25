@@ -31,7 +31,7 @@ export default function Footer() {
           <p>
             Aperture Science · Investigación, desarrollo y tecnologías experimentales.
           </p>
-          </div>
+        </div>
         <div className="footer-last mono">
           <span>APERTURE SCIENCE / INVESTIGACIÓN Y DESARROLLO</span>
           <span>

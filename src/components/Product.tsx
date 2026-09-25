@@ -135,7 +135,7 @@ export default function Product() {
               </article>
             ))}
             <p className="product-note mono">
-              TECNOLOGÍA FICTICIA DEL UNIVERSO PORTAL.
+              TECNOLOGÍA DE PORTALES DE APERTURE SCIENCE.
             </p>
           </div>
         </div>

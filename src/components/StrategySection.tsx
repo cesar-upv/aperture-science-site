@@ -1,6 +1,5 @@
 import { philosophy, swot, webContent } from "../data/strategy"
 import "./StrategySection.css"
-import "../styles/company.css"
 
 export default function StrategySection() {
   return <section className="company-section company-dark" id="estrategia" aria-labelledby="strategy-title">

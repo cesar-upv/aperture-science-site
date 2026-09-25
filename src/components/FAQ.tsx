@@ -10,7 +10,7 @@ const faqs = [
   ],
   [
     "¿Puedo abrir un portal en cualquier superficie?",
-    "No. La superficie debe ser compatible, plana y suficientemente grande. Dentro del juego, reconocer dónde colocar cada portal es parte del desafío.",
+    "No. La superficie debe ser compatible, plana y suficientemente grande. En las cámaras de prueba, identificar las superficies adecuadas forma parte del protocolo.",
   ],
   [
     "¿Cuántos portales se pueden abrir a la vez?",

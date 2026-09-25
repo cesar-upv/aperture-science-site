@@ -112,7 +112,7 @@ export default function PortalDemo() {
               loading="lazy"
             />
             <span className="stage-note">
-              VISUALIZACIÓN CONCEPTUAL · CONEXIÓN BIDIRECCIONAL
+              DEMOSTRACIÓN INTERACTIVA · CONEXIÓN BIDIRECCIONAL
             </span>
           </div>
           <div className="demo-controls">

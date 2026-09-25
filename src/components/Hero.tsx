@@ -139,7 +139,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-system">
-          <i className="status-dot" /> PROYECTO CONCEPTUAL / PORTAL
+          <i className="status-dot" /> APERTURE / CIENCIA EXPERIMENTAL
         </div>
       </div>
     </section>
