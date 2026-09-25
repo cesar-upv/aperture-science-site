@@ -1,0 +1,225 @@
+/* Editorial chapters: contrast, photography and diagrams break up long reading. */
+.strategy-story { padding: 0; }
+.strategy-cover { position: relative; isolation: isolate; padding-top: 80px; overflow: hidden; }
+.strategy-cover-image { position: absolute; inset: 0; z-index: -1; }
+.strategy-cover-image img { width: 100%; height: 100%; object-fit: cover; object-position: 65% 50%; }
+.strategy-cover-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg,#081923 5%,#081923ec 30%,#08192336 100%),linear-gradient(0deg,#081923,transparent 60%); }
+.strategy-cover-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 70px; align-items: center; min-height: 390px; }
+.strategy-cover .company-heading { margin-bottom: 40px; }
+.strategy-cover h2 { font-size: clamp(4rem,7.3vw,7rem); max-width: 10ch; }
+.strategy-cover .company-heading p { max-width: 39ch; }
+.story-explore { display: inline-flex; align-items: center; gap: 24px; margin-top: 28px; border-bottom: 1px solid #77d9fa; min-height: 44px; font-size: 1rem; }
+.story-explore span { font-size: 1.5rem; color: #88dfff; transition: transform .25s; }
+.story-explore:hover span { transform: translateY(4px); }
+.cover-coordinate { justify-self: center; width: min(100%,300px); color: #b5edff; }
+.cover-coordinate > .science-mark { width: 100%; filter: drop-shadow(0 0 25px #2bb2ea); }
+.cover-coordinate > .mono { display: block; text-align: center; font-size: .75rem; margin-top: 12px; }
+.strategy-chapters { display: grid; grid-template-columns: repeat(5,minmax(0,1fr)); border-top: 1px solid #496271; margin-top: 32px; }
+.strategy-chapters a { display: flex; align-items: center; gap: 12px; padding: 25px 15px; border-right: 1px solid #496271; font-size: 1rem; transition: background .2s; }
+.strategy-chapters a:first-child { border-left: 1px solid #496271; }
+.strategy-chapters .mono { color: #8ed9f4; font-size: .75rem; }
+.strategy-chapters a > span:last-child { margin-left: auto; color: #8ed9f4; }
+.strategy-chapters a:hover { background: #88dfff18; }
+.story-panel { padding: 76px 0; position: relative; scroll-margin-top: 80px; }
+.story-split { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: clamp(32px,5vw,80px); align-items: start; }
+.story-side { position: sticky; top: 115px; }
+.chapter-label { color: var(--company-accent); font-size: .75rem; letter-spacing: .13em; display: block; }
+.story-side h3,.story-section-heading h3 { font: 500 clamp(2.5rem,3.8vw,3.8rem)/1.03 var(--font-display); margin: 20px 0 24px; }
+.story-side > p { color: var(--company-muted); font-size: 1.125rem; line-height: 1.65; max-width: 32ch; }
+.story-content { min-width: 0; }
+.science-mark { display: block; width: 64px; height: auto; color: var(--company-accent); flex-shrink: 0; }
+.mark-orange { stroke: #ee873b; }
+#filosofia { background: #f4f4ed; --company-card: #ffffffb0; --company-line: #c9d3cc; }
+.philosophy-art { margin-top: 32px; width: min(100%,245px); }
+.philosophy-art .science-mark { width: 190px; }
+.philosophy-art .mono { display: block; color: #526861; font-size: .7rem; margin-top: 16px; }
+.philosophy-cards .company-card { border: 0; border-top: 2px solid #2b819e; padding: 24px; }
+.philosophy-cards .company-card:nth-child(2) { border-color: #c36b28; }
+.philosophy-cards h4 { font-size: 2.1rem; }
+.story-content .company-values { grid-template-columns: repeat(3,minmax(0,1fr)); gap: 25px 22px; margin-top: 35px; }
+.story-content .company-values article { border-color: #c4d0c9; }
+.story-content .company-values .mono { color: #9a4b19; }
+.panorama-panel { background: #102e42; --company-card: #17394d; --company-line: #426073; background-image: radial-gradient(ellipse at 0 40%,#23597755,transparent 60%); }
+.panorama-window { position: relative; margin: 30px 0 0; border: 1px solid #56778a; height: 240px; overflow: hidden; }
+.panorama-window img { width: 100%; height: 100%; object-fit: cover; opacity: .82; transition: transform .7s ease; }
+.panorama-window:hover img { transform: scale(1.06); }
+.panorama-window figcaption { position: absolute; bottom: 0; inset-inline: 0; padding: 16px; background: #081923e8; color: #a9dcec; font-size: .7rem; }
+.panorama-grid { gap: 16px; }
+.panorama-grid .company-card { padding: 22px; }
+.panorama-card-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+.panorama-card-top .science-mark { width: 42px; }
+.panorama-grid h4 { font-size: 1.85rem; }
+.panorama-grid li { font-size: 1rem; line-height: 1.5; }
+.panorama-grid .company-card ul { list-style: none; padding: 0; }
+.panorama-grid li { border-top: 1px solid #ffffff14; padding-top: 10px; }
+.panorama-fortalezas { --company-accent: #88dfff; }
+.panorama-oportunidades { --company-accent: #88e9bf; }
+.panorama-debilidades { --company-accent: #ffb580; }
+.panorama-amenazas { --company-accent: #f3a7ba; }
+.objectives-panel { background: #dfedf1; background-image: linear-gradient(#236a8b09 1px,transparent 1px),linear-gradient(90deg,#236a8b09 1px,transparent 1px); background-size: 36px 36px; }
+.device-study { position: relative; min-height: 290px; display: grid; align-items: center; margin-top: 22px; }
+.device-study-ring { position: absolute; width: 240px; height: 240px; border: 1px solid #76a9bd; border-radius: 50%; left: 50%; top: 8px; transform: translateX(-50%); outline: 1px dashed #9cbac7; outline-offset: 14px; }
+.device-study-ring::after { content: '+'; position: absolute; top: 20px; right: 20px; color: #126888; font-family: var(--font-mono); }
+.device-study img { position: relative; width: 115%; max-width: 115%; margin-left: -7%; transform: rotate(-12deg); filter: drop-shadow(0 20px 18px #163e4730); transition: transform .6s; }
+.device-study:hover img { transform: rotate(-5deg) translateY(-7px); }
+.device-study .mono { position: relative; text-align: center; font-size: .7rem; color: #365c6e; }
+.goal-rows { display: grid; gap: 16px; }
+.goal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; background: #f9fcfd; border: 0; border-left: 3px solid #267b9c; }
+.goal-row:nth-child(2) { border-color: #ba6024; }
+.goal-row:nth-child(3) { border-color: #488269; }
+.goal-row-heading h4 { font-size: 1.9rem; max-width: 13ch; }
+.goal-row-metric .company-metric { margin-top: 0; font-size: 4.6rem; }
+.goal-row-metric p { max-width: 22ch; font-size: 1rem; }
+.goal-row .company-tag { justify-self: start; grid-column: 1/-1; margin-top: 0; font-size: .8rem; border: 0; background: #dfedf1; }
+.strategies-panel { background: #091b26; }
+.story-section-heading { position: relative; margin-bottom: 34px; }
+.story-section-heading > .science-mark { position: absolute; right: 0; top: 0; width: 100px; opacity: .7; }
+.strategy-editorial-cards .company-card { padding: 0; overflow: hidden; background: #102c3b; transition: transform .25s,border-color .25s; }
+.strategy-card-photo { position: relative; height: 190px; overflow: hidden; }
+.strategy-card-photo img { height: 100%; width: 100%; object-fit: cover; transition: transform .6s; }
+.strategy-card-photo::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg,#102c3b,transparent 70%); }
+.strategy-card-photo .mono { position: absolute; z-index: 1; left: 25px; bottom: 8px; font-size: 2.5rem; color: white; font-family: var(--font-display); }
+.strategy-card-body { padding: 20px 26px 26px; }
+.strategy-card-body > .mono { font-size: .7rem; text-transform: uppercase; }
+.strategy-card-body h4 { font-size: 1.9rem; }
+.action-panel { background: #f2eadd; --company-card: #fffcf6; --company-line: #d2c5b1; --company-accent: #9b4c20; --company-muted: #605648; color: #332b24; }
+.action-heading { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; gap: 32px; margin-bottom: 30px; }
+.action-heading .story-section-heading { margin-bottom: 0; }
+.action-heading h3 { max-width: 15ch; margin-bottom: 0; }
+.action-bot { display: flex; align-items: center; gap: 14px; justify-content: flex-end; }
+.action-bot img { height: 190px; width: 170px; object-fit: contain; filter: drop-shadow(0 12px 15px #48382325); }
+.action-bot .mono { color: #826342; font-size: .7rem; }
+.action-cards .company-card { border: 0; border-top: 3px solid #b96931; }
+.action-card-top { display: flex; align-items: center; gap: 16px; justify-content: space-between; }
+.action-number { font: 400 3rem/1 var(--font-display); color: #b97644; }
+.action-card-top .company-tag { margin: 0; max-width: 22ch; font-size: .8rem; }
+.action-cards ol { list-style: none; counter-reset: action-step; padding: 0; }
+.action-cards li { counter-increment: action-step; position: relative; padding: 0 0 16px 30px; border-bottom: 1px solid #d2c5b160; }
+.action-cards li::before { content: counter(action-step); position: absolute; left: 0; top: 2px; font: 400 .75rem/1.6 var(--font-mono); color: #9b4c20; border-bottom: 1px solid #9b4c20; }
+/* Collaboration uses the game's cooperative pair as an editorial illustration. */
+.culture-story { background: #0b2635; background-image: radial-gradient(ellipse at 95% 10%,#18618155,transparent 50%); }
+.culture-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; margin-bottom: 45px; }
+.culture-intro .company-heading { margin-bottom: 0; }
+.culture-intro h2 { max-width: 12ch; }
+.cooperative-visual { position: relative; display: flex; align-items: flex-end; justify-content: center; height: 410px; margin: 0; padding-bottom: 46px; isolation: isolate; }
+.cooperative-visual img { object-fit: contain; filter: drop-shadow(0 16px 14px #0005); }
+.cooperative-atlas { width: 49%; height: 270px; z-index: 1; }
+.cooperative-pbody { width: 43%; height: 350px; margin-left: -8%; }
+.cooperative-orbit { position: absolute; z-index: -1; width: 300px; height: 300px; border: 1px solid #67b9dd44; border-radius: 50%; top: 20px; background: radial-gradient(circle,#52caff15,transparent 70%); outline: 1px dashed #7bb9cf44; outline-offset: 20px; }
+.cooperative-visual figcaption { display: flex; justify-content: space-between; gap: 20px; position: absolute; bottom: 0; inset-inline: 0; padding: 12px 0; border-top: 1px solid #498198; font-size: .65rem; color: #b0d9e9; }
+.culture-grid .company-card { background: #133748; border-color: #35586a; }
+.culture-grid > :first-child { background: #dcecf0; --company-accent: #086282; --company-muted: #395965; color: #15394c; }
+.culture-grid > :first-child .company-tag { border-color: #90b4c3; }
+.culture-card-top { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.culture-card-top .science-mark { width: 44px; }
+.culture-grid h3 { margin-top: 8px; }
+.commitment-story { background: #f1f4f0; }
+.commitment-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.commitment-intro .company-heading { margin: 0; }
+.commitment-image { height: 330px; position: relative; }
+.commitment-image > img { height: 100%; width: 100%; object-fit: cover; }
+.commitment-seal { position: absolute; right: -15px; bottom: -20px; padding: 20px; display: flex; align-items: center; gap: 20px; background: #12364a; color: #dceef4; }
+.commitment-seal .science-mark { color: #98d4eb; }
+.commitment-seal .mono { font-size: .7rem; }
+#estandares .science-mark { width: 48px; }
+#resultados { padding: 35px; background: #dce9ee; }
+.improvement-cycle li { position: relative; }
+.improvement-cycle li:not(:last-child)::after { content: '→'; position: absolute; right: 10px; top: 9px; color: #2f789a; font-size: 1.5rem; }
+@media(hover:hover) and (prefers-reduced-motion:no-preference) {
+  .strategy-editorial-cards .company-card:hover { transform: translateY(-6px); border-color: #88dfff; }
+  .strategy-editorial-cards .company-card:hover img { transform: scale(1.06); }
+  .cooperative-visual:hover .cooperative-atlas { transform: translateY(-8px) rotate(-3deg); }
+  .cooperative-visual:hover .cooperative-pbody { transform: translateY(-5px) rotate(2deg); }
+  .cooperative-visual img { transition: transform .5s ease; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .motion-on .cover-coordinate .science-mark { animation: science-breathe 8s ease-in-out infinite; }
+  @keyframes science-breathe { 50% { transform: translateY(-8px); filter: drop-shadow(0 0 40px #2bb2ea); } }
+}
+@media(min-width:901px) and (max-height:760px) { .story-side { position: static; } }
+@media(max-width:1050px) {
+  .story-split { grid-template-columns: minmax(0,.7fr) minmax(0,1.3fr); gap: 30px; }
+  .philosophy-cards { grid-template-columns: 1fr !important; }
+  .story-content .company-values { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .panorama-grid { grid-template-columns: 1fr !important; }
+  .story-side { top: 105px; }
+  .strategy-chapters a { padding-inline: 10px; gap: 8px; }
+  .strategy-chapters a > span:last-child { display: none; }
+  .strategy-editorial-cards { grid-template-columns: repeat(3,minmax(0,1fr)) !important; }
+  .strategy-card-body { padding: 18px; }
+  .action-bot .mono { display: none; }
+  .commitment-intro { gap: 30px; }
+}
+@media(max-width:760px) {
+  .strategy-cover { padding-top: 50px; }
+  .strategy-cover-layout { grid-template-columns: 1fr; min-height: 0; gap: 0; }
+  .strategy-cover-image::after { background: linear-gradient(90deg,#081923eb,#08192388),linear-gradient(0deg,#081923,transparent); }
+  .cover-coordinate { display: none; }
+  .strategy-cover h2 { font-size: clamp(3.8rem,12vw,6rem); }
+  .strategy-chapters { grid-template-columns: repeat(3,minmax(0,1fr)); margin-top: 0; }
+  .strategy-chapters a { border: 0; padding: 14px 7px; font-size: .9rem; min-height: 48px; }
+  .strategy-chapters a:first-child { border: 0; }
+  .story-panel { padding-block: 48px; }
+  .story-split { grid-template-columns: 1fr; gap: 28px; }
+  .story-side { position: static; }
+  .story-side h3 { max-width: none; }
+  .story-side > p { max-width: 55ch; }
+  .philosophy-art { display: none; }
+  .philosophy-cards { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  .story-content .company-values { grid-template-columns: repeat(3,minmax(0,1fr)); }
+  .panorama-window { height: 190px; }
+  .panorama-grid { grid-template-columns: repeat(2,minmax(0,1fr)) !important; }
+  .device-study { width: min(100%,330px); margin: 25px auto 0; min-height: 235px; }
+  .device-study-ring { width: 200px; height: 200px; }
+  .strategy-editorial-cards { grid-template-columns: 1fr !important; }
+  .strategy-editorial-cards .company-card { display: grid; grid-template-columns: .8fr 1.2fr; }
+  .strategy-card-photo { height: 100%; min-height: 220px; }
+  .story-section-heading > .science-mark { display: none; }
+  .action-heading { grid-template-columns: 1fr auto; gap: 15px; }
+  .action-bot img { width: 100px; height: 130px; }
+  .action-cards { grid-template-columns: 1fr !important; }
+  .culture-intro { grid-template-columns: 1fr; gap: 20px; }
+  .culture-intro h2 { max-width: none; }
+  .cooperative-visual { width: min(100%,450px); margin: auto; height: 320px; }
+  .cooperative-atlas { height: 200px; }
+  .cooperative-pbody { height: 270px; }
+  .cooperative-orbit { width: 230px; height: 230px; }
+  .commitment-intro { grid-template-columns: 1fr; }
+  .commitment-image { height: 240px; margin-bottom: 12px; }
+  .commitment-seal { right: 12px; }
+  #resultados { padding: 24px; }
+}
+@media(max-width:480px) {
+  .story-panel .wrap { width: calc(100% - 40px); }
+  .philosophy-cards,.panorama-grid { grid-template-columns: 1fr !important; }
+  .story-content .company-values { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  .goal-row { grid-template-columns: 1fr; gap: 4px; }
+  .goal-row-heading h4 { max-width: none; }
+  .goal-row-metric { display: flex; align-items: center; gap: 20px; }
+  .goal-row-metric .company-metric { font-size: 3.7rem; }
+  .goal-row-metric p { max-width: 14ch; }
+  .strategy-editorial-cards .company-card { display: block; }
+  .strategy-card-photo { height: 160px; min-height: 0; }
+  .action-bot { display: none; }
+  .action-heading { grid-template-columns: 1fr; }
+  .cooperative-visual figcaption { font-size: .6rem; gap: 8px; }
+  #resultados { padding: 22px 16px; }
+}
+@media(prefers-reduced-motion:reduce) { .strategy-story *, .cooperative-visual * { animation: none !important; transition: none !important; } }
+@media print { .story-side { position: static; } .strategy-chapters,.story-explore { display: none; } .story-panel { padding-block: 30px; } }
+/* A section-sized container also reflows when the reader enlarges the font. */
+.story-panel { container-type: inline-size; }
+@container (max-width: 60rem) {
+  .story-split { grid-template-columns: 1fr; }
+  .story-side { position: static; }
+  .philosophy-art { display: none; }
+  .device-study { width: min(100%,330px); margin-inline: auto; }
+  .panorama-window { max-width: 550px; }
+}
+@media(max-width:760px) { .device-study img { width: 92%; max-width: 92%; margin-inline: auto; } }
+#estructura #areas { background: #dce8ec; box-shadow: 0 0 0 100vmax #dce8ec; clip-path: inset(0 -100vmax); padding-block: 48px; }
+#estructura #equipo { padding-top: 8px; }
+#equipo .team-portrait { background-color: #d8e8ec; }
+#equipo .team-card:nth-child(even) .team-portrait { background-color: #eee5d8; }
+#equipo .team-card:nth-child(even) .portrait-silhouette,
+#equipo .team-card:nth-child(even) .portrait-silhouette i { background-color: #baa68c; }

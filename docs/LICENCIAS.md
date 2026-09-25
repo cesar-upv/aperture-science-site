@@ -51,3 +51,12 @@ Barlow, Barlow Condensed y JetBrains Mono, obtenidas de Google Fonts y almacenad
 - https://github.com/google/fonts/tree/main/ofl/jetbrainsmono
 
 `fonts.css` identifica la familia y el peso de cada archivo `font-*.ttf`. Ninguna fuente se presenta como tipografía oficial de Portal.
+
+### Robots de pruebas cooperativas
+
+Recursos incorporados para las ilustraciones de colaboración y acción. Se descargan al repositorio y se sirven localmente; no se depende de hotlinking.
+
+- `src/assets/atlas.png`: render de Atlas. [Ficha y procedencia](https://theportalwiki.com/wiki/File:Atlas.png); archivo original: https://i1.theportalwiki.net/img/0/04/Atlas.png
+- `src/assets/p-body.png`: render de P-body. [Ficha y procedencia](https://theportalwiki.com/wiki/File:P-body.png); archivo original: https://i1.theportalwiki.net/img/7/74/P-body.png
+
+Arte del videojuego de Valve, distribuido por Portal Wiki; no se declara como dominio público ni como recurso de licencia abierta. Los esquemas geométricos de `ScienceVisuals.tsx` son gráficos propios de la interfaz.

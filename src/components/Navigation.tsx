@@ -13,9 +13,10 @@ export default function Navigation() {
         }),
       { rootMargin: "-15% 0px -65% 0px" },
     )
-    document
-      .querySelectorAll("main section[id]")
-      .forEach((el) => observer.observe(el))
+    navLinks.forEach(({ id }) => {
+      const section = document.getElementById(id)
+      if (section) observer.observe(section)
+    })
     return () => observer.disconnect()
   }, [])
   useEffect(() => {
