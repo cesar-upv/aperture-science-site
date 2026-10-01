@@ -60,29 +60,34 @@ export const webContent = {
   ],
   "roles": [
     {
+      "name": "César",
       "title": "Dirección General",
       "function": "Define el rumbo de Aperture Science.",
       "responsibility": "Prioriza objetivos, asigna recursos y supervisa a las cuatro direcciones de área."
     },
     {
-      "title": "Responsable de Manufactura",
-      "function": "Coordina ensamblaje y síntesis.",
-      "responsibility": "Asegura materiales, gestiona proveedores y controla los costos de producción."
+      "name": "Elías",
+      "title": "Responsable de Creatividad",
+      "function": "Convierte ideas en propuestas visuales.",
+      "responsibility": "Desarrolla conceptos creativos, cuida la identidad de Aperture y prepara materiales para comunicar cada proyecto."
     },
     {
-      "title": "Responsable de Investigación",
-      "function": "Lidera el desarrollo experimental.",
-      "responsibility": "Coordina simulaciones, valida prototipos y supervisa la calibración del hardware."
+      "name": "Jesús",
+      "title": "Responsable de Diseño y Página Web",
+      "function": "Da forma a la experiencia digital de Aperture.",
+      "responsibility": "Diseña la interfaz, desarrolla y mantiene la página web, y verifica su funcionamiento en distintos dispositivos."
     },
     {
-      "title": "Responsable de Personas",
-      "function": "Coordina personal y reclutamiento.",
-      "responsibility": "Informa a los voluntarios, verifica expedientes y gestiona las compensaciones."
+      "name": "Israel",
+      "title": "Responsable de Prototipos",
+      "function": "Convierte conceptos en modelos funcionales.",
+      "responsibility": "Construye y ajusta prototipos, documenta las pruebas y coordina mejoras antes de cada demostración."
     },
     {
-      "title": "Responsable de Calidad y Seguridad",
-      "function": "Supervisa dispositivos y cámaras.",
-      "responsibility": "Autoriza pruebas según los estándares, registra incidentes y detiene operaciones de riesgo."
+      "name": "Don Pollo",
+      "title": "Director de Seguridad y Probabilidades Favorables",
+      "function": "Evalúa los riesgos antes de cada prueba.",
+      "responsibility": "Supervisa los protocolos, registra incidentes y procura que toda anomalía tenga una explicación tranquilizadora."
     }
   ],
   "culture": [
