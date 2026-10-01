@@ -35,7 +35,16 @@
 .panorama-debilidades { border-top: 3px solid #ffb580; }
 .panorama-amenazas { border-top: 3px solid #f3a7ba; }
 .team-grid { grid-template-columns: repeat(3,minmax(0,1fr)); }
-.team-portrait { height: 150px; background: repeating-linear-gradient(90deg,transparent 0 29px,#64839114 29px 30px),#e2edf0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px dashed #8aa6b3; }
+@media(min-width:901px) {
+  .team-grid { grid-template-columns: repeat(6,minmax(0,1fr)); }
+  .team-grid > .team-card { grid-column: span 2; }
+  .team-grid > .team-card:nth-last-child(2):nth-child(3n + 1) { grid-column: 2 / span 2; }
+}
+.team-portrait { height: 190px; background: repeating-linear-gradient(90deg,transparent 0 29px,#64839114 29px 30px),#e2edf0; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border: 1px dashed #8aa6b3; }
+.team-portrait.has-photo { border-style: solid; background: #d8e8ec; }
+.team-portrait.has-photo img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 17%; }
+.team-portrait.has-photo::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent,#071b28a8); pointer-events: none; }
+.team-portrait.has-photo > .mono { z-index: 1; color: #fff; text-shadow: 0 1px 3px #071b28; }
 .team-portrait > .mono { position: absolute; bottom: 8px; left: 10px; color: #405d6b; font-size: .7rem; }
 .portrait-silhouette { display: block; width: 90px; height: 48px; background: #9db6c1; border-radius: 50% 50% 0 0; margin-top: 50px; }
 .portrait-silhouette i { display: block; width: 40px; height: 40px; border-radius: 50%; background: #9db6c1; margin: -47px auto 0; }

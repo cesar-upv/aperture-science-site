@@ -11,6 +11,7 @@ const chapters = [
   ["estrategias", "Estrategias"], ["accion", "Acción"],
 ]
 const strategyImages = [chamber, repulsion, architecture]
+const valueMarks = ["spark", "calibrate", "portal", "orbit", "shield"] as const
 
 export default function StrategySection() {
   return (
@@ -32,19 +33,47 @@ export default function StrategySection() {
       </header>
 
       <section className="story-panel company-light" id="filosofia" aria-labelledby="philosophy-title">
-        <div className="wrap story-split">
-          <div className="story-side">
-            <span className="chapter-label mono">01 / EL PUNTO DE PARTIDA</span>
-            <h3 id="philosophy-title">Nuestra filosofía</h3>
-            <div className="philosophy-art" aria-hidden="true"><ScienceMark kind="portal" /><span className="mono">DOS PUNTOS.<br />INFINITAS POSIBILIDADES.</span></div>
-          </div>
-          <div className="story-content">
-            <div className="company-grid two philosophy-cards">
-              <article className="company-card"><span className="mono">MISIÓN</span><h4>Ampliar lo posible.</h4><p>{philosophy.mission}</p></article>
-              <article className="company-card"><span className="mono">VISIÓN</span><h4>Conectar el futuro.</h4><p>{philosophy.vision}</p></article>
+        <div className="wrap philosophy-layout">
+          <div className="story-split philosophy-intro">
+            <div className="story-side">
+              <span className="chapter-label mono">01 / EL PUNTO DE PARTIDA</span>
+              <h3 id="philosophy-title">Nuestra filosofía</h3>
+              <div className="philosophy-art" aria-hidden="true"><ScienceMark kind="portal" /><span className="mono">DOS PUNTOS.<br />INFINITAS POSIBILIDADES.</span></div>
             </div>
-            <div className="company-values">{philosophy.values.map((value, i) => <article key={value.title}><span className="mono">0{i + 1}</span><h4>{value.title}</h4><p>{webContent.values[i]}</p></article>)}</div>
+            <div className="story-content philosophy-statements">
+              <article className="philosophy-statement philosophy-mission">
+                <div className="statement-top"><span className="mono">01 / MISIÓN</span><ScienceMark kind="spark" /></div>
+                <div className="statement-body"><span className="mono">LO QUE HACEMOS HOY</span><h4>Ampliar lo posible.</h4><p>{philosophy.mission}</p></div>
+              </article>
+              <article className="philosophy-statement philosophy-vision">
+                <div className="statement-top"><span className="mono">02 / VISIÓN</span><ScienceMark kind="portal" /></div>
+                <div className="statement-body"><span className="mono">HACIA DONDE VAMOS</span><h4>Conectar el futuro.</h4><p>{philosophy.vision}</p></div>
+              </article>
+            </div>
           </div>
+          <div className="philosophy-values-heading"><div><span className="mono">NUESTROS VALORES / 05</span><h4>Lo que nos mueve.</h4></div><p className="philosophy-hover-hint">Pasa el cursor sobre una tarjeta para descubrir más.</p><p className="philosophy-touch-hint">Cinco ideas que guían cada avance.</p></div>
+          <div className="philosophy-flashcards">{philosophy.values.map((value, i) => <article
+            className="philosophy-flashcard"
+            key={value.title}
+            tabIndex={0}
+            aria-label={`${value.title}. ${webContent.values[i]} ${value.description}`}
+          >
+            <div className="flashcard-inner" aria-hidden="true">
+              <div className="flashcard-face flashcard-front">
+                <div className="flashcard-top"><span className="mono">VALOR / 0{i + 1}</span><ScienceMark kind={valueMarks[i]} /></div>
+                <strong>{value.title}</strong>
+                <span className="flashcard-copy">{webContent.values[i]}</span>
+                <span className="flashcard-touch-detail">{value.description}</span>
+                <span className="flashcard-action mono">DESCUBRIR <span>↗</span></span>
+              </div>
+              <div className="flashcard-face flashcard-back">
+                <span className="flashcard-back-label mono">APERTURE / 0{i + 1}</span>
+                <strong>{value.title}</strong>
+                <span className="flashcard-copy">{value.description}</span>
+                <span className="flashcard-action mono">NUESTROS VALORES <span>✦</span></span>
+              </div>
+            </div>
+          </article>)}</div>
         </div>
       </section>
 

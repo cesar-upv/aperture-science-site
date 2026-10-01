@@ -2,6 +2,15 @@ import { orgStructure, webContent } from "../data/strategy"
 import "./OrgSection.css"
 import { CooperativeVisual, ScienceMark } from "./ScienceVisuals"
 import chamber from "../assets/test-chamber.jpg"
+import cesarPortrait from "../assets/cesar-aperture.png"
+import jesusPortrait from "../assets/jesus-aperture.png"
+import donPolloPortrait from "../assets/don-pollo-aperture.png"
+
+const teamPortraits: Record<string, string> = {
+  "Dirección General": cesarPortrait,
+  "Responsable de Investigación": jesusPortrait,
+  "Responsable de Calidad y Seguridad": donPolloPortrait,
+}
 
 export default function OrgSection() {
   const { ceo, departments } = orgStructure
@@ -10,7 +19,16 @@ export default function OrgSection() {
       <header className="company-heading"><span className="mono">02 / PERSONAS Y ESTRUCTURA</span><h2 id="org-title">Nuestra organización</h2><p>Una dirección común. Cuatro áreas que convierten ideas en dispositivos, materiales y pruebas.</p></header>
       <section className="company-block org-chart" id="organigrama"><h3>Nuestra estructura</h3><ul className="org-tree" aria-label="Jerarquía de Aperture Science"><li><div className="org-director"><span className="mono">DIRECCIÓN</span><h4>{ceo.title}</h4></div><ul className="org-branches">{departments.map(dept => <li key={dept.id}><a className="org-node" href={`#department-${dept.id}`}>{dept.title.replace("Dpto. de ", "")}<span aria-hidden="true">↓</span></a>{dept.subareas.length > 0 && <ul className="org-leaves">{dept.subareas.map(sub => <li key={sub.id}>{sub.title}</li>)}</ul>}</li>)}</ul></li></ul><p className="company-note">Dirección General → Departamentos → Unidades especializadas</p></section>
       <section className="company-block" id="areas"><h3>Nuestras áreas</h3><div className="company-grid two">{departments.map(dept => <article className="company-card" key={dept.id} id={`department-${dept.id}`}><h4>{dept.title.replace("Dpto. de ", "")}</h4><p>{dept.description}</p>{dept.subareas.length > 0 && <details><summary>Unidades especializadas</summary><dl>{dept.subareas.map(sub => <div key={sub.id}><dt>{sub.title}</dt><dd>{sub.description}</dd></div>)}</dl></details>}</article>)}</div></section>
-      <section className="company-block" id="equipo"><h3>Nuestro equipo</h3><p className="company-intro">Responsabilidades claras en cada etapa, desde la primera idea hasta la última verificación.</p><div className="company-grid team-grid">{webContent.roles.map((role,i) => <article className="company-card team-card" key={role.title}><div className="team-portrait" role="img" aria-label={`Espacio reservado para retrato de ${role.title}`}><span className="portrait-silhouette" aria-hidden="true"><i /></span><span className="mono">RETRATO / 0{i+1}</span></div><h4>{role.title}</h4><p>{role.function}</p><dl><dt>Responsabilidades</dt><dd>{role.responsibility}</dd></dl></article>)}</div></section>
+      <section className="company-block" id="equipo"><h3>Nuestro equipo</h3><p className="company-intro">Responsabilidades claras en cada etapa, desde la primera idea hasta la última verificación.</p><div className="company-grid team-grid">{webContent.roles.map((role,i) => {
+        const portrait = teamPortraits[role.title]
+        return <article className="company-card team-card" key={role.title}>
+          <div className={`team-portrait${portrait ? " has-photo" : ""}`} role={portrait ? undefined : "img"} aria-label={portrait ? undefined : `Espacio reservado para retrato de ${role.title}`}>
+            {portrait ? <img src={portrait} alt={`Retrato para el cargo de ${role.title}`} loading="lazy" decoding="async" /> : <span className="portrait-silhouette" aria-hidden="true"><i /></span>}
+            <span className="mono">RETRATO / 0{i+1}</span>
+          </div>
+          <h4>{role.title}</h4><p>{role.function}</p><dl><dt>Responsabilidades</dt><dd>{role.responsibility}</dd></dl>
+        </article>
+      })}</div></section>
     </div></section>
     <section className="company-section company-dark culture-story" id="forma-de-trabajar" aria-labelledby="culture-title"><div className="wrap"><div className="culture-intro"><header className="company-heading"><span className="mono">03 / COLABORACIÓN</span><h2 id="culture-title">Nuestra forma de trabajar</h2><p>El siguiente descubrimiento comienza con una buena coordinación.</p></header><CooperativeVisual /></div><div className="culture-grid">{webContent.culture.map((item,i) => <section className="company-card" id={`cultura-${i+1}`} key={item.title}><div className="culture-card-top"><span className="mono">03 / 0{i+1}</span><ScienceMark kind={i === 0 ? "spark" : i === 1 ? "orbit" : i === 2 ? "portal" : i === 3 ? "calibrate" : "shield"} /></div><h3>{item.title}</h3><p>{item.text}</p><div className="company-tags">{item.tags.map(tag => <span className="company-tag" key={tag}>{tag}</span>)}</div></section>)}</div></div></section>
     <section className="company-section company-light commitment-story" id="compromiso" aria-labelledby="commitments-title"><div className="wrap"><div className="commitment-intro"><header className="company-heading"><span className="mono">04 / MEJORA CONTINUA</span><h2 id="commitments-title">Nuestro compromiso</h2><p>La confianza se construye con criterios claros, resultados verificables y acciones de mejora.</p></header><div className="commitment-image"><img src={chamber} alt="Cámara de pruebas de Aperture Science" loading="lazy" /><div className="commitment-seal"><ScienceMark kind="shield" /><span className="mono">OBSERVAR.<br />VERIFICAR.<br />MEJORAR.</span></div></div></div>
