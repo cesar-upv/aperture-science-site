@@ -1,6 +1,6 @@
 # Aperture Science
 
-Sitio estático e interactivo inspirado en Portal y Portal 2: presentación de la Portal Gun, demostración de portales, filosofía empresarial, planeación estratégica, organización y galería de instalaciones.
+Sitio estático e interactivo inspirado en Portal y Portal 2: presentación de la Portal Gun, demostración de portales, filosofía empresarial, planeación estratégica, organización, galería de instalaciones, atención al cliente y catálogo de productos y servicios.
 
 React 19 · TypeScript · Vite 8 · Tailwind CSS 4. Créditos de recursos en [docs/LICENCIAS.md](docs/LICENCIAS.md).
 
@@ -24,6 +24,8 @@ Abre la URL que indique Vite (por defecto, `http://127.0.0.1:5173`).
 | `npm run preview` | Servir la compilación localmente |
 
 ## Contenido y mantenimiento
+
+La página principal incluye la sección `#atencion` para consultas, quejas y sugerencias. El botón **Ver productos y servicios** abre `catalogo.html`, una página independiente con diez opciones de compra, precios, condiciones y entrega. El correo `atencion@aperturescience.example` es ilustrativo: debe sustituirse por un canal real antes de publicar o usar las consultas.
 
 [docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las cifras son metas del programa, no resultados obtenidos.
 

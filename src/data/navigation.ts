@@ -4,4 +4,5 @@ export const navLinks = [
   { label: "Organización", id: "estructura" },
   { label: "Cultura", id: "forma-de-trabajar" },
   { label: "Compromiso", id: "compromiso" },
+  { label: "Atención", id: "atencion" },
 ]

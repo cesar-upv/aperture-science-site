@@ -62,6 +62,7 @@ export default function Navigation() {
                 {link.label}
               </a>
             ))}
+            <a className="catalog-nav-link" href="./catalogo.html">Catálogo ↗</a>
           </div>
           <button
             ref={toggle}
@@ -87,6 +88,9 @@ export default function Navigation() {
               <Arrow diagonal />
             </a>
           ))}
+          <a href="./catalogo.html" onClick={() => setOpen(false)}>
+            <span className="mono">07</span>Catálogo <Arrow diagonal />
+          </a>
         </div>
       </header>
     </>

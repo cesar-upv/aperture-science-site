@@ -26,6 +26,7 @@ export default function Footer() {
               {link.label}
             </a>
           ))}
+          <a href="./catalogo.html">Catálogo de productos</a>
         </div>
         <div className="footer-bottom">
           <p>

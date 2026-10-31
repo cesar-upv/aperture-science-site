@@ -8,8 +8,13 @@ import OrgSection from "./components/OrgSection"
 import Facilities from "./components/Facilities"
 import FAQ from "./components/FAQ"
 import Footer from "./components/Footer"
+import CustomerCare from "./components/CustomerCare"
 
 export default function App() {
+  useEffect(() => {
+    const target = decodeURIComponent(window.location.hash.slice(1))
+    if (target) requestAnimationFrame(() => document.getElementById(target)?.scrollIntoView())
+  }, [])
   const [motion, setMotion] = useState(
     () => !window.matchMedia("(prefers-reduced-motion: reduce)").matches,
   )
@@ -37,6 +42,7 @@ export default function App() {
         <OrgSection />
         <Facilities />
         <FAQ />
+        <CustomerCare />
       </main>
       <Footer />
     </div>

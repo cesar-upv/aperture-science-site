@@ -7,6 +7,14 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   // Relative output URLs work at / and /any-github-repository/.
   base: "./",
+  build: {
+    rollupOptions: {
+      input: {
+        main: fileURLToPath(new URL("./index.html", import.meta.url)),
+        catalogo: fileURLToPath(new URL("./catalogo.html", import.meta.url)),
+      },
+    },
+  },
   resolve: {
     alias: { "@": fileURLToPath(new URL("./src", import.meta.url)) },
   },

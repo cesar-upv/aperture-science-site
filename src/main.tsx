@@ -6,6 +6,7 @@ import "./styles/experience.css"
 import "./styles/readability.css"
 import "./styles/company.css"
 import "./styles/science-story.css"
+import "./styles/customer-care.css"
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
