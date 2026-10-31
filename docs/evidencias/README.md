@@ -1,5 +1,7 @@
 # Evidencia de la Unidad 1
 
+> La evidencia de la Unidad 2 está en [unidad-2/](unidad-2/README.md).
+
 [Presentación editable: Unidad-1-Aperture-Science.pptx](Unidad-1-Aperture-Science.pptx)
 
 15 diapositivas con capturas del sitio y títulos ordenados según los cuatro apartados solicitados. Los PNG se incluyen por separado para reutilizarlos. Los retratos reservados son intencionales.

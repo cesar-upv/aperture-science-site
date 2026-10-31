@@ -16,7 +16,7 @@ Barlow, Barlow Condensed y JetBrains Mono se almacenan localmente. Sus avisos SI
 
 La interfaz, diagramas, favicon, animaciones y contenido corporativo se prepararon para este proyecto. La filosofía empresarial, el análisis FODA, los objetivos SMART, las estrategias y los planes de acción son una propuesta académica, no citas oficiales ni hechos canónicos.
 
-Las nueve imágenes de `src/assets/catalog/` son renders conceptuales originales generados con la herramienta integrada de OpenAI ImageGen para este catálogo el 22 de octubre de 2026. Representan productos y paquetes ficticios; no son capturas ni arte oficial de Valve. Se usaron indicaciones de fotografía de producto en estudio, fondo gris claro y diseño industrial blanco, grafito, azul y naranja. La ficha del Dispositivo Portátil de Portales reutiliza `src/assets/portal-gun.png`, cuya procedencia se indica abajo.
+Las nueve imágenes de `src/assets/catalog/` son renders conceptuales originales generados con la herramienta integrada de OpenAI ImageGen para este catálogo el 22 de octubre de 2026. Se convirtieron de PNG a WebP (calidad 82, misma resolución de 1536 × 1024) para reducir el peso de 18 MB a 0.8 MB. Representan productos y paquetes ficticios; no son capturas ni arte oficial de Valve. Se usaron indicaciones de fotografía de producto en estudio, fondo gris claro y diseño industrial blanco, grafito, azul y naranja. La ficha del Dispositivo Portátil de Portales reutiliza `src/assets/portal-gun.png`, cuya procedencia se indica abajo.
 
 No se ha añadido una licencia global de distribución del código. Si posteriormente se elige una licencia para el código propio, deberá indicar con claridad su alcance y excluir los assets y tipografías de terceros, que mantienen sus condiciones originales.
 
