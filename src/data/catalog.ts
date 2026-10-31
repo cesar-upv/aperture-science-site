@@ -45,7 +45,6 @@ export const policyLabels: Record<PolicyStatus, string> = {
 
 export const contactEmail = "atencion@aperturescience.example"
 export const flashDealId = "ashpd"
-export const promoValidity = "30 de noviembre de 2026"
 export const interestFreeMonths = 12
 export const interestFreeMinimum = 100_000
 

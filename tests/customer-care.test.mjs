@@ -46,4 +46,6 @@ test('Cada solicitud recibe folio y se envía con sus datos por correo', () => {
 test('Los textos públicos de Unidad 2 mantienen la voz de la empresa', () => {
   const files = ['components/CustomerCare.tsx', 'components/CareChat.tsx', 'components/FeedbackForm.tsx', 'components/CatalogOffers.tsx', 'components/ProductCard.tsx', 'components/ProductDialog.tsx', 'catalogo.tsx', 'data/catalog.ts', 'data/customer-care.ts']
   for (const file of files) assert.doesNotMatch(read(file), /acad[eé]mic|\btareas?\b|\bunidad \d|demostraci[oó]n|profesor|alumno/i, file)
+  // Las promociones se anuncian hasta agotar existencias, sin fechas explícitas.
+  for (const file of files) assert.doesNotMatch(read(file), /\b(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\b|\b20\d\d\b/i, file)
 })

@@ -1,7 +1,7 @@
 import { Arrow } from "./ui"
 import LineIcon, { type IconName } from "./LineIcon"
 import { catalogImage } from "../data/catalog-images"
-import { catalog, discountPercent, flashDealId, formatPrice, interestFreeMinimum, interestFreeMonths, promoValidity, savings, type CatalogItem } from "../data/catalog"
+import { catalog, discountPercent, flashDealId, formatPrice, interestFreeMinimum, interestFreeMonths, savings, type CatalogItem } from "../data/catalog"
 
 const flashDeal = catalog.find((item) => item.id === flashDealId)!
 const bundles = catalog.filter((item) => item.group === "paquetes" && item.prior)
@@ -31,7 +31,7 @@ export default function CatalogOffers({ onOpen }: { onOpen: (id: string) => void
             <span className="mono offers-kicker"><LineIcon name="bolt" size={16} />OFERTAS IMPERDIBLES</span>
             <h2 id="offers-title">Precios que desafían<br /><span>la gravedad.</span></h2>
           </div>
-          <p className="offers-validity"><LineIcon name="clock" size={18} />Vigentes hasta el {promoValidity} o hasta agotar existencias.</p>
+          <p className="offers-validity"><LineIcon name="clock" size={18} />Válidas hasta agotar existencias.</p>
         </div>
         <div className="offers-grid">
           <article className="offer-flash" aria-labelledby="offer-flash-title">

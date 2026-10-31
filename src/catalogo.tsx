@@ -6,7 +6,7 @@ import ProductCard from "./components/ProductCard"
 import ProductDialog from "./components/ProductDialog"
 import CatalogOffers from "./components/CatalogOffers"
 import portalGun from "./assets/portal-gun.png"
-import { catalog, catalogGroups, contactEmail, interestFreeMonths, promoValidity, type CatalogGroup } from "./data/catalog"
+import { catalog, catalogGroups, contactEmail, interestFreeMonths, type CatalogGroup } from "./data/catalog"
 import "./index.css"
 import "./styles/catalog.css"
 
@@ -114,7 +114,7 @@ function CatalogPage() {
               </div>
             </aside>
           </div>
-          <p className="catalog-note">Precios en pesos mexicanos (MXN), IVA incluido. Promociones vigentes hasta el {promoValidity} o hasta agotar existencias. Imágenes ilustrativas.</p>
+          <p className="catalog-note">Precios en pesos mexicanos (MXN), IVA incluido. Promociones válidas hasta agotar existencias. Imágenes ilustrativas.</p>
         </section>
 
         <section className="catalog-contact" aria-labelledby="catalog-contact-title">

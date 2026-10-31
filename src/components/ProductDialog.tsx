@@ -25,6 +25,11 @@ export default function ProductDialog({ items, selectedId, onSelect, onClose }: 
     }
   }, [open])
 
+  // A new product starts reading from the top of its details.
+  useEffect(() => {
+    dialog.current?.querySelector(".product-dialog-info")?.scrollTo({ top: 0 })
+  }, [selectedId])
+
   const go = (step: number) => onSelect(items[(index + step + items.length) % items.length].id)
   const onKeyDown = (event: KeyboardEvent) => {
     if (items.length < 2) return

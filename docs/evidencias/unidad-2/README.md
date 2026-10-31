@@ -21,7 +21,7 @@ Capturas a 1440 × 1080 CSS px, escala 2 (2880 × 2160 PNG), listas para agregar
 - **Estamos para ayudarte:** correo, chat de atención con temas frecuentes, atención presencial y horario. El chat responde sobre compras, entregas, cambios y devoluciones, pagos, quejas y asesoría.
 - **Atención a quejas y sugerencias:** formulario con tipo de solicitud (queja, reclamación o sugerencia), producto, número de pedido y autorización de datos; seguimiento en cuatro pasos con plazos. Al enviarlo se asigna un folio y se abre el correo del cliente con la solicitud.
 - **Catálogo:** diez opciones de compra (seis productos, tres paquetes y un servicio). Cada ficha incluye nombre, imagen, descripción, precio, descuento cuando aplica, cambios y devoluciones, y opciones de entrega. La imagen y el botón **Ver ficha completa** abren la ficha ampliada; las flechas del teclado recorren el catálogo.
-- **Ofertas imperdibles:** oferta relámpago, tres paquetes con precio anterior y ahorro, meses sin intereses y precio por volumen, con vigencia al 30 de noviembre de 2026.
+- **Ofertas imperdibles:** oferta relámpago, tres paquetes con precio anterior y ahorro, meses sin intereses y precio por volumen, válidos hasta agotar existencias.
 
 ## Regeneración
 

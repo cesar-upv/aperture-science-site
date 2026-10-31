@@ -27,7 +27,7 @@ Abre la URL que indique Vite (por defecto, `http://127.0.0.1:5173`).
 
 La página principal incluye la sección `#atencion`: canales de contacto, un chat de atención con respuestas guiadas (`#chat-atencion`) y un formulario de quejas y sugerencias (`#quejas`) que valida los datos, asigna un folio y abre el correo del cliente con la solicitud lista. El sitio no tiene backend: el envío depende de que el cliente mande ese correo.
 
-El botón **Ver productos y servicios** abre `catalogo.html`: ofertas imperdibles (`#ofertas`) y diez opciones de compra (`#productos`) con filtros por tipo, orden por precio y una ficha ampliada con imagen a pantalla completa, condiciones de compra y entrega. El correo `atencion@aperturescience.example` es ilustrativo: debe sustituirse por un canal real antes de publicar o usar las consultas. Las promociones, los meses sin intereses y la vigencia se definen en `src/data/catalog.ts`.
+El botón **Ver productos y servicios** abre `catalogo.html`: ofertas imperdibles (`#ofertas`) y diez opciones de compra (`#productos`) con filtros por tipo, orden por precio y una ficha ampliada con imagen a pantalla completa, condiciones de compra y entrega. El correo `atencion@aperturescience.example` es ilustrativo: debe sustituirse por un canal real antes de publicar o usar las consultas. Las promociones y los meses sin intereses se definen en `src/data/catalog.ts`; las ofertas no muestran fechas, solo la leyenda «hasta agotar existencias».
 
 [docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las cifras son metas del programa, no resultados obtenidos.
 
