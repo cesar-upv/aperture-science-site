@@ -19,23 +19,27 @@ Abre la URL que indique Vite (por defecto, `http://127.0.0.1:5173`).
 | --- | --- |
 | `npm run dev` | Servidor de desarrollo |
 | `npm run typecheck` | Comprobar tipos de TypeScript |
-| `npm test` | Verificar contenido y relaciones del plan empresarial |
+| `npm test` | Verificar contenido empresarial, catálogo y atención al cliente |
 | `npm run build` | Comprobar tipos y generar `dist/` |
 | `npm run preview` | Servir la compilación localmente |
 
 ## Contenido y mantenimiento
 
-La página principal incluye la sección `#atencion` para consultas, quejas y sugerencias. El botón **Ver productos y servicios** abre `catalogo.html`, una página independiente con diez opciones de compra, precios, condiciones y entrega. El correo `atencion@aperturescience.example` es ilustrativo: debe sustituirse por un canal real antes de publicar o usar las consultas.
+La página principal incluye la sección `#atencion`: canales de contacto, un chat de atención con respuestas guiadas (`#chat-atencion`) y un formulario de quejas y sugerencias (`#quejas`) que valida los datos, asigna un folio y abre el correo del cliente con la solicitud lista. El sitio no tiene backend: el envío depende de que el cliente mande ese correo.
+
+El botón **Ver productos y servicios** abre `catalogo.html`: ofertas imperdibles (`#ofertas`) y diez opciones de compra (`#productos`) con filtros por tipo, orden por precio y una ficha ampliada con imagen a pantalla completa, condiciones de compra y entrega. El correo `atencion@aperturescience.example` es ilustrativo: debe sustituirse por un canal real antes de publicar o usar las consultas. Las promociones, los meses sin intereses y la vigencia se definen en `src/data/catalog.ts`.
 
 [docs/SITE_CONTENT.md](docs/SITE_CONTENT.md) es la fuente editorial vigente. La página puede resumir su redacción, conservando objetivos, fases, departamentos, subáreas e indicadores. Las cifras son metas del programa, no resultados obtenidos.
 
 - `src/data/strategy.ts`: datos del FODA, objetivos, estrategias, planes, organización, cultura y compromisos.
+- `src/data/catalog.ts` y `src/data/customer-care.ts`: productos, precios, ofertas, canales, temas del chat, seguimiento y validación del formulario. No importan recursos, para que Node pueda probarlos; `catalog-images.ts` resuelve las imágenes.
 - `src/data/navigation.ts`: enlaces compartidos de navegación.
 - `src/components/`: secciones e interacciones; los textos de presentación también se mantienen aquí.
 - `src/styles/` y `src/index.css`: estilos generales y ajustes de legibilidad; organización y planeación tienen CSS junto a sus componentes.
 - `src/assets/`: imágenes, fuentes locales y avisos de licencia. Procedencia en [docs/LICENCIAS.md](docs/LICENCIAS.md).
 - `public/`: recursos estáticos, como el favicon.
 - `tests/strategy.test.mjs`: integridad del contenido y correspondencia con la fuente editorial.
+- `tests/catalog.test.mjs` y `tests/customer-care.test.mjs`: fichas completas, imágenes existentes, descuentos coherentes, validación, folios, enlaces internos y redacción sin referencias escolares.
 
 Las versiones anteriores del contenido y la documentación de entrega se conservan en el historial de Git.
 
@@ -73,3 +77,7 @@ Edita `docs/SITE_CONTENT.md` y ejecuta `npm run content:sync` para regenerar los
 ## Evidencia de la Unidad 1
 
 Capturas organizadas, presentación editable y matriz de cumplimiento en [docs/evidencias/README.md](docs/evidencias/README.md).
+
+## Evidencia de la Unidad 2
+
+Capturas de atención al cliente, catálogo y ofertas en [docs/evidencias/unidad-2/README.md](docs/evidencias/unidad-2/README.md).
