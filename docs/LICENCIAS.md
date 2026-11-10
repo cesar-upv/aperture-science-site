@@ -18,6 +18,8 @@ La interfaz, diagramas, favicon, animaciones y contenido corporativo se preparar
 
 Las nueve imágenes de `src/assets/catalog/` son renders conceptuales originales generados con la herramienta integrada de OpenAI ImageGen para este catálogo el 22 de octubre de 2026. Se convirtieron de PNG a WebP (calidad 82, misma resolución de 1536 × 1024) para reducir el peso de 18 MB a 0.8 MB. Representan productos y paquetes ficticios; no son capturas ni arte oficial de Valve. Se usaron indicaciones de fotografía de producto en estudio, fondo gris claro y diseño industrial blanco, grafito, azul y naranja. La ficha del Dispositivo Portátil de Portales reutiliza `src/assets/portal-gun.png`, cuya procedencia se indica abajo.
 
+El fondo de estudio `src/assets/catalog/portal-gun-studio.webp` se generó con OpenAI ImageGen el 10 de noviembre de 2026, tomando como referencia visual el ambiente de las otras fichas. Se muestra detrás del render original y no modifica la pistola.
+
 No se ha añadido una licencia global de distribución del código. Si posteriormente se elige una licencia para el código propio, deberá indicar con claridad su alcance y excluir los assets y tipografías de terceros, que mantienen sus condiciones originales.
 
 ## Dependencias
