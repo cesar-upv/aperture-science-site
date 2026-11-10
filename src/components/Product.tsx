@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Icon, SectionLabel } from "./ui"
-import portalGun from "../assets/portal-gun.png"
+import portalGun from "../assets/portal-gun-polished.webp"
 const productFeatures = [
   {
     title: "Dos puntos. Un mismo espacio.",

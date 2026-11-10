@@ -3,6 +3,7 @@ import { Arrow } from "./ui"
 import LineIcon from "./LineIcon"
 import { DeliveryModes, PriceTag, policyIcons } from "./ProductCard"
 import { catalogImage } from "../data/catalog-images"
+import BundleArt from "./BundleArt"
 import { discountPercent, inquiryHref, policyLabels, type CatalogItem } from "../data/catalog"
 
 type Props = { items: CatalogItem[]; selectedId: string | null; onSelect: (id: string) => void; onClose: () => void }
@@ -50,7 +51,9 @@ export default function ProductDialog({ items, selectedId, onSelect, onClose }: 
         <div className="product-dialog-layout">
           <figure className={`product-dialog-media ${item.imageFit === "contain" ? "is-contained" : ""}`}
             style={{ "--media": `url("${catalogImage(item)}")` } as CSSProperties}>
-            <img src={catalogImage(item)} alt={item.imageDescription} />
+            {item.id === "paquete-desplazamiento-seguro"
+              ? <BundleArt boots={catalogImage(item)} alt={item.imageDescription} />
+              : <img src={catalogImage(item)} alt={item.imageDescription} />}
             {discountPercent(item) > 0 && <span className="catalog-offer">−{discountPercent(item)}%</span>}
             <button type="button" className="product-dialog-zoom" onClick={() => setFullView(!fullView)} aria-pressed={fullView}>
               <LineIcon name={fullView ? "shrink" : "expand"} size={18} />

@@ -1,7 +1,7 @@
 import { useRef, useState } from "react"
 import type { CSSProperties, PointerEvent } from "react"
 import { Arrow } from "./ui"
-import portalGun from "../assets/portal-gun.png"
+import portalGun from "../assets/portal-gun-polished.webp"
 import chamber from "../assets/test-chamber.jpg"
 import architecture from "../assets/architecture.jpg"
 
@@ -90,8 +90,8 @@ export default function Hero() {
               className="hero-gun"
               src={portalGun}
               alt="Portal Gun de Aperture: carcasa blanca, núcleo negro y tres pinzas mecánicas"
-              width="779"
-              height="589"
+              width="1442"
+              height="1091"
               fetchPriority="high"
             />
           </div>

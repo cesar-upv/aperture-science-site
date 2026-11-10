@@ -65,7 +65,7 @@ export const catalog: CatalogItem[] = [
     returns: { status: "condicional", label: "Cambios solo por defecto de fábrica" },
     delivery: "Transporte blindado a domicilio o recolección en Muelle 4 del Centro de Enriquecimiento.",
     deliveryModes: ["domicilio", "sucursal"],
-    image: "portal-gun.png", imageFit: "contain", imageDescription: "Imagen original del dispositivo portátil de portales",
+    image: "portal-gun-polished.webp", imageFit: "contain", imageDescription: "Render mejorado del dispositivo portátil de portales original",
   },
   {
     id: "botas-caida-libre", name: "Botas de Caída Libre (Long Fall Boots)", group: "equipo", category: "Seguridad personal",
@@ -125,7 +125,7 @@ export const catalog: CatalogItem[] = [
     returns: { status: "si", label: "Cambio de talla de botas incluido" },
     delivery: "Envío premium asegurado sin costo a domicilio en territorio nacional.",
     deliveryModes: ["domicilio"],
-    image: "catalog/safe-transit-bundle.webp", imageDescription: "Render conceptual del paquete de dispositivo de portales y botas",
+    image: "catalog/safe-transit-boots.webp", imageDescription: "Render conceptual del paquete de dispositivo de portales y botas",
   },
   {
     id: "paquete-cero-brechas", name: "Paquete «Cero Brechas»", group: "paquetes", category: "Paquete de seguridad · 2 torretas + rejilla",

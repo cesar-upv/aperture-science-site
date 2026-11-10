@@ -2,7 +2,7 @@ import { philosophy, swot, webContent } from "../data/strategy"
 import chamber from "../assets/test-chamber.jpg"
 import architecture from "../assets/architecture.jpg"
 import repulsion from "../assets/repulsion.jpg"
-import portalGun from "../assets/portal-gun.png"
+import portalGun from "../assets/portal-gun-polished.webp"
 import atlas from "../assets/atlas.png"
 import { ScienceMark } from "./ScienceVisuals"
 

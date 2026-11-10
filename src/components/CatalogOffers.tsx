@@ -1,6 +1,7 @@
 import { Arrow } from "./ui"
 import LineIcon, { type IconName } from "./LineIcon"
 import { catalogImage } from "../data/catalog-images"
+import BundleArt from "./BundleArt"
 import { catalog, discountPercent, flashDealId, formatPrice, interestFreeMinimum, interestFreeMonths, savings, type CatalogItem } from "../data/catalog"
 
 const flashDeal = catalog.find((item) => item.id === flashDealId)!
@@ -47,7 +48,9 @@ export default function CatalogOffers({ onOpen }: { onOpen: (id: string) => void
           </article>
           {bundles.map((item) => (
             <article className="offer-tile" key={item.id} aria-labelledby={`offer-${item.id}`}>
-              <img src={catalogImage(item)} alt="" loading="lazy" />
+              {item.id === "paquete-desplazamiento-seguro"
+                ? <BundleArt boots={catalogImage(item)} alt="" />
+                : <img src={catalogImage(item)} alt="" loading="lazy" />}
               <div className="offer-tile-copy">
                 <span className="mono">{item.category}</span>
                 <h3 id={`offer-${item.id}`}>{item.name}</h3>

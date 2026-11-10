@@ -1,6 +1,7 @@
 import { Arrow } from "./ui"
 import LineIcon, { type IconName } from "./LineIcon"
 import { catalogImage } from "../data/catalog-images"
+import BundleArt from "./BundleArt"
 import { deliveryLabels, discountPercent, formatPrice, inquiryHref, policyLabels, savings, type CatalogItem, type DeliveryMode, type PolicyStatus } from "../data/catalog"
 
 export const deliveryIcons: Record<DeliveryMode, IconName> = { domicilio: "truck", sucursal: "store", sede: "building" }
@@ -30,7 +31,9 @@ export default function ProductCard({ item, position, total, onOpen }: { item: C
   return (
     <article className="catalog-card" id={item.id} aria-labelledby={`${item.id}-title`}>
       <button type="button" className={`catalog-image ${item.imageFit === "contain" ? "is-contained" : ""}`} onClick={onOpen} aria-label={`Ampliar imagen: ${item.name}`}>
-        <img src={catalogImage(item)} alt={item.imageDescription} loading="lazy" width="1536" height="1024" />
+        {item.id === "paquete-desplazamiento-seguro"
+          ? <BundleArt boots={catalogImage(item)} alt={item.imageDescription} />
+          : <img src={catalogImage(item)} alt={item.imageDescription} loading="lazy" width="1536" height="1024" />}
         {discount > 0 && <span className="catalog-offer">−{discount}%</span>}
         <span className="catalog-number mono">{String(position).padStart(2, "0")} / {total}</span>
         <span className="catalog-zoom"><LineIcon name="expand" size={18} /></span>
