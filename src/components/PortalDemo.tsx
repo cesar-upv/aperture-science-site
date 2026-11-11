@@ -46,8 +46,6 @@ export default function PortalDemo() {
             <span>Atravesarlo, mejor.</span>
           </h2>
           <p>
-            Una conexión que puedes explorar.
-            <br />
             Activa los portales y envía el cubo al otro lado.
           </p>
         </div>
@@ -153,17 +151,17 @@ export default function PortalDemo() {
             [
               "01",
               "Elige la superficie.",
-              "Identifica una superficie compatible dentro de la cámara de pruebas.",
+              "Identifica una superficie compatible en la cámara.",
             ],
             [
               "02",
               "Conecta dos puntos.",
-              "Coloca los portales azul y naranja en las ubicaciones que quieras conectar.",
+              "Coloca los portales azul y naranja donde quieras conectar.",
             ],
             [
               "03",
               "Cambia de perspectiva.",
-              "Atraviesa cualquiera de los dos. El otro lado está a un paso.",
+              "Atraviesa cualquiera de los dos.",
             ],
           ].map(([num, title, copy]) => (
             <article key={num}>

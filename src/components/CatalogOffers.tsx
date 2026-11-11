@@ -9,9 +9,9 @@ const bundles = catalog.filter((item) => item.group === "paquetes" && item.prior
 const bestBundleDiscount = Math.max(...bundles.map(discountPercent))
 
 const perks: { icon: IconName; title: string; detail: string }[] = [
-  { icon: "card", title: `Hasta ${interestFreeMonths} meses sin intereses`, detail: `En compras desde ${formatPrice(interestFreeMinimum)} con tarjetas participantes.` },
-  { icon: "tag", title: `Ahorra hasta ${bestBundleDiscount}% en paquetes`, detail: "Combina equipo, seguridad y compuestos en una sola compra." },
-  { icon: "building", title: "Precio corporativo por volumen", detail: "¿Cinco unidades o más? Un asesor prepara tu cotización." },
+  { icon: "card", title: `Hasta ${interestFreeMonths} meses sin intereses`, detail: `Desde ${formatPrice(interestFreeMinimum)} con tarjetas participantes.` },
+  { icon: "tag", title: `Ahorra hasta ${bestBundleDiscount}% en paquetes`, detail: "Equipo, seguridad y compuestos en una compra." },
+  { icon: "building", title: "Precio corporativo por volumen", detail: "Desde cinco unidades; solicita cotización." },
 ]
 
 function OfferPrice({ item }: { item: CatalogItem }) {

@@ -22,7 +22,7 @@ export default function StrategySection() {
           <div className="company-heading">
             <span className="mono">01 / VISIÓN DE FUTURO</span>
             <h2 id="strategy-title">Nuestra estrategia</h2>
-            <p>Exploramos nuevas posibilidades. Convertimos cada descubrimiento en un siguiente paso.</p>
+            <p>Convertimos cada descubrimiento en el siguiente avance.</p>
             <a className="story-explore" href="#filosofia">Explora nuestro siguiente paso <span aria-hidden="true">↓</span></a>
           </div>
           <div className="cover-coordinate" aria-hidden="true"><ScienceMark kind="portal" /><span className="mono">APERTURE SCIENCE<br />EL FUTURO ESTÁ CONECTADO.</span></div>
@@ -81,7 +81,7 @@ export default function StrategySection() {
         <div className="wrap story-split">
           <div className="story-side">
             <span className="chapter-label mono">02 / LEER EL ENTORNO</span><h3 id="panorama-title">Nuestro panorama</h3>
-            <p>Lo que nos impulsa, lo que debemos resolver y las posibilidades del entorno.</p>
+            <p>Fortalezas, retos y oportunidades del entorno.</p>
             <figure className="panorama-window"><img src={architecture} alt="Estructuras e instalaciones de investigación de Aperture Science" loading="lazy" /><figcaption className="mono">UNA NUEVA PERSPECTIVA ↗</figcaption></figure>
           </div>
           <div className="company-grid two panorama-grid">{swot.map((group, i) => <article className={`company-card panorama-${group.id}`} key={group.id}><div className="panorama-card-top"><span className="mono">{group.context}</span><ScienceMark kind={i === 0 ? "spark" : i === 1 ? "orbit" : i === 2 ? "calibrate" : "shield"} /></div><h4>{group.title}</h4><ul>{group.items.map(item => <li key={item.title}>{item.title}</li>)}</ul></article>)}</div>
@@ -91,7 +91,7 @@ export default function StrategySection() {
       <section className="story-panel objectives-panel company-light" id="objetivos" aria-labelledby="goals-title">
         <div className="wrap story-split">
           <div className="story-side">
-            <span className="chapter-label mono">03 / EL SIGUIENTE SALTO</span><h3 id="goals-title">Hacia dónde vamos</h3><p>Metas del programa. Cada avance se compara con la medición inicial.</p>
+            <span className="chapter-label mono">03 / EL SIGUIENTE SALTO</span><h3 id="goals-title">Hacia dónde vamos</h3><p>Metas medidas desde el punto de partida.</p>
             <div className="device-study" aria-hidden="true"><div className="device-study-ring" /><img src={portalGun} alt="" loading="lazy" /><span className="mono">ASHPD / DESARROLLO CONTINUO</span></div>
           </div>
           <div className="goal-rows">{webContent.goals.map((goal, i) => <article className="company-card goal-row" key={goal.title}><div className="goal-row-heading"><span className="mono">META / 0{i + 1}</span><h4>{goal.title}</h4></div><div className="goal-row-metric"><strong className="company-metric">{goal.metric}</strong><p>{goal.unit}</p></div><span className="company-tag">{goal.deadline}</span></article>)}</div>

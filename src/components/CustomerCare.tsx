@@ -15,7 +15,7 @@ export default function CustomerCare() {
             <h2 id="care-title">Estamos para<br /><span>ayudarte.</span></h2>
           </div>
           <div className="care-heading-copy">
-            <p>¿Tienes dudas sobre nuestros productos, condiciones de compra o entregas? Escríbenos o abre el chat: te orientamos para elegir la solución adecuada.</p>
+            <p>¿Dudas sobre productos, compras o entregas? Escríbenos o abre el chat: te ayudamos a elegir.</p>
             <a className="button button-blue" href="./catalogo.html">Ver productos y servicios <Arrow diagonal /></a>
           </div>
         </div>
@@ -42,7 +42,7 @@ export default function CustomerCare() {
           <div className="care-feedback-copy">
             <span className="mono care-index">02 / TU OPINIÓN MUEVE LA CIENCIA</span>
             <h3 id="feedback-title">Atención a quejas<br />y sugerencias.</h3>
-            <p>Si tuviste algún inconveniente con nuestros productos o servicios, o tienes una idea para mejorar, envíanos tu caso por este formulario. Nuestro equipo lo revisará y se pondrá en contacto contigo para ofrecerte una solución.</p>
+            <p>¿Tuviste un inconveniente o tienes una sugerencia? Envíala por el formulario. Revisaremos tu caso y te contactaremos con una solución.</p>
             <ol className="care-steps" aria-label="Seguimiento de tu solicitud">
               {followUpSteps.map((step, i) => (
                 <li key={step.title}>

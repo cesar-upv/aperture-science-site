@@ -2,23 +2,23 @@ import { SectionLabel } from "./ui"
 const faqs = [
   [
     "¿Qué es exactamente la Portal Gun?",
-    "Es el dispositivo de portales de Aperture Science. Permite colocar dos portales conectados y manipular objetos del entorno durante las pruebas.",
+    "El dispositivo de Aperture Science crea dos portales conectados y permite mover objetos durante las pruebas.",
   ],
   [
     "¿Los portales funcionan en ambas direcciones?",
-    "Sí. Puedes entrar por el azul y salir por el naranja, o hacerlo al revés. Los colores identifican cada portal; no limitan la dirección del recorrido.",
+    "Sí. Puedes entrar por cualquiera y salir por el otro. Los colores solo identifican cada portal.",
   ],
   [
     "¿Puedo abrir un portal en cualquier superficie?",
-    "No. La superficie debe ser compatible, plana y suficientemente grande. En las cámaras de prueba, identificar las superficies adecuadas forma parte del protocolo.",
+    "No. Debe ser compatible, plana y suficientemente grande. Identificarla forma parte de la prueba.",
   ],
   [
     "¿Cuántos portales se pueden abrir a la vez?",
-    "El dispositivo mantiene un portal de cada color. Al colocar uno nuevo, se sustituye el anterior del mismo color y se conserva la conexión con el otro.",
+    "Uno de cada color. Al abrir otro, reemplazas el del mismo color sin perder la conexión.",
   ],
   [
     "¿Cómo se participa en el programa de pruebas?",
-    "Recursos Humanos coordina la selección de voluntarios, las entrevistas y la información sobre cada prueba. La participación requiere conocer las condiciones, completar el expediente y otorgar consentimiento.",
+    "Recursos Humanos selecciona y entrevista voluntarios. Para participar debes conocer las condiciones, completar tu expediente y dar tu consentimiento.",
   ],
 ]
 export default function FAQ() {
@@ -37,9 +37,7 @@ export default function FAQ() {
             preguntas.
           </h2>
           <p>
-            La curiosidad está permitida.
-            <br />
-            De hecho, la recomendamos.
+            La curiosidad es bienvenida.
           </p>
           <div className="faq-sign" aria-hidden="true">
             ?

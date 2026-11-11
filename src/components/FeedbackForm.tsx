@@ -46,7 +46,7 @@ export default function FeedbackForm() {
         <span className="mono">FOLIO DE SEGUIMIENTO</span>
         <strong className="care-folio">{sent.folio}</strong>
         <span className="care-summary">{sent.summary}</span>
-        <p>Abrimos tu aplicación de correo con la solicitud y el folio. Envía el mensaje para que nuestro equipo la reciba; confirmaremos la recepción y te contactaremos en un máximo de 5 días hábiles.</p>
+        <p>Se abrió tu correo con la solicitud y el folio. Envíala para que podamos responderte en un máximo de 5 días hábiles.</p>
         <div className="care-done-actions">
           <a className="button button-blue" href={sent.href}>Abrir correo de nuevo <Arrow diagonal /></a>
           <button type="button" className="care-text-button" onClick={() => { setRequest(emptyRequest); setSent(null) }}>Registrar otra solicitud</button>
@@ -109,7 +109,7 @@ export default function FeedbackForm() {
       </div>
       <div className="care-submit">
         <button type="submit" className="button button-orange">Enviar solicitud <LineIcon name="send" size={18} /></button>
-        <p>Se abrirá tu correo con la solicitud lista y un folio de seguimiento.</p>
+        <p>Se abrirá tu correo con la solicitud y un folio.</p>
       </div>
     </form>
   )

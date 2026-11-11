@@ -24,21 +24,21 @@ export const channels: { id: string; icon: ChannelIcon; title: string; detail: s
 
 export type ChatTopic = { id: string; question: string; answer: string; link?: CareLink }
 
-export const chatGreeting = "Hola, te damos la bienvenida a Aperture Science. ¿En qué podemos ayudarte hoy? Elige un tema."
+export const chatGreeting = "Bienvenido a Aperture Science. ¿En qué podemos ayudarte? Elige un tema."
 
 export const chatTopics: ChatTopic[] = [
   {
     id: "comprar", question: "¿Cómo compro un producto?",
-    answer: "Elige tu producto en el catálogo y solicita tu cotización desde su ficha. Un asesor confirma existencias, precio final y forma de entrega.",
+    answer: "Elige un producto y solicita la cotización desde su ficha. Un asesor confirma existencias, precio final y entrega.",
     link: { label: "Ir al catálogo", href: "./catalogo.html" },
   },
   {
     id: "entregas", question: "Opciones de entrega",
-    answer: "Enviamos a domicilio en todo el país con transporte especializado según el producto. Varios artículos también pueden recogerse en el Centro de Enriquecimiento.",
+    answer: "Enviamos a todo el país con transporte según el producto. Algunos artículos pueden recogerse en el Centro de Enriquecimiento.",
   },
   {
     id: "devoluciones", question: "Cambios y devoluciones",
-    answer: "Cada ficha indica sus condiciones. Atendemos cambios por defectos de fábrica y devoluciones con precinto o envase intacto, según el producto.",
+    answer: "Cada ficha indica sus condiciones: cambios por defectos de fábrica y devoluciones con precinto o envase intacto, según el producto.",
     link: { label: "Consultar condiciones", href: "./catalogo.html#productos" },
   },
   {
@@ -47,21 +47,21 @@ export const chatTopics: ChatTopic[] = [
   },
   {
     id: "queja", question: "Presentar una queja o sugerencia",
-    answer: "Usa nuestro formulario de quejas y sugerencias. Te asignamos un folio y damos seguimiento hasta resolver tu caso.",
+    answer: "Envía el formulario. Recibirás un folio para dar seguimiento a tu caso.",
     link: { label: "Ir al formulario", href: "#quejas" },
   },
   {
     id: "asesor", question: "Hablar con un asesor",
-    answer: `Escríbenos a ${contactEmail}. Un asesor te responde en menos de 24 horas hábiles (${serviceHours.toLowerCase()}).`,
+    answer: `Escríbenos a ${contactEmail}. Respondemos en menos de 24 horas hábiles (${serviceHours.toLowerCase()}).`,
     link: { label: "Escribir correo", href: `mailto:${contactEmail}?subject=${encodeURIComponent("Quiero hablar con un asesor")}` },
   },
 ]
 
 export const followUpSteps = [
-  { title: "Recibimos tu caso", detail: "Confirmamos la recepción con tu folio de seguimiento.", time: "Mismo día" },
-  { title: "Lo analizamos", detail: "Un especialista revisa tu caso y el producto involucrado.", time: "1 a 2 días hábiles" },
-  { title: "Te proponemos una solución", detail: "Te contactamos con la respuesta: cambio, reparación, reembolso o mejora.", time: "Hasta 5 días hábiles" },
-  { title: "Cerramos contigo", detail: "Confirmamos que el caso quedó resuelto y registramos tu opinión.", time: "Encuesta de cierre" },
+  { title: "Recibimos tu caso", detail: "Te enviamos un folio de seguimiento.", time: "Mismo día" },
+  { title: "Lo analizamos", detail: "Revisamos tu caso y el producto.", time: "1 a 2 días hábiles" },
+  { title: "Te proponemos una solución", detail: "Te contactamos con una opción: cambio, reparación, reembolso o mejora.", time: "Hasta 5 días hábiles" },
+  { title: "Cerramos contigo", detail: "Confirmamos la solución y registramos tu opinión.", time: "Encuesta de cierre" },
 ]
 
 export type RequestType = "queja" | "reclamacion" | "sugerencia"

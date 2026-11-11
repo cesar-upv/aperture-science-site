@@ -4,17 +4,17 @@ import portalGun from "../assets/portal-gun-polished.webp"
 const productFeatures = [
   {
     title: "Dos puntos. Un mismo espacio.",
-    copy: "Abre un portal azul y uno naranja. Ambos conectan sus ubicaciones y permiten atravesarlos en las dos direcciones.",
+    copy: "Abre portales azul y naranja para conectar dos lugares en ambas direcciones.",
     icon: "portals" as const,
   },
   {
     title: "Piensa fuera del recorrido.",
-    copy: "Transforma una pared en un acceso y una caída en una nueva trayectoria. El entorno forma parte de la solución.",
+    copy: "Convierte paredes en accesos y caídas en nuevas trayectorias.",
     icon: "arrow" as const,
   },
   {
     title: "Todo un laboratorio en tus manos.",
-    copy: "Coloca portales en superficies compatibles y manipula objetos para resolver cada prueba desde otra perspectiva.",
+    copy: "Coloca portales en superficies compatibles y mueve objetos para resolver pruebas.",
     icon: "cube" as const,
   },
 ]
@@ -27,7 +27,7 @@ const hotspots = [
   {
     label: "Carcasa",
     detail:
-      "La silueta blanca y el mecanismo expuesto identifican al dispositivo de Aperture.",
+      "La carcasa blanca y el mecanismo expuesto distinguen al dispositivo.",
     className: "spot-shell",
   },
   {
@@ -57,8 +57,7 @@ export default function Product() {
             <span className="muted-heading">Infinitos caminos.</span>
           </h2>
           <p>
-            Presentamos el Dispositivo Portátil de Portales de Aperture Science.
-            Puedes llamarlo <strong>Portal Gun.</strong>
+            El Dispositivo Portátil de Portales de Aperture Science, o <strong>Portal Gun.</strong>
           </p>
         </div>
         <div className="product-layout">

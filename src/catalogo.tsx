@@ -56,7 +56,7 @@ function CatalogPage() {
             <h1 id="catalog-hero-title">El futuro<br /><span>está en catálogo.</span></h1>
             <div className="catalog-intro">
               <div>
-                <p>Diez formas de llevar la ciencia más allá de la cámara de pruebas. Explora dispositivos, compuestos, paquetes y servicios corporativos.</p>
+                <p>Diez opciones entre dispositivos, compuestos, paquetes y servicios corporativos.</p>
                 <div className="catalog-hero-actions">
                   <a className="button button-orange" href="#ofertas">Ver ofertas imperdibles <Arrow diagonal /></a>
                   <a className="catalog-text-link" href="#productos">Explorar catálogo <Arrow /></a>
@@ -76,7 +76,7 @@ function CatalogPage() {
         <section className="catalog-section wrap" id="productos" aria-labelledby="catalog-title">
           <div className="catalog-section-head">
             <div><span className="mono">CATÁLOGO DE PRODUCTOS Y SERVICIOS</span><h2 id="catalog-title">Elige tu próxima<br />gran idea.</h2></div>
-            <p>Cada ficha muestra precio, cambios y devoluciones, y opciones de entrega. Toca la imagen para ampliarla.</p>
+            <p>Consulta precio, cambios y entrega. Toca la imagen para ver la ficha completa.</p>
           </div>
           <div className="catalog-toolbar">
             <div className="catalog-filters" role="group" aria-label="Filtrar por tipo">
@@ -107,7 +107,7 @@ function CatalogPage() {
             <aside className="catalog-custom" data-rem3={(3 - (visible.length % 3)) % 3} data-rem2={visible.length % 2} aria-labelledby="custom-title">
               <span className="mono">PROYECTOS ESPECIALES</span>
               <h3 id="custom-title">¿Necesitas una solución a la medida?</h3>
-              <p>Configuramos paquetes para laboratorios, naves industriales y corporativos, con instalación y capacitación.</p>
+              <p>Paquetes para laboratorios y empresas, con instalación y capacitación.</p>
               <div className="catalog-custom-actions">
                 <a className="button button-orange" href={`mailto:${contactEmail}?subject=${encodeURIComponent("Proyecto a la medida")}`}>Solicitar propuesta <Arrow diagonal /></a>
                 <a className="catalog-custom-link" href="./index.html#chat-atencion">Hablar con un asesor <Arrow /></a>
@@ -122,7 +122,7 @@ function CatalogPage() {
             <div>
               <span className="mono">¿NECESITAS ORIENTACIÓN?</span>
               <h2 id="catalog-contact-title">Hablemos de tu proyecto.</h2>
-              <p>Un asesor te ayuda a elegir, cotizar y programar la entrega. Escríbenos a <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
+              <p>Te ayudamos a elegir, cotizar y programar la entrega: <a href={`mailto:${contactEmail}`}>{contactEmail}</a>.</p>
             </div>
             <div className="catalog-contact-actions">
               <a className="button button-orange" href="./index.html#chat-atencion">Abrir chat de atención <LineIcon name="chat" /></a>

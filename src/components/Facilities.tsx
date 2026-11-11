@@ -9,7 +9,7 @@ const facilities = [
     title: "Cámaras de pruebas",
     tag: "01 / EXPERIMENTACIÓN",
     description:
-      "Cada superficie es una posibilidad. Cada recorrido, una nueva pregunta.",
+      "Cada superficie abre un nuevo recorrido.",
     alt: "Cámara de Portal 2 con paneles blancos, vegetación y señalización de salida",
   },
   {
@@ -17,7 +17,7 @@ const facilities = [
     title: "Ingeniería en movimiento",
     tag: "02 / INFRAESTRUCTURA",
     description:
-      "Mecanismos, paneles y estructuras que transforman el entorno de pruebas.",
+      "Paneles y mecanismos transforman las cámaras de prueba.",
     alt: "Paneles mecánicos y pasarelas en las instalaciones de Portal 2",
   },
   {
@@ -25,7 +25,7 @@ const facilities = [
     title: "Ciencia aplicada",
     tag: "03 / INVESTIGACIÓN",
     description:
-      "Materiales experimentales para encontrar formas inesperadas de avanzar.",
+      "Materiales experimentales para nuevas pruebas.",
     alt: "Gel de repulsión azul en una cámara de pruebas de Portal 2",
   },
 ]
@@ -53,8 +53,7 @@ export default function Facilities() {
             <span className="muted-heading">el mañana.</span>
           </h2>
           <p>
-            Un vistazo al lugar donde la curiosidad se convierte en
-            experimentación.
+            Explora nuestro centro de pruebas.
           </p>
         </div>
         <div className="facilities-grid">

@@ -48,10 +48,9 @@ export default function Hero() {
             </span>
           </h1>
           <p>
-            El espacio ya no es una barrera.
+            El espacio deja de ser una barrera.
             <br />
-            Conecta dos puntos, cambia de perspectiva y descubre lo que hay al
-            otro lado.
+            Conecta dos puntos y descubre el otro lado.
           </p>
           <div className="hero-actions">
             <a className="button button-blue" href="#portal-gun">
